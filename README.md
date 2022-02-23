@@ -16,12 +16,12 @@
 
 ![2022-02-23 (2)](https://user-images.githubusercontent.com/35156960/155311998-68d76e21-8f63-4ee5-90fe-9d1601e371ce.png)
 
-<h2 id="#building">Building It</h2>
+<h2 id="building">Building It</h2>
 
 <p>Just use Apache Maven. Make sure it's on your path and type <b>mvn install</b> in the root directory of the project. You'll find your executable in <b>server/target</b> after the build is complete</p>
 
 
-<h2 id="#database">Setting up the database</h2>
+<h2 id="database">Setting up the database</h2>
 
 <p>The file <a href="https://github.com/mkjanda/IAT-Website/blob/master/iat.sql">iat.sql</a> must be executed in your database to enable interactive content. It must be run as root because it creates a user and grants privileges to that user. The following file should also be examined: <a href="https://github.com/mkjanda/IAT-Website/blob/master/server/src/main/resources/environment.properties">environment.properties</a>
   
@@ -32,7 +32,7 @@ environment.clientSoftwareV10FilePath=/var/www/iat/ClientSoftware/IATDesignV10.z
 server.port=8082
 ```
   
-<h2 id="#nginx">Setting up Nginx</h2>
+<h2 id="nginx">Setting up Nginx</h2>
 
 Very simple. The following configuration will suffice.
 
