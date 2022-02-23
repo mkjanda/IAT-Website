@@ -6,7 +6,7 @@
   <li><a href="#building">Building It</a></li>
   <li><a href="#database">Setting up the database</a></li>
   <li><a href="#nginx">Setting up nginx</a></li>
-  <li><a href="#setup">Application Setup</a></li>
+  <li><a href="#deploying">Deploying It</a></li>
 </ol>
 
 
@@ -32,7 +32,7 @@ environment.clientSoftwareV10FilePath=/var/www/iat/ClientSoftware/IATDesignV10.z
 server.port=8082
 ```
   
-<h2 id="nginx">Setting up Nginx</h2>
+<h2 id="nginx">Setting up Nginx (Optional)</h2>
 
 Very simple. The following configuration will suffice.
 
@@ -57,3 +57,7 @@ server {
 ```
 
 This presumes you chose port 8082 in the above environment.properties file.
+
+
+<h2 id="deploying">Deploying It</h2>
+Just double-click or otherwise execute the single .jar file and point your browser to <b>http://127.0.0.1</b> if you setup Nginx or <b>http://127.0.0.1:8082</b> if you did not.
