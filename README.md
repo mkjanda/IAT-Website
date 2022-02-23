@@ -34,9 +34,26 @@ server.port=8082
   
 <h2 id="#nginx">Setting up nginx</h2>
 
+Very simple. The following configuration will suffice.
 
+``` nginx
+server {
+  listen 80;
+	server_name iatsoftware.net www.iatsoftware.net localhost 127.0.0.1;
+	root /var/www/iat;
+	client_max_body_size 50M;
 
-iatsoftware.net build material 
-If you want to set up the iatsoftware.net website on your own machine, import /server/src/main/resources/make-server-database.sql into a MySQL installation. Or modify what you will. It compiles with Maven and is set to run on port 8082, which is modifiable in /server/src/main/resources/application.properties. This is my first time with Git and my current work in progress doesn't compile at the moment.
+	access_log /var/log/nginx/iatsoftware.net-access.log;
+	error_log /var/log/nginx/iatsoftware.net-error.log;
 
-Oh, the build will install Node on your machine, on a user level. Just a head's up.
+  location / {
+		proxy_redirect http://127.0.0.1:8082 $scheme://$host;
+		proxy_set_header Host $host;
+		proxy_pass http://127.0.0.1:8082;
+		proxy_set_header X-Real-IP $remote_addr;
+		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+	}
+}
+```
+
+This presumes you chose port 8082 in the above environment.properties file.
