@@ -16,7 +16,7 @@
 
 ![2022-02-23 (2)](https://user-images.githubusercontent.com/35156960/155311998-68d76e21-8f63-4ee5-90fe-9d1601e371ce.png)
 
-<h2 id="building">Building It</h2>
+<h2 id="#building">Building It</h2>
 
 <p>Just use Apache Maven. Make sure it's on your path and type <b>mvn install</b> in the root directory of the project. You'll find your executable in <b>server/target</b> after the build is complete</p>
 
@@ -32,13 +32,13 @@ environment.clientSoftwareV10FilePath=/var/www/iat/ClientSoftware/IATDesignV10.z
 server.port=8082
 ```
   
-<h2 id="#nginx">Setting up nginx</h2>
+<h2 id="#nginx">Setting up Nginx</h2>
 
 Very simple. The following configuration will suffice.
 
 ``` nginx
 server {
-  listen 80;
+  	listen 80;
 	server_name iatsoftware.net www.iatsoftware.net localhost 127.0.0.1;
 	root /var/www/iat;
 	client_max_body_size 50M;
@@ -46,7 +46,7 @@ server {
 	access_log /var/log/nginx/iatsoftware.net-access.log;
 	error_log /var/log/nginx/iatsoftware.net-error.log;
 
-  location / {
+  	location / {
 		proxy_redirect http://127.0.0.1:8082 $scheme://$host;
 		proxy_set_header Host $host;
 		proxy_pass http://127.0.0.1:8082;
