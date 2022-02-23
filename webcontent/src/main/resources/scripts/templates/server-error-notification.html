@@ -1,0 +1,33 @@
+<div data-bind="ifnot: clusterFuck()">
+    <form id="serverErrorReportForm">
+        <div data-bind="if : reported() === false">
+            <p>I'm really sorry, but the server encountered an error while processing your request. This error has been logged
+                but I don't check the log files as compulsively as I should since, for the life of me, I haven't been able to
+                get the software to log errors to a different file than it logs informational events to. As a personal favor
+                to me, could you enter your email address below and click the <span class='buttonHilight'>Report</span> button?</p>
+            <p>I'm asking for your email address so I can get in touch with you when the error has been corrected and also
+                in case additional information from you is necessary in isolating the bug.</p>
+            <p>If you prefer, email me at <span class='hilight'>admin@iatsoftware.net</span>.</p>
+            <div style="text-align: center">
+                <table style="width: 80%; margin: 20px 100px;">
+                    <tr>
+                        <td style="margin-right: 4px">eMail:</td>
+                        <td><input id="errorReportEmail" name="errorReportEmail" type="text" style="width: 300px; margin-left: 3px; margin-right: 10px;" /></td>
+                        <td><input type="button" value="Report" data-bind="click : report" />
+                    </tr>
+                </table>
+            </div>
+            <div data-bind="if : error()">
+                <p class="error" data-bind='text: error()' />
+            </div>
+        </div>
+        <div data-bind="if : reported() === true">
+            <svg-header params="caption: 'Seriously, thank you', template: errorReportedTemplate, display : display"></svg-header>
+            <p>I'll get to work on this in the next day or two. It's likely I can get you access to the software sooner with a
+                work-around.</p>
+        </div>
+    </form>
+</div>
+<div data-bind="if: clusterFuck()">
+    <server-failure></server-failure>
+</div>

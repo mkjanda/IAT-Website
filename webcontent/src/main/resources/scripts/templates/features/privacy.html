@@ -1,0 +1,70 @@
+<div class="finePrint">
+	<p>We understand that the privacy of participants is essential to research. To ensure that your data is not compromised,
+    it is stored in an encrypted form on the server. The encryption mechanism ensures that, even should someone &mdash; including
+    the administer &mdash; have full access to the server, your data is still private. To accomplish this, you are asked to supply a 
+    password when you upload your IAT. This password is not stored on the server in any form and your data cannot be retrieved without it.</p>
+    <p>When you upload your IAT, you are given the option of storing your password in your own computer's registry, a place where programs
+    can store small quantities of information. It is highly recommended that you do so to avoid losing it. If you do lose your password,
+    your data cannot be accessed and is lost forever. This is necessary to ensure the privacy of your data, and accomplished with a 
+    combination of encryption schemes known as DES and RSA.</p>
+    <p>DES is a standard encryption algorithm that was devised may years ago. While it is not the strongest form of encryption available,
+    the algorithm is secure and it is impossible to break DES encryption except through a brute force approach unless a person has
+    a segment of encrypted data and the corresponding segment of decrypted data. DES encryption ciphers are not passwords. They are, in this instance,
+    an eight byte key and an eight byte initialization vector. What most people don't understand about encryption is that any key supplied will
+    yield an output. The encryption algorithm takes the two eight byte segments of data and performs the decryption where the key data is 
+    correct or not. If it is correct, the algorithm will output the decrypted data. If it is not, the algorithm will output garbage. The brute force
+    approach is to try all combinations of these sixteen bytes of data (there are 340282366920938463463374607431768211456) and examine the output
+    to determine whether that output is the decrypted equivalent of the encrypted data. This can be made easier if you know the format of the decrypted
+    data. Suppose you know the decrypted data represents a PDF file. Then you could write a relatively simple computer program to interface with
+    Adobe's PDF reader to seperate out all valid PDF files. But your data on the server is not in a widely recognized format such as a Microsoft
+    Word document or Jpeg image, so this is not possible.</p>
+    <p>RSA encryption is used for establishing secure transmissions over the Internet. It's a form of asymmetric encryption known as public
+    key encryption that allows two computers to agree on a shared cipher they will use for traditional encryption such as DES, which uses the
+    same cipher both to encrypt and decrypt data. This is a difficult problem, arranging for a cipher to be shared between two computers over
+    a non-secure connection. One answer is RSA. An RSA encryption key consists of a public key and a private key. The public key can encrypt data, 
+    but not decrypt it. Conversely, the private key can decrypt data but not encrypt it. If one computer needs a secure connection to another, it creates
+    both a public and private key. Tt then sends its public key over the non-secure network. The second computer randomly generates a cipher for an 
+    algorithm such as DES or AES and then uses the public key to encrypt it. It sends the encrypted cipher back to the first computer which then uses 
+    the private key that never passed over the network to decrypt the cipher. Then both computers have the same shared cipher. Why not simply use
+    RSA encryption alone? First, it's very computationally complex, meaning it demands much more processing power then standard encryption 
+    algorithms. Second, RSA encryption cannot be used on large quantities of data. The RSA algorithm used with IAT Design cannot encrypt more than
+    256 bytes of data at a time. Third, RSA encryption can be broken. Though it can be broken, it's still used to secure credit card transfers over
+    the Internet. More detailed information can be found below.</p>
+    <p>The password you enter when you upload your IAT is transformed through bit manipulation into 16 bytes overwhelmingly likely to be unique
+    to your text password. This constitutes a DES key. The algorithm for generating it doesn't vary, so when you enter your password to retrieve
+    your IAT result data, provided the same password is entered, the same DES key will be generated. When an IAT is uploaded, an RSA public/private key pair
+    is generated and the entirety of it is encrypted with the DES cipher generated from the supplied text password. The encrypted RSA key is transmitted
+    to the server, but the DES cipher that could be used to decrypt it is not. The public portion of the RSA key pair, the key that can encrypt but not
+    decrypt, is transmitted to the server as well in a non-encrypted form, though the connection with the server itself is secure. The server stores the
+    unencrypted public key and the encrypted public and private key in the database. When a test taker's results are sent to the server, the server randomly
+    generated a 16-byte DES key and initialization vector and uses them to encrypt the result data, then it uses the public RSA key to encrypt the DES cipher.
+    It stores the randomly generated DES key that was used to encrypt the result data, after encrypting it with the RSA public key, to the database along with 
+    the encrypted result data. When your enter your password to download your IAT, the algorithm mentioned at the start of this paragraph will generate
+    the same DES key that it used to encrypt the randomly generated RSA key before sending it to the server. The encrypted RSA key is returned from the server
+    and decrypted with the DES cipher derived from your password. You now have access to the private portion of the RSA key, which can decrypt, that your computer
+    generated when you uploaded the IAT. When the result set is processed, this private key is used to decrypt the DES ciphers the server used to encrypt the result
+    data. They cannot be decrypted on the server because it only has the public portion of the RSA key pair available to it. Each result set has its own encrypted DES
+    cipher. The private key is used to decrypt each, and then these decrypted DES ciphers are used to decrypt the corresponding result set. This is how your data
+    is kept private.</p>
+    <hr style="width: 75%;" />
+    <p>RSA encryption begins with two very large random prime numbers. Large numbers can be tested for primality in a number of ways. One method is the Miller-Rabin
+    primality test. It's computationally inexpensive, much less so than attempting to factor the number. For each pass through the Miller-Rabin primality test,
+    there is a 50% chance the algorithm will reject the number, in which case the number is not prime, or accept it. In other words, the odds that the number <em>is not</em> 
+    prime are cut in half each time is passes the test. After 100 iterations, the odds that the number is not prime are 1 in 2<sup>100</sup>. Through methods such
+    as this, two prime numbers are chosen that are each 1024 bits or very slightly fewer in length. These numbers are multiplied together to form the <strong>modulus</strong>
+    of the RSA key. The Euler Totient is then calculated which is simply (p - 1) X (q - 1) for two numbers p and q provided both are prime. The public key consists of
+    the modulus and a public key exponent. The public key exponent is a value that is selected at random with one criteria, that it be coprime to the Euler Totient of
+    the two prime numbers. In other words, the public key exponent, which need not necessarily be prime, cannot have any factors in common with the calculated Euler
+    Totient, which is not prime. The private key is computed from this data, specifically from the Euler Totient and the public key exponent. The raw byte representation of
+    data to be encrypted must have a numerical value less than the product of p and q. As a quick example, the byte 10000011 represents the number 131. Similarly, the two bytes
+    11111111 and 11011000 have a numerical value of 65,496 when strung together. The data to be encrypted is treated as a number in this fashion and is multiplied by itself
+    public key exponent number of times, meaning the number would be multiplied by itself 65,537 times if the public key exponent were 65,537. Each time the multiplication
+    takes place, if the result value is larger than product of p and q, the modulus, then it is divided by that modulus and the remainder of that division is substituted
+    for the value, which continues to be multiplied by itself. This is how the data is encrypted. The data is decrypted by performing substituting the private key exponent 
+    for the public key exponent and performing the exact same process.</p>
+    <p>So, how can this encryption be broken? Well, the private key exponent is computed from the public key exponent and the totient of p and q. The modulus, which is
+    part of the public key, is the product of p and q. So, if someone can factor the 2048-bit modulus into the two prime numbers that comprise it, they can compute 
+    the private key. Though this sounds like child's play, factoring a 2048-bit number takes so long that, even with modern computers, Internet sites will
+    use the same public/private key pair for a full year before substituting another for it. This process, RSA, was first developed to transmit emails over
+    the internet and was initially referred to as PGP, or petty good privacy.</p>
+</div>

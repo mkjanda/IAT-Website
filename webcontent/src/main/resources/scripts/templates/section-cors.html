@@ -1,0 +1,79 @@
+<!-- ko ifnot: corsForm() === 'corsConfirmation' -->
+<svg-header
+    params="caption : 'Maintaining Your Website Domain Name', template : sectionHeaderTemplate, display : display">
+</svg-header>
+<p>If you would like to have your website URL appear in the browser bar as opposed to <span class="hilight">
+    www.iatsoftware.net</span>, this can be accomplished by setting up a forward proxy on your server and 
+    registering your domain below. A sample forward proxy setup for the Apache web server can be found 
+    <span class="hilightHover" data-bind="event : { click : () => { navigate('manual', 'manual-cors'); } }">here</span>.</p>
+<!-- /ko -->
+<div data-bind="if : corsForm() === 'corsRegistration'">
+    <form id="cors-registration">
+        <p>To preclude distribution of tests to third parties, you may only register one domain with your product
+            key. If
+            you have already registered a domain, it will be replaced with the one you supply below.</p>
+        <div class="fieldSummary">
+            <h2>Field Summary</h2>
+            <p><span class="fieldName">product key &ndash;</span> This is accessible via the
+                Help&mdash;&gt;About menu in the test design program</p>
+            <p><span class="fieldName">your domain &ndash;</span> The domain name you would like to forward
+                proxy from.
+                Exclude &quot;www.&quot; and &quot;https://&quot; and include only the host name,
+                omitting any path information.</p>
+            <p><span class="fieldName">allow http&ndash;</span> By default, the connection to your server
+                from the test taker's browser must be secure. Click this box to allow non-secure HTTP
+                connections.</p>
+            </ul>
+        </div>
+        <div class="errorDiv" data-bind="if : hasErrors()">
+            <svg-header params="caption: 'Errors in Submission', template: errorCaptionTemplate, display : display">
+            </svg-header>
+            <div data-bind="foreach : { data : errors().filter(e => e.field === 'global'), as : 'error' }">
+                <h2 class="globalErrorMessage" data-bind='text : error.message'></h2>
+            </div>
+        </div>
+        <div class="formDataGrid">
+            <!-- ko foreach: errors().filter(e => e.field === 'productKey') -->
+            <p class="errorMessage" data-bind="text: $data.message"></p>
+            <!-- /ko -->
+            <p class="leftInputLabel">Product key:</p>
+            <input type="text" name="productKey" />
+            <!-- ko foreach: errors().filter(e => e.field === 'domain') -->
+            <p class="errorMessage" data-bind="text: $data.message"></p>
+            <!-- /ko -->
+            <p class="leftInputLabel">Your domain:</p>
+            <input type="text" name="domain" />
+            <input type="checkbox" name="http" />
+            <p class="rightInputLabel">Allow HTTP</p>
+            <!-- ko ifnot: posting() -->
+            <input type="button" value="Submit" data-bind="click: submitCorsRequest" />
+            <!-- /ko -->
+            <!-- ko if: posting() -->
+            <span class="pleaseWait" data-bind="text : pleaseWaitText()"></span>
+            <!-- /ko -->
+        </div>
+    </form>
+</div>
+<!-- ko if: corsForm() === "corsConfirmation" -->
+<div data-bind='descendantsComplete : scrollToCorsConfirmation' id="corsConfirmation">
+    <svg-header params="caption: 'Cors Registration Successful', template: attentionTemplate, display : display">
+    </svg-header>
+    <p><span class="hilight">(www.)</span><span class="hilight" data-bind='text : corsDomain()'></span> and all
+        paths on that
+        domain are now eligible for forward proxying to tests on <span class="hilight">iatsoftware.net</span>.
+        <!-- ko if: httpAllowed() -->
+        Both secure (HTTPS) and non-secure (HTTP) connections from the test taker will be permitted upon the next
+        server reboot.
+        <!-- /ko -->
+        <!-- ko ifnot: httpAllowed() -->
+        Only secure (HTTPS) connects from the test taker will be permitted upon the next server reboot.
+        <!-- /ko -->
+        Server reboots occur weekly. Please contact me if you require one. For an example forward proxy setup
+        using the Apache web server, consult the documentation
+        <span class='hilightHover'
+            data-bind='event : { click : () => { navigate("manual", "manual-cors"); } }'>here</span>.</p>
+</div>
+<!-- /ko -->
+<div data-bind="if : corsForm() === 'error'">
+    <server-error-notification params="errorId : corsErrorId()"></server-error-notification>
+</div>

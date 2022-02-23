@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>IAT Software</title>
+<link rel="icon" type="image/x-icon" sizes="16x16 24x24 32x32 48x48 64x64" href="/images/pageicon.ico"/>
+<link rel="apple-touch-icon" href="/images/apple-touch-icon-64x64.png" />
+<link rel="apple-touch-startup-image" href="/images/apple-icon-256x256.png" />
+<link rel="stylesheet" href="css/main.css" />
+<script src="scripts/lib/require.js"></script>
+<script>
+  requirejs.config({
+    waitSeconds: 30,
+    baseUrl: "/scripts/lib",
+    paths: {
+        modules: "../modules",
+        templates: "../templates",
+        json: "../../json",
+        images : "../../images",
+        token : "/token"
+    }
+  });  
+  require(['text!token'], function(t) {
+    sessionStorage.setItem("iat-website-token", t);
+  });
+
+</script>
+<script src="scripts/main.js"></script>
+<link rel="stylesheet" href="https://use.typekit.net/ssx7rnd.css" />
+</head>
+<body>
+<page-body></page-body>
+</body>
+</html>

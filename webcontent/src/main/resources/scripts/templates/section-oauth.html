@@ -1,0 +1,146 @@
+<svg-header params="caption: 'Direct Data Retrieval', template : sectionHeaderTemplate, display : display"></svg-header>
+<p>If you want to integrate IATs with another application, it will likely be necessary to retrieve
+    test results on-the-fly. Traditionally, test results are downloaded from within the test design program
+    but this is insufficient for, say, a mobile credit application application that includes an IAT. The server
+    supports an OAuth interface that makes this possible. Depending on demand, a Java SDK might become available
+    as well.</p>
+<p>Once authentication is complete, individual result sets may be retrieved. A prerequisite is that you include
+    a &quot;token&quot; in your test during upload. A token is a query string parameter that you include
+    in your IAT link that uniquely identifies each test-taker. For more information on tokens, <span
+        class="hilightHover" data-bind='event : { click : () => { navigate("manual", "manual-tokens"); } }'>click
+        here</span>. When you retrieve data, you supply the token
+    value for the result set you desire and your IAT password, and the result data is returned in JSON in a
+    small handful of formats you may select from. For the ins and outs of the process, as well as a step-by-step
+    OAuth example, please refer to the manual <span class="hilightHover"
+        data-bind="event : { click : () => { navigate('manual', 'manual-oauth'); } }">here</span>.</p>
+<p>When you are ready to begin, upload your test then register it for OAuth data retrieval with the form below. You may
+    modify
+    the redirection URL for an existing OAuth registration by supplying the information below. You may not regenerate
+    your client id or client secret once your test has been registered. If your client secret has been compromised,
+    contact me at <span class="hilight">michael@iatsoftware.net</span>.</p>
+<div data-bind="if : oauthForm() === 'oauthRegistration'">
+    <form id="oauthRegistration">
+        <p>Complete the following form to enable result retrieval via an application other than <span
+                class="hilight">IAT Design</span>.
+            You will be issued a client id and client secret that you must use when retrieving data. If you have lost
+            your client id
+            or client secret, submitting this form again will retrieve them for you. It is highly recommended that you
+            <span class="hilightHover"
+                data-bind="event : { click : () => { navigate('manual', 'manual-oauth'); } }">consult the
+                documentation</span> for the mechanics of data retrieval
+            using OAuth to ensure it meets your needs and also to understand what information is required in the form
+            below before proceeding.</p>
+        <div class="fieldSummary">
+            <h2>Field Summary</h2>
+            <p><span class="fieldName">product key &ndash;</span> This is accessible via the Help&mdash;&gt;About
+                menu in the test
+                design program</p>
+            <p><span class="fieldName">test &ndash;</span> The name of the test you are registering</p>
+            <p><span class="fieldName">password &ndash;</span> The password you selected for the test</p>
+            <p><span class="fieldName">redirect url &ndash;</span> The URL that you will be redirected back to
+                during
+                the authentication process. This should reference a domain you own. You may enter a minimal path
+                for the URL and allow redirections to explicitly specified subpaths or if you may specify a
+                unique URL. This can be modified if you have already registered your test by completing the remainder of the
+                form.</p>
+        </div>
+        <div class="errorDiv" data-bind="if : hasErrors()">
+            <svg-header params="caption: 'Errors in Submission', template: errorCaptionTemplate, display : display">
+            </svg-header>
+            <div data-bind="foreach : { data : errors().filter(e => e.field === 'global'), as : 'error' }">
+                <h2 class="globalErrorMessage" data-bind='text : error.message'></h2>
+            </div>
+        </div>
+        <div class="formDataGrid">
+            <!-- ko foreach: errors().filter(e => { return e.field === 'productKey' }) -->
+            <p class="errorMessage" data-bind="text : $data.message"></p>
+            <!-- /ko -->
+            <p class='leftInputLabel'>Product key:</p>
+            <input type="text" name="productKey" />
+            <!-- ko foreach: errors().filter(e => { return e.field === 'testName' }) -->
+            <p class="errorMessage" data-bind="text : $data.message"></p>
+            <!-- /ko -->
+            <p class='leftInputLabel'>Test name:</p>
+            <input type="text" name="testName" />
+            <!-- ko foreach: errors().filter(e => { return e.field === 'password' }) -->
+            <p class="errorMessage" data-bind="text : $data.message"></p>
+            <!-- /ko -->
+            <p class="leftInputLabel">Test password:</p>
+            <input type="text" name="password" />
+            <!-- ko foreach: errors().filter(e => { return e.field === 'redirect' }) -->
+            <p class="errorMessage" data-bind="text : $data.message"></p>
+            <!-- /ko -->
+            <p class="leftInputLabel">Redirect URL:</p>
+            <input type="text" name="redirect" />
+            <input type="checkbox" name="subpaths" checked />
+            <p class="rightInputLabel">Allow explicit redirects to subpaths of redirection URL</p>
+            <!-- ko ifnot: posting() -->
+            <input type="button" value="Submit" data-bind="click: submitOAuthRequest" />
+            <!-- /ko -->
+            <!-- ko if: posting() -->
+            <span class="pleaseWait" data-bind="text : pleaseWaitText()"></span>
+            <!-- /ko -->
+        </div>
+    </form>
+</div>
+<div data-bind="if : oauthForm() === 'oauthConfirmation'">
+    <form id='oauthConfirmation'>
+        <div data-bind="if : registrationResponse().alreadyRegistered">
+            <p>You have already registered this test for remote data access with OAuth. Below is listed your client id
+                and client secret. If you need to change the
+                redirection URL that the server will send to your application during the first stage of authentication,
+                click the update button to do so. If you require
+                information on OAuth or the RESTful interface used to retrieve data once authentication is complete,
+                <span class="hilightHover"
+                    data-bind="event : { click : () => { navigate('manual', 'manual-oauth'); } }">click here to view the
+                    documentation</span>. Or you can contact me at
+                <span class="hilight">michael@iatsoftware.net</span>.</p>
+        </div>
+        <div data-bind="ifnot : registrationResponse().alreadyRegistered">
+            <p>Below is the client id and client secret you will use to authenticate your application with the server.
+                Also listed is the URL the server
+                will redirect your application to in the first stage of authentication. You can revisit this page to
+                change that URL later.</p>
+            <p>If you have any questions about OAuth or the RESTful interface used to retrieve data, feel free to
+                contact me at <span class="hilight">
+                    michael@iatsoftware.net</span>. I will assist you as I am able and provide links to further reading
+                material.</p>
+        </div>
+        <div class="oauthCredentials">
+            <p>client id:</p>
+            <p data-bind="text: registrationResponse().clientId"></p>
+            <p>client secret:</p>
+            <p data-bind="text: registrationResponse().clientSecret"></p>
+            <p>redirect url:</p>
+            <!-- ko if: (redirectUpdatePhase() === redirectStatus.none) || (redirectUpdatePhase() === redirectStatus.complete) -->
+            <p data-bind="text: redirect()"></p>
+            <!-- /ko -->
+            <!-- ko ifnot: (redirectUpdatePhase() === redirectStatus.none) || (redirectUpdatePhase() === redirectStatus.complete) -->
+            <input type="text" name="newRedirect" data-bind="attr : { value : redirect() }" />
+            <!-- /ko -->
+            <!-- ko if: (redirectUpdatePhase() === redirectStatus.none) || (redirectUpdatePhase() === redirectStatus.complete) -->
+            <input type="button" value='Change' data-bind="click : startRedirectUpdate"></input>
+            <!-- /ko -->
+            <!-- ko if: redirectUpdatePhase() === redirectStatus.editing -->
+            <input type="button" value='Update' data-bind="click : submitRedirectUpdate" />
+            <!-- /ko -->
+            <!-- ko if: redirectUpdatePhase() === redirectStatus.updating -->
+            <input type="button" value='Update' disabled />
+            <!-- /ko -->
+            <!-- ko if: redirectUpdatePhase() === redirectStatus.errorState -->
+            <input type="button" value='Update' data-bind="click : submitRedirectUpdate" />
+            <!-- /ko -->
+            <input type="hidden" name="clientId" data-bind='attr : { value : registrationResponse().clientId }' />
+        </div>
+        <div data-bind="if : redirectUpdateError()">
+            <p style="text-align: center;" class="error" data-bind="text: redirectUpdateError()"></p>
+        </div>
+        <div data-bind="if: redirectUpdatePhase() === redirectStatus.complete">
+            <p style="text-align: center;"><span class="hilight">Your auth requests will now be directed to the URL
+                    above.</span></p>
+        </div>
+    </form>
+</div>
+<div data-bind="if : oauthForm() === 'error'">
+    <server-error-notification params="errorId : errorId()"></server-error-notification>
+</div>

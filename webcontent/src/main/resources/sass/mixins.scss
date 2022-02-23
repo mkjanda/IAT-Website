@@ -1,0 +1,151 @@
+// _mixins.scss
+@import 'fonts';
+@import 'resources';
+
+@mixin electricBorder {
+	background-image: url('../images/whitetexture.svg');
+	border-image: url('../images/steel-blue-border.png');
+	border-image-repeat: repeat;
+	border-image-slice: 20%;
+	border-image-width: 10px;
+	border-image-outset: 8px;
+	border-style: solid;
+	padding-top: 30px;
+	padding-left: 100px;
+	padding-right: 100px;
+	padding-bottom: 60px;
+	background-repeat: repeat;
+	margin: 30px auto 50px auto;
+	width: 60%;
+
+	@each $element in ('p', 'li', 'h2', 'span', 'pre') {
+		#{$element} {
+			@if $element in ('p', 'li', 'span') {
+				font-size: 16px;
+				font-family: $cartoonish;
+				color: $purpleWine;
+			}
+
+			@else if $element == 'h2' {
+				font-size: 22px;
+				font-family: $tekton;
+
+			}
+
+			@else if $element == 'pre' {
+				font-family: $mono;
+				font-size: 16px;
+			}
+			text-align: left;
+
+			@if $element in ('span', 'pre', 'h2') {
+				&.hilight {
+					color: $lovePotion;
+				}
+
+				&.hilightHover {
+					color: $knockoutPink;
+
+					&:hover {
+						cursor: pointer;
+						color: $ultraViolet;
+					}
+				}
+			}
+		}
+	}
+}
+
+@mixin primaryParagraph {
+	color: $redwood;
+	text-shadow: 1px 1px 0px rgba($grapeKiss, 0.5);
+	font-family: $readableSerif;
+	font-size: 20px;
+	line-height: 22px;
+
+	span.buttonReference {
+		color: $grapeKiss;
+	}
+
+	span.hilight {
+		color: $ultraViolet;
+	}
+
+	span.hilightHover {
+		color: $knockoutPink;
+		cursor: pointer;
+
+		&:hover {
+			color: $lovePotion;
+		}
+	}
+
+	a {
+		color: $knockoutPink;
+		text-decoration: none;
+
+		&:hover {
+			color: $lovePotion;
+			cursor: pointer;
+		}
+	}
+}
+
+@mixin secondaryParagraph {
+	font-family: $readableSansSerif;
+	font-size: 16px;
+	font-weight: 700;
+	letter-spacing: 2px;
+	color: $greenery;
+	text-shadow: 1px 1px 0px $kalamata;
+	line-height: 18px;
+}
+
+/*
+	table {
+		border: none;
+		border-collapse: collapse;
+
+		tr {
+			p {
+				margin: 0px;
+			}
+
+			padding-bottom: 15px;
+
+			td:nth-child(1) {
+				margin-right: 5px;
+				padding-left: 50px;
+
+				p {
+					text-align: right;
+				}
+			}
+
+			td:nth-child(2) input {
+				text-align: left;
+				font-family: $readableSansSerif;
+				font-size: 16px;
+				color: #000;
+				width: 300px;
+				font-weight: 700;
+			}
+
+			td[colspan='2'] {
+				text-align: center;
+				padding-top: 15px;
+
+				label {
+					font-family: $cartoonish;
+					font-size: 16px;
+					color: $purpleHaze;
+				}
+
+				p {
+					text-align: left;
+				}
+			}
+		}
+	}
+}
+*/

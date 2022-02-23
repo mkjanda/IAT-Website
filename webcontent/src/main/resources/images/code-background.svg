@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="225.5" height="292.62" viewBox="14 14 225.5 292.62">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="299.52" height="319" viewBox="0 0 299.52 319">
+  <defs>
+    <clipPath id="clip-path">
+      <rect x="14" y="14" width="225.5" height="292.62" style="fill: none"/>
+    </clipPath>
+    <radialGradient id="radial-gradient" cx="2616.9" cy="791.45" r="106.75" gradientTransform="translate(2853.16 1017.87) rotate(180)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#36404c"/>
+      <stop offset="1" stop-color="#00000a"/>
+    </radialGradient>
+    <linearGradient id="New_Gradient_Swatch_3" data-name="New Gradient Swatch 3" x1="2736.96" y1="859.14" x2="2813.15" y2="854.3" gradientTransform="translate(2853.16 1017.87) rotate(180)" xlink:href="#radial-gradient"/>
+    <linearGradient id="linear-gradient" x1="2569.96" y1="861.49" x2="2923.3" y2="663.49" gradientTransform="translate(2853.16 1017.87) rotate(180)" gradientUnits="userSpaceOnUse">
+      <stop offset="0.21" stop-color="#00000a"/>
+      <stop offset="0.4" stop-color="#edffff"/>
+      <stop offset="0.6" stop-color="#00000a"/>
+      <stop offset="0.8" stop-color="#edffff"/>
+      <stop offset="1" stop-color="#00000a"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="1344.14" y1="1023.97" x2="1697.47" y2="825.97" gradientTransform="translate(-1373.72 -861.01)" xlink:href="#linear-gradient"/>
+    <radialGradient id="radial-gradient-2" cx="2736.95" cy="817.7" r="175.96" xlink:href="#radial-gradient"/>
+    <pattern id="Hatching_Dense_1" data-name="Hatching Dense 1" width="72" height="72" patternTransform="translate(71.92 7.42) rotate(-180)" patternUnits="userSpaceOnUse" viewBox="0 0 72 72">
+      <rect width="72" height="72" style="fill: none"/>
+      <line x1="-16" y1="66" x2="-10" y2="72" style="fill: #edffff"/>
+      <line x1="-16" y1="72" x2="-10" y2="66" style="fill: #edffff"/>
+      <line x1="35.38" y1="18.25" x2="40.13" y2="20.5" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <line x1="35.13" y1="15.25" x2="38.38" y2="17.5" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <line x1="8.63" y1="42" x2="32" y2="41.5" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <line x1="7.63" y1="45.5" x2="33.5" y2="45.25" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <line x1="3.25" y1="34.13" x2="22.13" y2="12" style="fill: none;stroke: #0d1e2b;stroke-linejoin: bevel;stroke-width: 0.30000000000000004px"/>
+      <line x1="22.13" y1="15.5" x2="22" y2="37.5" style="fill: none;stroke: #0d1e2b;stroke-linejoin: bevel;stroke-width: 0.30000000000000004px"/>
+      <line x1="7.13" y1="8.25" x2="31.63" y2="9.25" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <line x1="44.13" y1="42.25" x2="35.63" y2="37.75" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <line x1="8.75" y1="38.25" x2="1.31" y2="32.44" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <line x1="29" y1="12.5" x2="28.88" y2="37.13" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <line x1="32" y1="12.5" x2="31.88" y2="36.94" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <line x1="24.81" y1="12.19" x2="25.25" y2="37.25" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <line x1="19.13" y1="18.5" x2="19" y2="37.69" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <line x1="15.13" y1="24" x2="14.06" y2="37.94" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <line x1="11.38" y1="27" x2="10.44" y2="38.19" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <line x1="8.13" y1="31.25" x2="7.38" y2="35.25" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <line x1="8.38" y1="5.5" x2="28.88" y2="6.25" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <line x1="11.31" y1="2.5" x2="25.63" y2="3" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <line x1="4.88" y1="48.5" x2="32.75" y2="48.5" style="fill: none;stroke: #0d1e2b;stroke-linejoin: bevel;stroke-width: 0.30000000000000004px"/>
+      <line x1="52.13" y1="37" x2="42.75" y2="45" style="fill: none;stroke: #0d1e2b;stroke-linejoin: bevel;stroke-width: 0.30000000000000004px"/>
+      <line x1="50.63" y1="55.75" x2="34" y2="44" style="fill: none;stroke: #0d1e2b;stroke-linejoin: bevel;stroke-width: 0.30000000000000004px"/>
+      <line x1="45.13" y1="46.25" x2="51.81" y2="40.06" style="fill: none;stroke: #0d1e2b;stroke-linejoin: bevel;stroke-width: 0.30000000000000004px"/>
+      <line x1="44.63" y1="48.25" x2="34.81" y2="40.13" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <line x1="26.38" y1="52" x2="43.13" y2="69.5" style="fill: none;stroke: #0d1e2b;stroke-linejoin: bevel;stroke-width: 0.30000000000000004px"/>
+      <line x1="30.63" y1="51.75" x2="44.13" y2="65" style="fill: none;stroke: #0d1e2b;stroke-linejoin: bevel;stroke-width: 0.30000000000000004px"/>
+      <line x1="33.88" y1="50.75" x2="42.13" y2="59.25" style="fill: none;stroke: #0d1e2b;stroke-linejoin: bevel;stroke-width: 0.30000000000000004px"/>
+      <line x1="33.25" y1="46.63" x2="43.88" y2="56.25" style="fill: none;stroke: #0d1e2b;stroke-linejoin: bevel;stroke-width: 0.30000000000000004px"/>
+      <line x1="47.63" y1="19.5" x2="53.38" y2="33.75" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <line x1="59.5" y1="16.38" x2="67.63" y2="18.75" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <line x1="57.5" y1="16.88" x2="65.38" y2="21.75" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <line x1="55" y1="17.63" x2="63.38" y2="23.75" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <line x1="52.25" y1="18.38" x2="62.63" y2="27.13" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <line x1="52.13" y1="20.25" x2="60.63" y2="31" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <line x1="49.88" y1="20.5" x2="59.88" y2="36.75" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <line x1="2.63" y1="66.25" x2="15.13" y2="57.5" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <line x1="16.63" y1="59.75" x2="4.38" y2="68.5" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <line x1="18.38" y1="61.75" x2="6.38" y2="70.75" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <line x1="53.38" y1="33.75" x2="55.63" y2="39.75" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <line x1="54.69" y1="39.88" x2="45.75" y2="48.88" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <line x1="12.38" y1="69.5" x2="22.13" y2="70" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <line x1="54.88" y1="47.75" x2="49.13" y2="53.25" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <line x1="58.44" y1="51.38" x2="55.63" y2="56.5" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <line x1="60.63" y1="54.75" x2="67.13" y2="55.25" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <line x1="56.63" y1="48.75" x2="52.38" y2="56.25" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <line x1="35.63" y1="21.25" x2="48.13" y2="24" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <line x1="36.38" y1="25" x2="49.38" y2="28" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <line x1="35.31" y1="28.63" x2="51.38" y2="32.25" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <line x1="35.69" y1="32.19" x2="50.63" y2="35.75" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <line x1="35.63" y1="34.88" x2="48.38" y2="38.25" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <line x1="39.13" y1="37.75" x2="46.19" y2="40.31" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <line x1="13.88" y1="67.75" x2="20.88" y2="68" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <line x1="15.63" y1="66" x2="19.25" y2="66.19" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <polyline points="30.84 -0.72 32.52 0.98 50.19 18.81" style="fill: none;stroke: #0d1e2b;stroke-linejoin: bevel;stroke-width: 0.30000000000000004px"/>
+      <polyline points="35.24 -0.8 37.1 1.09 44.63 8.75" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <polyline points="45.63 -0.75 45.78 1.31 46.56 12.25" style="fill: none;stroke: #0d1e2b;stroke-linejoin: bevel;stroke-width: 0.30000000000000004px"/>
+      <polyline points="65.72 -0.76 66.21 0.89 70.94 17" style="fill: none;stroke: #0d1e2b;stroke-linejoin: bevel;stroke-width: 0.30000000000000004px"/>
+      <polyline points="48.89 -0.75 49.07 1.25 50.38 16" style="fill: none;stroke: #0d1e2b;stroke-linejoin: bevel;stroke-width: 0.30000000000000004px"/>
+      <polyline points="53.54 -0.69 53.76 1.07 55.63 15.75" style="fill: none;stroke: #0d1e2b;stroke-linejoin: bevel;stroke-width: 0.30000000000000004px"/>
+      <polyline points="57.18 -0.69 57.43 1.06 59.44 14.75" style="fill: none;stroke: #0d1e2b;stroke-linejoin: bevel;stroke-width: 0.30000000000000004px"/>
+      <polyline points="62.24 -0.69 62.64 1 66.19 16.06" style="fill: none;stroke: #0d1e2b;stroke-linejoin: bevel;stroke-width: 0.30000000000000004px"/>
+      <polyline points="40.8 -0.8 42.56 0.88 44.13 2.38" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <polyline points="25.57 -0.82 27.13 1.12 42.81 20.69" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <polyline points="4.25 -1.25 6.75 1.25 9.63 4.13" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <polyline points="0.81 -0.56 2.03 0.91 6.94 6.81" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <polyline points="-0.47 2.23 0.71 3.86 4.56 9.19" style="fill: none;stroke: #0d1e2b;stroke-linejoin: bevel;stroke-width: 0.30000000000000004px"/>
+      <polyline points="-0.52 5.36 0.56 8 2.88 13.69" style="fill: none;stroke: #0d1e2b;stroke-linejoin: bevel;stroke-width: 0.30000000000000004px"/>
+      <polyline points="-0.64 22.05 0.59 20.65 8.75 11.38" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <polyline points="-0.75 30.88 0.69 29.44 18.25 11.88" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <polyline points="-0.57 17.25 0.76 15.88 5.25 11.25" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <polyline points="-0.58 25.61 0.68 24.36 13.5 11.63" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <polyline points="-0.81 54.76 0.69 53.81 5.13 51" style="fill: none;stroke: #0d1e2b;stroke-linejoin: bevel;stroke-width: 0.30000000000000004px"/>
+      <polyline points="-0.82 58.05 0.79 57.03 8.38 52.25" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <polyline points="-0.99 63.95 0.73 62.79 11.88 55.25" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <polyline points="2.19 65.25 0.68 66.1 -1 67.05" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <polyline points="-0.88 51.46 0.56 51.7 2.38 52" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <polyline points="1.75 48.25 0.68 47.9 -0.99 47.34" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <polyline points="2.75 50.13 0.62 49.65 -0.94 49.31" style="fill: none;stroke: #0d1e2b;stroke-linejoin: bevel;stroke-width: 0.30000000000000004px"/>
+      <polyline points="-0.66 39.27 0.73 40.33 4.88 43.5" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <polyline points="-0.77 42.54 0.81 43.5 4.13 45.5" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <polyline points="-0.66 34.59 0.9 35.97 6.88 41.25" style="fill: none;stroke: #0d1e2b;stroke-linejoin: bevel;stroke-width: 0.30000000000000004px"/>
+      <polyline points="-0.94 45.81 0.68 46.77 2.13 47.63" style="fill: none;stroke: #0d1e2b;stroke-linejoin: bevel;stroke-width: 0.30000000000000004px"/>
+      <polyline points="11.44 51.69 30.84 71.28 32.52 72.98" style="fill: none;stroke: #0d1e2b;stroke-linejoin: bevel;stroke-width: 0.30000000000000004px"/>
+      <polyline points="15.38 51 35.24 71.2 37.1 73.09" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <polyline points="44.88 60.75 45.63 71.25 45.78 73.31" style="fill: none;stroke: #0d1e2b;stroke-linejoin: bevel;stroke-width: 0.30000000000000004px"/>
+      <polyline points="64.63 67.5 65.72 71.24 66.21 72.89" style="fill: none;stroke: #0d1e2b;stroke-linejoin: bevel;stroke-width: 0.30000000000000004px"/>
+      <polyline points="47.63 57 48.89 71.25 49.07 73.25" style="fill: none;stroke: #0d1e2b;stroke-linejoin: bevel;stroke-width: 0.30000000000000004px"/>
+      <polyline points="51.88 58.25 53.54 71.31 53.76 73.07" style="fill: none;stroke: #0d1e2b;stroke-linejoin: bevel;stroke-width: 0.30000000000000004px"/>
+      <polyline points="55.38 59 57.18 71.31 57.43 73.06" style="fill: none;stroke: #0d1e2b;stroke-linejoin: bevel;stroke-width: 0.30000000000000004px"/>
+      <polyline points="59.25 58.63 62.24 71.31 62.64 73" style="fill: none;stroke: #0d1e2b;stroke-linejoin: bevel;stroke-width: 0.30000000000000004px"/>
+      <polyline points="20.38 51.75 40.8 71.2 42.56 72.88" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <polyline points="20.63 65 25.57 71.18 27.13 73.12" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <polyline points="0 66.5 4.25 70.75 6.75 73.25" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <polyline points="-2.38 67.63 0.81 71.44 2.03 72.91" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <polyline points="69.38 -0.75 71.53 2.23 72.71 3.86" style="fill: none;stroke: #0d1e2b;stroke-linejoin: bevel;stroke-width: 0.30000000000000004px"/>
+      <polyline points="68.85 -1.08 69.72 1.05 71.48 5.36 72.56 8" style="fill: none;stroke: #0d1e2b;stroke-linejoin: bevel;stroke-width: 0.30000000000000004px"/>
+      <polyline points="60.63 34.25 71.36 22.05 72.59 20.65" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <polyline points="61.88 40.25 71.25 30.88 72.69 29.44" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <polyline points="63.19 25.75 71.43 17.25 72.76 15.88" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <polyline points="46.63 50.25 71.42 25.61 72.68 24.36" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <polyline points="63.13 59.88 71.19 54.76 72.69 53.81" style="fill: none;stroke: #0d1e2b;stroke-linejoin: bevel;stroke-width: 0.30000000000000004px"/>
+      <polyline points="62.13 63.75 71.18 58.05 72.79 57.03" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <polyline points="66.88 66.75 71.01 63.95 72.73 62.79" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <polyline points="72.68 66.1 71 67.05 68.88 68.25" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <polyline points="57.88 49.25 71.12 51.46 72.56 51.7" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <polyline points="72.68 47.9 71.01 47.34 57.88 43" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <polyline points="72.62 49.65 71.06 49.31 56.13 46" style="fill: none;stroke: #0d1e2b;stroke-linejoin: bevel;stroke-width: 0.30000000000000004px"/>
+      <polyline points="68.38 37 71.34 39.27 72.73 40.33" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <polyline points="65.38 39 71.23 42.54 72.81 43.5" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <polyline points="69.25 32.75 71.34 34.59 72.9 35.97" style="fill: none;stroke: #0d1e2b;stroke-linejoin: bevel;stroke-width: 0.30000000000000004px"/>
+      <polyline points="63.38 41.25 71.06 45.81 72.68 46.77" style="fill: none;stroke: #0d1e2b;stroke-linejoin: bevel;stroke-width: 0.30000000000000004px"/>
+      <line x1="69.63" y1="67.62" x2="72.8" y2="71.44" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+      <polyline points="68.38 69.75 68.85 70.92 69.72 73.05" style="fill: none;stroke: #0d1e2b;stroke-linejoin: bevel;stroke-width: 0.30000000000000004px"/>
+      <line x1="-20.38" y1="14.5" x2="-7.88" y2="17.25" style="fill: none;stroke: #0d1e2b;stroke-width: 0.30000000000000004px"/>
+    </pattern>
+  </defs>
+  <g style="isolation: isolate">
+    <g id="Layer_1" data-name="Layer 1">
+      <g style="clip-path: url(#clip-path)">
+        <rect x="14" y="14" width="225.75" height="291" style="fill: url(#radial-gradient)"/>
+        <path d="M14,14H62.92C179.08,143.54,18.28,187.61,194.25,305H14Z" style="fill: url(#New_Gradient_Swatch_3)"/>
+        <path d="M242.2,17.73C172.81,70,92.2,110.21,4,125.86q-1.16-7.9-2.3-15.8c86.92-10.08,172-37,240.46-92.33Z" style="fill: #4e5965"/>
+        <path d="M12.8,306.23c70.29-48.56,149.1-92.11,231.36-122q0,4.68-.1,9.37C163.69,219.72,82.66,256,12.8,306.23Z" style="fill: #36404c"/>
+        <path d="M12.8,306.23C82.07,256,162,212.36,243.26,180.58l-.78,8.08C163.3,217.06,83.64,257.82,12.8,306.23Z" style="fill: url(#linear-gradient)"/>
+        <path d="M240.81,13.11c-70.29,48.56-149.1,92.1-231.36,122q0-4.68.1-9.36C89.92,99.61,171,63.36,240.81,13.11Z" style="fill: #36404c"/>
+        <path d="M240.81,13.11C171.54,63.38,91.62,107,10.35,138.75l.78-8.07C90.31,102.28,170,61.51,240.81,13.11Z" style="fill: url(#linear-gradient-2)"/>
+        <path d="M14,305h.51c67.87-49,145.85-91.63,225.24-123V14h-.18C171.63,63.14,93.53,105.85,14,137.31Z" style="fill: url(#radial-gradient-2)"/>
+        <path d="M14,305h.51c67.87-49,145.85-91.63,225.24-123V14h-.18C171.63,63.14,93.53,105.85,14,137.31Z" style="fill: url(#Hatching_Dense_1)"/>
+        <g style="opacity: 0;mix-blend-mode: darken">
+          <path d="M14,305V14H239.75V305H14M0,319H253.75V0H0V319Z" style="fill: #fff"/>
+        </g>
+        <rect x="298.61" y="260.91" width="0.91" height="0.91" style="fill: #fff"/>
+      </g>
+    </g>
+  </g>
+</svg>
+</svg>

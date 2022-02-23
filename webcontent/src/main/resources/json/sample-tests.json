@@ -1,0 +1,6 @@
+{
+    "slideWidth" : 400, "tests" : [ 
+        "json/sample-tests/flower-insect.json", "json/sample-tests/marketing.json", "json/sample-tests/self-esteem.json", 
+            "json/sample-tests/beauty-intelligence.json", "json/sample-tests/swift.json"
+    ]
+}

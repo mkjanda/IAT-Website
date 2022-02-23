@@ -1,0 +1,9 @@
+<div id="features">
+<div class="featureMenu" data-bind="style : { width : menuWidth }, foreach: buttons">
+    <div data-bind='click : $parent.buttonClick, event : { mouseover : $parent.buttonMouseOver, mouseout : $parent.buttonMouseOut }' class="featureButton">
+	<inset-text params="button : $data, buttonStyle : $parent.buttonStyles"></inset-text>
+    </div>
+</div>
+<div class="featuresContent" data-bind="component : activeComponent">
+</div>
+</div>

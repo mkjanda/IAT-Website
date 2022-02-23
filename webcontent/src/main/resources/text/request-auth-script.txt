@@ -1,0 +1,77 @@
+        function onLoad() {
+            document.querySelector(
+                "div.authContent p.code"
+            ).innerText = new URLSearchParams(window.location.search).get("code");
+            document.querySelector(
+                "div.authContent p.state"
+            ).innerText = new URLSearchParams(window.location.search).get("state");
+        }
+
+        function authWithJson() {
+            let authObj = {
+                client_id: "CLIENT611:straight-drag:16269d02f38b4e3a",
+                client_secret: "secret:481dd7bce7f17ec6bf3f71345af4a1c7",
+                code: new URLSearchParams(window.location.search).get("code"),
+                grant_type: "code",
+            };
+            let ajax = new XMLHttpRequest();
+            ajax.onreadystatechange = () => {
+                if (ajax.readyState === 4 && ajax.status === 200) {
+                    parent.document.body.dispatchEvent(
+                        new CustomEvent("oauthsuccess", {
+                            detail: {
+                                result: JSON.parse(ajax.responseText),
+                            },
+                        })
+                    );
+                    displayAuthResults(ajax.responseText);
+                } else if (ajax.readyState === 4) {
+                    displayAuthResults(ajax.responseText);
+                }
+            };
+            ajax.open("POST", "http://127.0.0.1/IAT/OAuth/RequestAuth");
+            // ------ MAKE SURE TO DO THIS -------- //
+            ajax.setRequestHeader("content-type", "text/json");
+            ajax.setRequestHeader("accept", "text/json");
+            ajax.send(JSON.stringify(authObj));
+        }
+
+        function authWithFormData() {
+            let form = new FormData();
+            form.set("client_id", "CLIENT611:straight-drag:16269d02f38b4e3a");
+            form.set("client_secret", "secret:481dd7bce7f17ec6bf3f71345af4a1c7");
+            form.set(
+                "code",
+                new URLSearchParams(window.location.search).get("code")
+            );
+            form.set("grant_type", "code");
+            let ajax = new XMLHttpRequest();
+            ajax.onreadystatechange = () => {
+                if (ajax.readyState === 4 && ajax.status === 200) {
+                    parent.document.body.dispatchEvent(
+                        new CustomEvent("oauthsuccess", {
+                            detail: {
+                                result: JSON.parse(ajax.responseText),
+                            },
+                        })
+                    );
+                    displayAuthResults(ajax.responseText);
+                } else if (ajax.readyState === 4) {
+                    displayAuthResults(ajax.responseText);
+                }
+            };
+            ajax.open("POST", "http://127.0.0.1/IAT/OAuth/RequestAuth");
+            // ------ MAKE SURE TO DO THIS -------- //
+            ajax.setRequestHeader("accept", "text/json");
+            ajax.send(form);
+        }
+
+        function displayAuthResults(results) {
+            let resultLines = results.split("\n");
+            resultLines.forEach((line) => {
+                line = line.innerHTML.replaceAll(/\t/g, "&nbsp;&nbsp;");
+                let pre = document.createElement("pre");
+                pre.innerText = line;
+                document.querySelector("body div#authResponse").appendChild(pre);
+            });
+        }

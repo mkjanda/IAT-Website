@@ -1,0 +1,6 @@
+{
+    "prettier.useTabs" : true,
+    "prettier.tabWidth" : 4,
+    "prettier.esLintIntegration" : true,
+    "prettier.printWidth" : 60,
+}

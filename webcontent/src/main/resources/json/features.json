@@ -1,0 +1,17 @@
+{
+    "buttonStyles" : { "height" : 72, "xOffset" : 0, 
+        "selected" : { "rectFill" : "rgba(255, 255, 255, .5)", "textFill" : "rgb(206, 49, 117)" },
+        "unselected" : { "rectFill" : "rgba(0, 0, 0, 0)", "textFill" : "rgb(123, 67, 104)" },
+        "hilighted" : { "rectFill" : "rgba(206, 49, 117, .5)", "textFill" : "rgb(123, 67, 104" }            
+    },
+    "sections" : [
+		{ "label" : "IAT Design", "component" : "iat-design", "template" : "text!templates/features/iat-design.html" },
+		{ "label" : "Block Design", "component" : "block-design", "template" : "text!templates/features/block-design.html" },
+		{ "label" : "Instructions", "component" : "instructions", "template" : "text!templates/features/instructions.html" },
+		{ "label" : "Response Keys", "component" : "response-keys", "template" : "text!templates/features/response-keys.html" },
+		{ "label" : "Layout", "component" : "layout", "template" : "text!templates/features/layout.html" },
+		{ "label" : "Questionnaires", "component" : "questionnaires", "template" : "text!templates/features/questionnaires.html" },
+		{ "label" : "Privacy", "component" : "privacy", "template" : "text!templates/features/privacy.html" },
+		{ "label" : "Test Results", "component" : "test-results", "template" : "text!templates/features/test-results.html" }
+    ]
+}
