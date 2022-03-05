@@ -36,7 +36,7 @@ public class DefaultServerErrorService implements ServerErrorService {
     private final ConcurrentHashMap<Long, ServerErrorReport> Errors = new ConcurrentHashMap<>();
     private final Logger logger = LogManager.getLogger();
     
-    @Value("${email.error-report-recipient}")  
+    @Value("${mail.error-report-recipient.username}")  
     private String errorReportRecipient;
 
     @Override

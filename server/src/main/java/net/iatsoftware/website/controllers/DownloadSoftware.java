@@ -48,9 +48,6 @@ public class DownloadSoftware {
     @Value("${environment.clientSoftwareFilePath}")
     private String clientSoftwareFilePath;
 
-    @Value("${environment.clientSoftwareV10FilePath}")
-    private String clientSoftwareV10FilePath;
-
     private Random rand = new Random();
     private Base64.Encoder b64Encoder = Base64.getEncoder();
     
@@ -74,21 +71,6 @@ public class DownloadSoftware {
             headers.set(HttpHeaders.CONTENT_TYPE, "application/octet-stream");
             headers.set(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"IAT Design.zip\"");
             return new ResponseEntity<>(new FileSystemResource(new File(clientSoftwareFilePath)), headers,
-                    HttpStatus.OK);
-        } catch (Exception ex) {
-            logger.error("Error reading software file for download", ex);
-            headers.set("Error-Id", serverErrorService.storeError(ex).toString());
-            return new ResponseEntity<>((Resource) null, HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-    }
-
-    @RequestMapping(value = "/V10", method = RequestMethod.GET)
-    public ResponseEntity<Resource> downloadV10() {
-        HttpHeaders headers = new HttpHeaders();
-        headers.set(HttpHeaders.CONTENT_TYPE, "application/octet-stream");
-        headers.set(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"IAT Design v1.0.zip\"");
-        try {
-            return new ResponseEntity<>(new FileSystemResource(new File(clientSoftwareV10FilePath)), headers,
                     HttpStatus.OK);
         } catch (Exception ex) {
             logger.error("Error reading software file for download", ex);

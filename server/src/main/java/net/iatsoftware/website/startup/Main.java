@@ -95,20 +95,12 @@ public class Main implements SchedulingConfigurer {
     @Value("${environment.clientSoftwareFilePath}")
     private String clientSoftwareFilePath;
 
-    @Value("${environment.clientSoftwareV10FilePath}")
-    private String clientSoftwareV10FilePath;
-
     @Value("${server.port}")
     private final int serverPort = 8082;
 
     @Bean("ClientSoftwareFilePath")
     public String clientSoftwareFilePath() {
         return clientSoftwareFilePath;
-    }
-
-    @Bean("ClientSoftwareV10FilePath")
-    public String clientSoftwareV10FilePath() {
-        return clientSoftwareV10FilePath;
     }
 
     @Bean
