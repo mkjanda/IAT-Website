@@ -93,6 +93,7 @@ server {
 }
 ```
 
+<h2 id="screenshots">What It Looks Like</h2>
 ![website](https://user-images.githubusercontent.com/35156960/156902902-5e430709-eccb-4927-b9cf-48845d322633.gif)
 
 
