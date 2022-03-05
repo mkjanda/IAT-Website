@@ -66,7 +66,7 @@ mail.image.header-classpath-location=classpath:email/images/header.png
 ```
 
 <p>You don't have to change any of it provided you import <b>iat.sql</b> as described below and your copy of MySQL or Maria runs on port 3306, which is the default. Building should be simple. This is the link to download Maven. the only build tool required: https://maven.apache.org/download.cgi  NodeJS will be installed on your machine during the build, at the user level. Of course, you need a copy of the Java SDK. Microsoft began shipping Java with Windows 10. Installation on Linux varies by distribution.</p>
-<p>You'll need to put mavenn on your path. It will appear there automatically if you used a Linux tool such as <b>apt</a> to install it. Otherwise, Google is your friend. Navigate to the home directory of the IAT project in a command prompt and type "mvn install" and it should produce a .jar file in theh <b>site/target</b> folder. Double click on it to run it. You'll need to make it executabe on Linux or use <b>java -jar iat-website-1.0.2.jar</b></p>
+<p>You'll need to put mavenn on your path. It will appear there automatically if you used a Linux tool such as <b>apt</b> to install it. Otherwise, Google is your friend. Navigate to the home directory of the IAT project in a command prompt and type "mvn install" and it should produce a .jar file in theh <b>site/target</b> folder. Double click on it to run it. You'll need to make it executabe on Linux or use <b>java -jar iat-website-1.0.2.jar</b></p>
 
 
 <h2 id="database">Setting up the database</h2>
