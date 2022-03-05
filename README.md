@@ -6,15 +6,10 @@
   <li><a href="#building">Building It</a></li>
   <li><a href="#database">Setting up the database</a></li>
   <li><a href="#nginx">Setting up nginx</a></li>
-  <li><a href="#deploying">Deploying It</a></li>
+  <li><a href="#screenshots">What it Looks Like</a></li>
 </ol>
 
 
-![2022-02-23 (4)](https://user-images.githubusercontent.com/35156960/155311931-5eecb9f4-f14b-4a9d-9d8a-2b4fd844300b.png)
-
-<p>Documentation remains shy of completion but even some of the more obscure features are covered.</p>
-
-![2022-02-23 (2)](https://user-images.githubusercontent.com/35156960/155311998-68d76e21-8f63-4ee5-90fe-9d1601e371ce.png)
 
 <h2 id="building">Building It</h2>
 
@@ -30,8 +25,8 @@ mysql.datasource.url=jdbc:mysql://localhost:3306/iatserver_db
 
 # Put your database name, user, and password here. These values will do if you 
 # imported the database from github
-mysql.datasource.user=IATServer
-mysql.datasource.password=vze4bcmipjiQfOwm
+mysql.datasource.user=iat
+mysql.datasource.password=vze5bcmipjiQfOwm
 mysql.datasource.database-name=iatserver_db
 
 #best to leave unmodified
@@ -64,21 +59,15 @@ mail.image.logo-classpath-location=classpath:email/images/logo.png
 mail.image.header-url=https://iatsoftware.net/images/header.png
 mail.image.header-classpath-location=classpath:email/images/header.png
 ```
-	
-<p>You don't 	
-<p>Just use Apache Maven. Make sure it's on your path and type <b>mvn install</b> in the root directory of the project. You'll find your executable in <b>server/target</b> after the build is complete</p>
+
+<p>You don't have to change any of it provided you import <b>iat.sql</b> as described below and your copy of MySQL or Maria runs on port 3306, which is the default. Building should be simple. This is the link to download Maven. the only build tool required: https://maven.apache.org/download.cgi  NodeJS will be installed on your machine during the build, at the user level. Of course, you need a copy of the Java SDK. Microsoft began shipping Java with Windows 10. Installation on Linux varies by distribution.</p>
+<p>You'll need to put mavenn on your path. It will appear there automatically if you used a Linux tool such as <b>apt</b> to install it. Otherwise, Google is your friend. Navigate to the home directory of the IAT project in a command prompt and type "mvn install" and it should produce a .jar file in theh <b>site/target</b> folder. Double click on it to run it. You'll need to make it executabe on Linux or use <b>java -jar iat-website-1.0.2.jar</b></p>
 
 
 <h2 id="database">Setting up the database</h2>
 
-<p>The file <a href="https://github.com/mkjanda/IAT-Website/blob/master/iat.sql">iat.sql</a> must be executed in your database to enable interactive content. It must be run as root because it creates a user and grants privileges to that user. The following file should also be examined: <a href="https://github.com/mkjanda/IAT-Website/blob/master/server/src/main/resources/environment.properties">environment.properties</a>
+<p>The file <a href="https://github.com/mkjanda/IAT-Website/blob/master/iat.sql">iat.sql</a> must be imported into your database. I reccomend using MySQL or Maria because that's all I've tested with. The command <b>source iat.sql</b> should be sufficient if you started MySQL from within the root directory of the project. Otherwise, <b>mysql [ -u root -p ] < iat.sql</b> be executed in your database to enable interactive content. It must be run as root because it creates a user and grants privileges to that user. Any deviations from <b>iat.sql</b> should be reflected by modifications in <b>environment.properties</b>.</a>
   
-``` properties
-environment.downloadControllerPath=/DownloadSoftware
-environment.clientSoftwareFilePath=/var/www/iat/ClientSoftware/IATDesign.zip
-environment.clientSoftwareV10FilePath=/var/www/iat/ClientSoftware/IATDesignV10.zip
-server.port=8082
-```
   
 <h2 id="nginx">Setting up Nginx (Optional)</h2>
 
@@ -104,8 +93,6 @@ server {
 }
 ```
 
-This presumes you chose port 8082 in the above environment.properties file.
+![2022-03-05 (6)](https://user-images.githubusercontent.com/35156960/156900328-ed9efe96-0556-4b2e-b6a4-b8733eb6a527.png)
+![2022-03-05 (8)](https://user-images.githubusercontent.com/35156960/156900351-eeff9f45-6fbd-4c86-88fd-d7a751995517.png)
 
-
-<h2 id="deploying">Deploying It</h2>
-Just double-click or otherwise execute the single .jar file and point your browser to <b>http://127.0.0.1</b> if you setup Nginx or <b>http://127.0.0.1:8082</b> if you did not.
