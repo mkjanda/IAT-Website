@@ -93,7 +93,6 @@ server {
 }
 ```
 
-![2022-03-05 (6)](https://user-images.githubusercontent.com/35156960/156900328-ed9efe96-0556-4b2e-b6a4-b8733eb6a527.png)
-![2022-03-05 (8)](https://user-images.githubusercontent.com/35156960/156900351-eeff9f45-6fbd-4c86-88fd-d7a751995517.png)
+![website](https://user-images.githubusercontent.com/35156960/156902902-5e430709-eccb-4927-b9cf-48845d322633.gif)
 
 
