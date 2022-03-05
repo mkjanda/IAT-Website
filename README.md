@@ -18,7 +18,7 @@
 
 <h2 id="building">Building It</h2>
 
-<p>Before building take a look at the following file <a href="server/src/mail/resources/environment.properties>environment.properties</a> shown below.</p>
+<p>Before building take a look at the following file <a href="server/src/mail/resources/environment.properties">environment.properties</a> shown below.</p>
 	
 	
 ``` properties
