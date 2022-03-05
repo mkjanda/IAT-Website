@@ -89,8 +89,7 @@ import javax.servlet.http.HttpServletResponse;
 @EnableJpaRepositories(basePackages = "net.iatsoftware.website", includeFilters = @ComponentScan.Filter(Repository.class), bootstrapMode = BootstrapMode.DEFERRED)
 @EnableAutoConfiguration(exclude = {ThymeleafAutoConfiguration.class})
 @EnableConfigurationProperties(Main.class)
-@PropertySources({ @PropertySource("application.properties"), @PropertySource("environment.properties"),
-    @PropertySource("user-resources.properties")})
+@PropertySources({ @PropertySource("application.properties"), @PropertySource("environment.properties")})
 public class Main implements SchedulingConfigurer {
 
     @Value("${environment.clientSoftwareFilePath}")
