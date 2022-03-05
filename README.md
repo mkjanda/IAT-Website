@@ -1,5 +1,5 @@
-# iatsoftware-website
-<p>This is the material that can be used to build the https://iatsoftware.net, which was built to both publicize and contain documentation for IAT Design,  into a single .jar file.</p>
+# IAT Software Website
+<p>This is the material that can be used to build the website at https://iatsoftware.net, a site constructed to both publicize and provide documentation for IAT Design/p>
 
 <description>Getting it running</description>
 <ol>
@@ -18,6 +18,54 @@
 
 <h2 id="building">Building It</h2>
 
+<p>Before building take a look at the following file <a href="server/src/mail/resources/environment.properties">environment.properties</a> shown below.</p>
+	
+	
+``` properties
+# The port the site will run on.
+server.port=8082
+
+# The database connection string
+mysql.datasource.url=jdbc:mysql://localhost:3306/iatserver_db
+
+# Put your database name, user, and password here. These values will do if you 
+# imported the database from github
+mysql.datasource.user=IATServer
+mysql.datasource.password=vze4bcmipjiQfOwm
+mysql.datasource.database-name=iatserver_db
+
+#best to leave unmodified
+mysql.datasource.server-timezone=UTC
+mysql.datasource.character-set=utf8
+environment.downloadControllerPath=/DownloadSoftware
+
+# The path, not URI, of the IAT Design application
+environment.clientSoftwareFilePath=/var/www/iat/IATDesign.zip
+
+# Settings for automated emails. Substitute your own values for mail.username 
+# and mail.password. This is the user that sends mail. mail.user-personal and 
+# mail.user-address are the name and sender that will appear as the From field.
+# sysinfo is the system user that would receive error reports if you correctly
+# modify the Resources.resx file. Nothing else should be touched
+mail.smtp.auth=true
+mail.smtp.starttls.enable=false
+mail.smtp.quitwait=false
+mail.host=127.0.0.1
+mail.port=25
+mail.protocol=smtp
+mail.username=iatsoftware
+mail.password=NDRD25Bb_HTNF42c
+mail.username.error-reprt-recipient=sysinfo
+mail.user-personal.errorreport=Error Reporter
+mail.user-personal=IAT Software
+mail.user-address=iatsoftware@iatsoftware.net
+mail.image.logo-url=https://iatsoftware/images/logo.png
+mail.image.logo-classpath-location=classpath:email/images/logo.png
+mail.image.header-url=https://iatsoftware.net/images/header.png
+mail.image.header-classpath-location=classpath:email/images/header.png
+```
+	
+<p>You don't 	
 <p>Just use Apache Maven. Make sure it's on your path and type <b>mvn install</b> in the root directory of the project. You'll find your executable in <b>server/target</b> after the build is complete</p>
 
 
