@@ -1,8 +1,8 @@
 { 
         "pageSections" : [
 		{"id" : "sectionIntro", "componentName" : "section-intro", "template" : "text!templates/section-intro.html"},
-                {"id" : "sectionTheIat", "componentName" : "section-the-iat", "module" : "section-the-iat", "template" : "text!templates/section-the-iat"},
 		{"label" : "The Software", "labelWidth" : 200, "id" : "sectionTheSoftware", "componentName" : "section-the-software", "module" : "section-the-software", "template" : "text!templates/section-the-software.html"},
+                {"id" : "sectionTheIat", "componentName" : "section-the-iat", "module" : "section-the-iat", "template" : "text!templates/section-the-iat"},
 		{"label" : "Download", "labelWidth" : 200, "id" : "sectionDownload", "componentName" : "section-download", "module" : "section-download", "template" : "text!templates/section-download.html"},
                 {"label" : "Sample IATs", "labelWidth" : 200, "id" : "sectionSampleTests", "componentName" : "sample-tests", "module" : "sample-tests", "template" : "test!templates/sample-tests.html"},
                 {"label" : "Commercial Use", "labelWidth" : 200, "id" : "sectionCommercialUse", "componentName" : "section-commmercial-use", "module" : "section-commercial-use", "template" : "text!templates/section-commercial-use.html"},

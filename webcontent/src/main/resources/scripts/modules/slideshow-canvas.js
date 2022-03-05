@@ -1,7 +1,7 @@
-define(['knockout', 'text!templates/slideshow-canvas.html', 'text!json/slide-show-image-names.json'], function (ko, htmlString, images) {
-    var SLIDE_PAUSE_PERIOD = 1800;
+define(['knockout', 'text!templates/slideshow-canvas.html'], function (ko, htmlString) {
+    var SLIDE_PAUSE_PERIOD = 5000;
     var SLIDE_MOVE_PERIOD = 500;
-
+    var images = ["screenshot1.png", "screenshot2.png", "screenshot3.png", "screenshot4.png", "screenshot5.png", "screenshot6.png"];
     function SlideShowCanvas(params) {
         var self = this;
         self.activeImageNdx = 0;
@@ -11,25 +11,23 @@ define(['knockout', 'text!templates/slideshow-canvas.html', 'text!json/slide-sho
         self.id = params.id;
         self.width = params.width;
         self.height = params.height;
-        self.imageSources = params.imageSources;
+        self.imageNames = [];
+        images.forEach(i => self.imageNames.push("images/" + i));
         self.images = ko.observableArray();
         self.imageDataAry = [];
-        self.subscription = self.images.subscribe(function () {
-            self.imageLoaded();
-        });
         self.nextImageNdx = 1;
-        self.imageNames = JSON.parse(images);
-        self.numImages = self.imageNames.requireNames.length;
+        self.numImages = self.imageNames.length;
         self.loadImages = self._loadImages.bind(self);
+        self.images.subscribe(() => self.imageLoaded());
     }
     SlideShowCanvas.prototype._loadImages = function() {
         let self = this;
-        self.imageNames.requireNames.forEach(function(reqName) {
-            require([reqName], function(img) {
+        self.imageNames.forEach((name) => {
+            require(["image!" + name], (img) => {
                self.images.push(img); 
             });
         });
-    },
+    };
     SlideShowCanvas.prototype.sizeImage = function (img) {
         var self = this;
         if (!self.canvas) {
@@ -69,9 +67,6 @@ define(['knockout', 'text!templates/slideshow-canvas.html', 'text!json/slide-sho
 
     SlideShowCanvas.prototype.imageLoaded = function () {
         var self = this;
-        if (self.images().length === self.numImages) {
-            self.subscription.dispose();
-        }
         var imgData = self.sizeImage(self.images()[self.images().length - 1]);
         self.imageDataAry.push(imgData);
         if (!self.lastT) {

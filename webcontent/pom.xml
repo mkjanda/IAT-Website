@@ -36,7 +36,7 @@
                         </goals>
                         <phase>generate-resources</phase>
                         <configuration>
-                            <arguments>npx npm install sass</arguments>
+                            <arguments>npm install sass</arguments>
                         </configuration>
                     </execution>
                     <execution>
