@@ -1,7 +1,7 @@
 # IAT Software Website
 <p>This is the material that can be used to build the website at https://iatsoftware.net, a site constructed to both publicize and provide documentation for IAT Design/p>
 
-	<b>Getting it running</b>S
+	<b>Getting It Running</b>
 <ol>
   <li><a href="#building">Building It</a></li>
   <li><a href="#database">Setting up the database</a></li>
