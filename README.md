@@ -20,6 +20,7 @@
 
 <p>Before building take a look at the following file <a href="server/src/mail/resources/environment.properties>environment.properties</a> shown below.</p>
 	
+	
 ``` properties
 # The port the site will run on.
 server.port=8082
