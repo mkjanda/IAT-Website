@@ -71,7 +71,7 @@ mail.image.header-classpath-location=classpath:email/images/header.png
 
 <h2 id="database">Setting up the database</h2>
 
-<p>The file <a href="https://github.com/mkjanda/IAT-Website/blob/master/iat.sql">iat.sql</a> must be imported into your database. I reccomend using MySQL or Maria because that's all I've tested with. The command <b>source iat.sql</b> should be sufficient if you started MySQL from within the root directory of the project. Otherwise, <b>mysql [ -u root -p ] < iat.sql</b> be executed in your database to enable interactive content. It must be run as root because it creates a user and grants privileges to that user. The following file should also be examined: <a href="https://github.com/mkjanda/IAT-Website/blob/master/server/src/main/resources/environment.properties">environment.properties</a>
+<p>The file <a href="https://github.com/mkjanda/IAT-Website/blob/master/iat.sql">iat.sql</a> must be imported into your database. I reccomend using MySQL or Maria because that's all I've tested with. The command <b>source iat.sql</b> should be sufficient if you started MySQL from within the root directory of the project. Otherwise, <b>mysql [ -u root -p ] < iat.sql</b> be executed in your database to enable interactive content. It must be run as root because it creates a user and grants privileges to that user. Any deviations from <b>iat.sql</b> should be reflected by modifications in <b>environment.properties</b></a>
   
 ``` properties
 environment.downloadControllerPath=/DownloadSoftware
