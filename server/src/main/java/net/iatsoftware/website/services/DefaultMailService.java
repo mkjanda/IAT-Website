@@ -35,7 +35,7 @@ import javax.inject.Inject;
 import javax.mail.internet.MimeMessage;
 
 @Service("MailService")
-@PropertySource("classpath:email/email-config.properties")
+@PropertySource("classpath:environment.properties")
 public class DefaultMailService implements MailService {
 
     @Value("${mail.user-personal}")

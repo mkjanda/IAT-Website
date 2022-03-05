@@ -7,18 +7,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
-import org.springframework.web.context.WebApplicationContext;
-
-import java.util.Properties;
-import javax.inject.Inject;
 
 @Configuration
-@PropertySource("classpath:email/email-config.properties")
+@PropertySource("classpath:email/environment.properties")
 public class SpringMailConfig  {
-    
-    private final String JAVA_MAIL_FILE = "classpath:email/java-mail-config.properties";
-    @Inject private WebApplicationContext applicationContext;
-    
     
     @Value("${mail.host}")
     private String mailServerHost;
@@ -43,10 +35,6 @@ public class SpringMailConfig  {
         mailSender.setProtocol(mailServerProtocol);
         mailSender.setUsername(mailServerUsername);
         mailSender.setPassword(mailServerPassword);
-        
-        final Properties javaMailProperties = new Properties();
-        javaMailProperties.load(applicationContext.getResource(JAVA_MAIL_FILE).getInputStream());
-        mailSender.setJavaMailProperties(javaMailProperties);
         return mailSender;
     }
 }

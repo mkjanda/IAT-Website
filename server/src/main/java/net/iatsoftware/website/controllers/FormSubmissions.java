@@ -47,8 +47,7 @@ import javax.validation.Valid;
 @Controller
 @RequestMapping("/FormSubmissions")
 @PropertySources({
-    @PropertySource("classpath:application.properties"),
-    @PropertySource("classpath:email/email-config.properties")})
+    @PropertySource("classpath:environment.properties")})
 public class FormSubmissions {
 
     public FormSubmissions(){}
