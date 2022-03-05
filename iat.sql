@@ -745,5 +745,5 @@ CREATE TABLE `users` (
 
 -- Dump completed on 2022-02-01  1:49:34
 
-create user 'iat'@'localhost' identified by 'ezasabcdefg';
+create user 'iat'@'localhost' identified by 'vze4bcmipjiQfOwm';
 grant all on iatserver_db.* to 'iat'@'localhost';
