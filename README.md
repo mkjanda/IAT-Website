@@ -65,6 +65,7 @@ mail.image.header-url=https://iatsoftware.net/images/header.png
 mail.image.header-classpath-location=classpath:email/images/header.png
 ```
 	
+<p>You don't 	
 <p>Just use Apache Maven. Make sure it's on your path and type <b>mvn install</b> in the root directory of the project. You'll find your executable in <b>server/target</b> after the build is complete</p>
 
 
