@@ -6,6 +6,7 @@
   <li><a href="#building">Building It</a></li>
   <li><a href="#database">Setting up the database</a></li>
   <li><a href="#nginx">Setting up nginx</a></li>
+  <li><a href="#screenshots">What it Looks Like</a></li>
 </ol>
 
 
