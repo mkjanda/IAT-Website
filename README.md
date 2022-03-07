@@ -1,7 +1,9 @@
 # IAT Software Website
-<p>This is the material that can be used to build the website at https://iatsoftware.net, a site constructed to both publicize and provide documentation for IAT Design/p>
+<p>This is the material that can be used to build the website at https://iatsoftware.net, a site constructed to both publicize and provide documentation for IAT Design</p>
 
-<description>Getting it running</description>
+
+	<description>Getting It Running</description>
+
 <ol>
   <li><a href="#building">Building It</a></li>
   <li><a href="#database">Setting up the database</a></li>
@@ -93,7 +95,8 @@ server {
 }
 ```
 
-![2022-03-05 (6)](https://user-images.githubusercontent.com/35156960/156900328-ed9efe96-0556-4b2e-b6a4-b8733eb6a527.png)
-![2022-03-05 (8)](https://user-images.githubusercontent.com/35156960/156900351-eeff9f45-6fbd-4c86-88fd-d7a751995517.png)
+<h2 id="screenshots">What It Looks Like</h2>
+
+![website](https://user-images.githubusercontent.com/35156960/156902902-5e430709-eccb-4927-b9cf-48845d322633.gif)
 
 
