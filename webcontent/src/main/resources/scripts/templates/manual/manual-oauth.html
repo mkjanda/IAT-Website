@@ -1,4 +1,4 @@
-<!--<!-- ko if: viewState() === 'manual-oauth' -->
+
 <div id="manual-oauth">
     <svg-header params="caption: 'Direct Data Retrieval', template : smallHeaderTemplate, display : display">
     </svg-header>
@@ -79,7 +79,10 @@
         <span class="hilightHover" data-bind="event : { click : oauthGetRequest }, text : authUrl"></span>
     </p>
     <!-- ko if: oauthGetLinkClicked() -->
-    <iframe data-bind="attr : { src : authUrl, height : requestAuthFrameHeight() ? requestAuthFrameHeight() : 2 }" style="overflow: clip; border: none; box-sizing: border-box;" width="100%"></iframe>
+    <div style="background-image: url(../../images/oauth-sample-background.png); background-size: 100% auto; overflow: clip; background-repeat: repeat-y; padding: 20px 4%;" 
+        data-bind="foreach: oauthLines.html">
+        <p style="margin: 0px 0px;" data-bind="html: $data"></p>
+    </div>
     <p>
         Again, you should <span class="hilight">NEVER</span>, embed your client secret in a webpage or mobile app. Client secrets are preceded with the word "secret" specifically to discourage you from doing so. Click one of the two authentication methods
         above.
@@ -150,10 +153,10 @@
         returns all data collected for that test-taker.
     </p>
     <!-- /ko -->
+
 </div>
-<!--<!-- /ko -->
-<!--
-<!-- ko if: viewState() === 'requestAuthResponse' 
+<!--ffdfdfdfdf
+ko if: viewState() === 'requestAuthResponse' 
 <div id="oauthWalkthrough1">
     <svg-header params="caption : 'Requesting Authentication', template : sectionHeaderTemplate, display : display">
     </svg-header>
@@ -196,4 +199,4 @@
 
     </div>
 </div>
-<!-- /ko -->
+-->

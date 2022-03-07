@@ -204,7 +204,7 @@ public class FormSubmissions {
         return new ResponseEntity<>("reported", HttpStatus.OK);
     }
 
-    @PostMapping(value = "/OauthRegistration", produces = "text/json")
+    @RequestMapping(value = "/OauthRegistration", produces = "text/json")
     public ResponseEntity<OauthRegistrationResponse> registerOauth(@Valid OauthRegistrationForm form, Errors errors,
             @RequestHeader(name="token") String token) {
             if (errors.hasErrors()) {

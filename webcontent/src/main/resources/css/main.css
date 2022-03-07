@@ -1049,11 +1049,11 @@ div.manualContent div.json {
 }
 div.manualContent div.json p {
   font-family: hobeaux-rococeaux-sherman;
-  font-size: 12px;
+  font-size: 15px;
   letter-spacing: 1px;
   margin: 0px;
   padding: 0px;
-  line-height: 16px;
+  line-height: 18px;
   color: #982027;
   text-align: left;
   margin: 0px;
@@ -1074,11 +1074,11 @@ div.manualContent div.sidebar {
 }
 div.manualContent div.sidebar p {
   font-family: hobeaux-rococeaux-sherman;
-  font-size: 12px;
+  font-size: 15px;
   letter-spacing: 1px;
   margin: 0px;
   padding: 0px;
-  line-height: 16px;
+  line-height: 18px;
   color: #982027;
   text-align: left;
 }
@@ -1136,11 +1136,11 @@ div.manualContent div.inlineImgDiv div.sidebar {
 }
 div.manualContent div.inlineImgDiv div.sidebar p {
   font-family: hobeaux-rococeaux-sherman;
-  font-size: 12px;
+  font-size: 15px;
   letter-spacing: 1px;
   margin: 0px;
   padding: 0px;
-  line-height: 16px;
+  line-height: 18px;
   color: #982027;
   text-align: left;
 }
@@ -1171,11 +1171,11 @@ div.manualContent div.inline2ImgDiv div.sidebar {
 }
 div.manualContent div.inline2ImgDiv div.sidebar p {
   font-family: hobeaux-rococeaux-sherman;
-  font-size: 12px;
+  font-size: 15px;
   letter-spacing: 1px;
   margin: 0px;
   padding: 0px;
-  line-height: 16px;
+  line-height: 18px;
   color: #982027;
   text-align: left;
 }
@@ -1316,11 +1316,11 @@ div.manualContent div.smallInlineImgDiv div.sidebar {
 div.manualContent div.smallInlineImgDiv div.sidebar p {
   text-align: left;
   font-family: hobeaux-rococeaux-sherman;
-  font-size: 12px;
+  font-size: 15px;
   letter-spacing: 1px;
   margin: 0px;
   padding: 0px;
-  line-height: 16px;
+  line-height: 18px;
   color: #982027;
   text-align: left;
 }
@@ -1350,11 +1350,11 @@ div.manualContent div#questionnaireResponses div.questionnaireItem div.responseE
 div.manualContent div#questionnaireResponses div.questionnaireItem div.responseExplanation p {
   padding: 20px 35px;
   font-family: hobeaux-rococeaux-sherman;
-  font-size: 12px;
+  font-size: 15px;
   letter-spacing: 1px;
   margin: 0px;
   padding: 0px;
-  line-height: 16px;
+  line-height: 18px;
   color: #982027;
   text-align: left;
 }

@@ -18,14 +18,14 @@ define(['knockout', 'modules/font-face-map', 'text!templates/page-body.html', 't
                 self.display(evt.state);
             };
             window.history.pushState({ page : 'page' }, document.title);
-            self.display.subscribe
             self.manualSection = ko.pureComputed(function () {
                 if (self.display().page !== "manual")
                     return null;
                 var manualSection = null;
-                self.sections.manual.forEach(function (sec) {
-                    if (sec.component === self.display().section)
+                self.sections.manual.forEach((sec)  => {
+                    if (sec.component === self.display().section) {
                         manualSection = sec;
+                    }
                 });
                 return manualSection;
             });
