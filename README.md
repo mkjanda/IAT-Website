@@ -1,10 +1,9 @@
 # IAT Software Website
 <p>This is the material that can be used to build the website at https://iatsoftware.net, a site constructed to both publicize and provide documentation for IAT Design</p>
 
-
-	<description>Getting It Running</description>
-
+### Getting It Running
 <ol>
+	<li><a href="#before-building">Before You Build</a></li>
   <li><a href="#building">Building It</a></li>
   <li><a href="#database">Setting up the database</a></li>
   <li><a href="#nginx">Setting up nginx</a></li>
@@ -13,7 +12,7 @@
 
 
 
-<h2 id="building">Building It</h2>
+<h2 id="before-building">Before You Build</h2>
 
 <p>Before building take a look at the following file <a href="server/src/mail/resources/environment.properties">environment.properties</a> shown below.</p>
 	
@@ -62,7 +61,10 @@ mail.image.header-url=https://iatsoftware.net/images/header.png
 mail.image.header-classpath-location=classpath:email/images/header.png
 ```
 
-<p>You don't have to change any of it provided you import <b>iat.sql</b> as described below and your copy of MySQL or Maria runs on port 3306, which is the default. Building should be simple. This is the link to download Maven. the only build tool required: https://maven.apache.org/download.cgi  NodeJS will be installed on your machine during the build, at the user level. Of course, you need a copy of the Java SDK. Microsoft began shipping Java with Windows 10. Installation on Linux varies by distribution.</p>
+<p>You don't have to change any of it provided you import <b>iat.sql</b> as described below and your copy of MySQL or Maria runs on port 3306, which is the default.</p>
+
+<h2 id="building">Building It</h2>
+Building should be simple. This is the link to download Maven. the only build tool required: https://maven.apache.org/download.cgi  NodeJS will be installed on your machine during the build, at the user level. Of course, you need a copy of the Java SDK. Microsoft began shipping Java with Windows 10. Installation on Linux varies by distribution.</p>
 <p>You'll need to put mavenn on your path. It will appear there automatically if you used a Linux tool such as <b>apt</b> to install it. Otherwise, Google is your friend. Navigate to the home directory of the IAT project in a command prompt and type "mvn install" and it should produce a .jar file in theh <b>site/target</b> folder. Double click on it to run it. You'll need to make it executabe on Linux or use <b>java -jar iat-website-1.0.2.jar</b></p>
 
 
