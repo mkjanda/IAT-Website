@@ -27,7 +27,7 @@ mysql.datasource.url=jdbc:mysql://localhost:3306/iatserver_db
 # Put your database name, user, and password here. These values will do if you 
 # imported the database from github
 mysql.datasource.user=iat
-mysql.datasource.password=vze5bcmipjiQfOwm
+mysql.datasource.password=vze4bcmipjiQfOwm
 mysql.datasource.database-name=iatserver_db
 
 #best to leave unmodified
@@ -36,7 +36,7 @@ mysql.datasource.character-set=utf8
 environment.downloadControllerPath=/DownloadSoftware
 
 # The path, not URI, of the IAT Design application
-environment.clientSoftwareFilePath=/var/www/iat/IATDesign.zip
+environment.clientSoftwareFilePath=/var/www/iat/ClientSoftware/IATDesign.zip
 
 # Settings for automated emails. Substitute your own values for mail.username 
 # and mail.password. This is the user that sends mail. mail.user-personal and 
@@ -49,16 +49,18 @@ mail.smtp.quitwait=false
 mail.host=127.0.0.1
 mail.port=25
 mail.protocol=smtp
-mail.username=iatsoftware
-mail.password=NDRD25Bb_HTNF42c
-mail.username.error-reprt-recipient=sysinfo
+#substitute your value here
+mail.username=iatsoftware-website
+#substitute your value here
+mail.password=abc
+mail.error-report-recipient.username=sysinfo
 mail.user-personal.errorreport=Error Reporter
 mail.user-personal=IAT Software
 mail.user-address=iatsoftware@iatsoftware.net
 mail.image.logo-url=https://iatsoftware/images/logo.png
 mail.image.logo-classpath-location=classpath:email/images/logo.png
 mail.image.header-url=https://iatsoftware.net/images/header.png
-mail.image.header-classpath-location=classpath:email/images/header.png
+mail.image.header-classpath-location=classpath:email/images/header.png```
 ```
 
 <p>You don't have to change any of it provided you import <b>iat.sql</b> as described below and your copy of MySQL or Maria runs on port 3306, which is the default.</p>
