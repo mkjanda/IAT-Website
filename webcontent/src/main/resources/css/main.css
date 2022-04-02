@@ -37,22 +37,22 @@
 }
 body div#headerWrapper {
   text-align: center;
-  background: #807396;
+  background: rgb(128, 115, 150);
   position: fixed;
   top: 0px;
   left: 0px;
-  width: 100%;
   z-index: -10;
   display: inline-block;
 }
 body div#headerWrapper div {
-  width: 100%;
-  min-height: 100%;
   margin: 0px auto 25px auto;
   position: absolute;
   top: 0px;
   left: 0px;
-  display: block;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  overflow: hidden;
   background-size: cover;
 }
 body div#headerWrapper div.lowRes {
@@ -79,7 +79,7 @@ div#mainMenuBarWrapper {
   padding: 0px;
   width: 100%;
   z-index: 10;
-  height: 40px;
+  height: 60px;
   font-size: 0px;
 }
 div#mainMenuBarWrapper div {
@@ -91,22 +91,22 @@ div#mainMenuBarWrapper svg {
   padding: 0px;
 }
 div#mainMenuBarWrapper svg linearGradient.menuButtonTextGradient stop:nth-of-type(1) {
-  stop-color: #47243b;
+  stop-color: rgb(71, 36, 59);
 }
 div#mainMenuBarWrapper svg linearGradient.menuButtonTextGradient stop:nth-of-type(2) {
-  stop-color: #973c6c;
+  stop-color: rgb(151, 60, 108);
 }
 div#mainMenuBarWrapper svg linearGradient.menuButtonTextGradient stop:nth-of-type(3) {
-  stop-color: black;
+  stop-color: rgb(0, 0, 0);
 }
 div#mainMenuBarWrapper svg linearGradient.menuButtonHilightedGradient stop:nth-of-type(1) {
-  stop-color: #982027;
+  stop-color: rgb(152, 32, 39);
 }
 div#mainMenuBarWrapper svg linearGradient.menuButtonHilightedGradient stop:nth-of-type(2) {
-  stop-color: #ce3175;
+  stop-color: rgb(206, 49, 117);
 }
 div#mainMenuBarWrapper svg linearGradient.menuButtonHilightedGradient stop:nth-of-type(3) {
-  stop-color: #b91228;
+  stop-color: rgb(185, 18, 40);
 }
 div#mainMenuBarWrapper div#mainMenuBar {
   display: inline-block;
@@ -114,59 +114,60 @@ div#mainMenuBarWrapper div#mainMenuBar {
   margin: 0px;
   padding: 0px;
   text-align: center;
-  height: 40px;
+  height: 60px;
 }
 div#mainMenuBarWrapper div#mainMenuBar svg linearGradient.menuBarGradient stop:nth-of-type(1) {
-  stop-color: #ab9895;
+  stop-color: rgb(171, 152, 149);
 }
 div#mainMenuBarWrapper div#mainMenuBar svg linearGradient.menuBarGradient stop:nth-of-type(2) {
-  stop-color: #807396;
+  stop-color: rgb(128, 115, 150);
 }
 div#mainMenuBarWrapper div#mainMenuBar svg linearGradient.menuBarGradient stop:nth-of-type(3) {
-  stop-color: #ab9895;
+  stop-color: rgb(171, 152, 149);
 }
 div#mainMenuBarWrapper div#mainMenuBar svg.menuBarBackground {
   width: 100%;
+  height: 60px;
   margin: 0px;
   padding: 0px;
 }
 div#mainMenuBarWrapper div#mainMenuBar div#mainMenuButtonWrapper {
-  display: block;
-  text-align: center;
-  width: 1200px;
+  display: flex;
+  flex-flow: row nowrap;
+  width: max-content;
   z-index: 101;
   margin: 0px auto;
   padding: 0px;
   position: relative;
-  top: -40px;
+  top: -60px;
   left: 0px;
-  height: 40px;
+  height: 60px;
 }
 div#mainMenuBarWrapper div#mainMenuBar div#mainMenuButtonWrapper div.menuButton {
   display: inline-block;
   text-align: left;
   cursor: pointer;
-  height: 40px;
+  height: 60px;
   font-family: myriad-pro;
   font-weight: 900;
 }
 div#mainMenuBarWrapper div#mainMenuBar div#mainMenuButtonWrapper div.menuButton svg {
-  height: 40px;
+  height: 60px;
 }
-div#mainMenuBarWrapper div#mainMenuBar div#mainMenuButtonWrapper text.mousedOver {
-  fill: #88b04b;
-}
-div#mainMenuBarWrapper div.expandedMenuButton {
+div#mainMenuBarWrapper div#mainMenuBar div#mainMenuButtonWrapper div.expandedMenuButton {
   cursor: pointer;
   text-align: center;
 }
-div#mainMenuBarWrapper div.expandedMenuButton svg {
+div#mainMenuBarWrapper div#mainMenuBar div#mainMenuButtonWrapper div.expandedMenuButton svg {
   margin: 0px 0px 0px 0px;
   padding: 0px;
 }
-div#mainMenuBarWrapper div.expandedMenuButton svg text {
+div#mainMenuBarWrapper div#mainMenuBar div#mainMenuButtonWrapper div.expandedMenuButton svg text {
   font-family: myriad-pro;
   font-weight: 900;
+}
+div#mainMenuBarWrapper div#mainMenuBar div#mainMenuButtonWrapper text.mousedOver {
+  fill: rgb(136, 176, 75);
 }
 
 /* greenery palettes */
@@ -228,8 +229,7 @@ div#mainMenuBarWrapper div.expandedMenuButton svg text {
 }
 */
 div#pageContentWrapper {
-  text-align: center;
-  background: #edf1fe;
+  background: white;
   position: relative;
   top: 450px;
   left: 0px;
@@ -237,32 +237,31 @@ div#pageContentWrapper {
   min-width: 100%;
 }
 div#pageContentWrapper div.pageContent {
-  width: 1200px;
+  width: min(1000px, 100%);
   text-align: left;
   margin: 20px auto 0px auto;
 }
 div#pageContentWrapper div.pageContent p {
-  color: #a6594c;
-  text-shadow: 1px 1px 0px rgba(123, 67, 104, 0.5);
-  font-family: oxtail;
-  font-size: 20px;
-  line-height: 22px;
+  color: rgb(95, 75, 139);
+  font-family: museo-sans-rounded;
+  font-size: 26px;
+  line-height: 30px;
 }
 div#pageContentWrapper div.pageContent p span.buttonReference {
-  color: #7b4368;
+  color: rgb(123, 67, 104);
 }
 div#pageContentWrapper div.pageContent p span.hilight {
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div#pageContentWrapper div.pageContent p span.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
   cursor: pointer;
 }
 div#pageContentWrapper div.pageContent p span.hilightHover:hover {
   color: #c01352;
 }
 div#pageContentWrapper div.pageContent p a {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
   text-decoration: none;
 }
 div#pageContentWrapper div.pageContent p a:hover {
@@ -271,41 +270,40 @@ div#pageContentWrapper div.pageContent p a:hover {
 }
 div#pageContentWrapper div.pageContent div.finePrint p {
   font-family: myriad-pro;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
   letter-spacing: 2px;
-  color: #88b04b;
-  text-shadow: 1px 1px 0px #5f5b4c;
-  line-height: 18px;
-  font-size: 11px;
+  color: rgb(136, 176, 75);
+  text-shadow: 1px 1px 0px rgb(95, 91, 76);
+  line-height: 20px;
+  font-size: 16px;
 }
 div#pageContentWrapper div.pageContent div {
   display: block;
 }
 div#pageContentWrapper div.pageContent div.leftMenuBar {
-  color: #a6594c;
-  text-shadow: 1px 1px 0px rgba(123, 67, 104, 0.5);
-  font-family: oxtail;
-  font-size: 20px;
-  line-height: 22px;
+  color: rgb(95, 75, 139);
+  font-family: museo-sans-rounded;
+  font-size: 26px;
+  line-height: 30px;
   display: inline-block;
   width: 240px;
 }
 div#pageContentWrapper div.pageContent div.leftMenuBar span.buttonReference {
-  color: #7b4368;
+  color: rgb(123, 67, 104);
 }
 div#pageContentWrapper div.pageContent div.leftMenuBar span.hilight {
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div#pageContentWrapper div.pageContent div.leftMenuBar span.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
   cursor: pointer;
 }
 div#pageContentWrapper div.pageContent div.leftMenuBar span.hilightHover:hover {
   color: #c01352;
 }
 div#pageContentWrapper div.pageContent div.leftMenuBar a {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
   text-decoration: none;
 }
 div#pageContentWrapper div.pageContent div.leftMenuBar a:hover {
@@ -339,84 +337,84 @@ div#pageContentWrapper div.pageContent div.download-notification {
   width: 60%;
 }
 div#pageContentWrapper div.pageContent div.download-notification p {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div#pageContentWrapper div.pageContent div.download-notification p.hilight {
   color: #c01352;
 }
 div#pageContentWrapper div.pageContent div.download-notification p.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div#pageContentWrapper div.pageContent div.download-notification p.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div#pageContentWrapper div.pageContent div.download-notification li {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div#pageContentWrapper div.pageContent div.download-notification li.hilight {
   color: #c01352;
 }
 div#pageContentWrapper div.pageContent div.download-notification li.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div#pageContentWrapper div.pageContent div.download-notification li.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div#pageContentWrapper div.pageContent div.download-notification h2 {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div#pageContentWrapper div.pageContent div.download-notification h2.hilight {
   color: #c01352;
 }
 div#pageContentWrapper div.pageContent div.download-notification h2.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div#pageContentWrapper div.pageContent div.download-notification h2.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div#pageContentWrapper div.pageContent div.download-notification span {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div#pageContentWrapper div.pageContent div.download-notification span.hilight {
   color: #c01352;
 }
 div#pageContentWrapper div.pageContent div.download-notification span.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div#pageContentWrapper div.pageContent div.download-notification span.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div#pageContentWrapper div.pageContent div.download-notification pre {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div#pageContentWrapper div.pageContent div.download-notification pre.hilight {
   color: #c01352;
 }
 div#pageContentWrapper div.pageContent div.download-notification pre.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div#pageContentWrapper div.pageContent div.download-notification pre.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div#pageContentWrapper div.pageContent div.emailing-product-key-notification {
   background-image: url("../images/whitetexture.svg");
@@ -435,84 +433,84 @@ div#pageContentWrapper div.pageContent div.emailing-product-key-notification {
   width: 60%;
 }
 div#pageContentWrapper div.pageContent div.emailing-product-key-notification p {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div#pageContentWrapper div.pageContent div.emailing-product-key-notification p.hilight {
   color: #c01352;
 }
 div#pageContentWrapper div.pageContent div.emailing-product-key-notification p.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div#pageContentWrapper div.pageContent div.emailing-product-key-notification p.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div#pageContentWrapper div.pageContent div.emailing-product-key-notification li {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div#pageContentWrapper div.pageContent div.emailing-product-key-notification li.hilight {
   color: #c01352;
 }
 div#pageContentWrapper div.pageContent div.emailing-product-key-notification li.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div#pageContentWrapper div.pageContent div.emailing-product-key-notification li.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div#pageContentWrapper div.pageContent div.emailing-product-key-notification h2 {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div#pageContentWrapper div.pageContent div.emailing-product-key-notification h2.hilight {
   color: #c01352;
 }
 div#pageContentWrapper div.pageContent div.emailing-product-key-notification h2.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div#pageContentWrapper div.pageContent div.emailing-product-key-notification h2.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div#pageContentWrapper div.pageContent div.emailing-product-key-notification span {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div#pageContentWrapper div.pageContent div.emailing-product-key-notification span.hilight {
   color: #c01352;
 }
 div#pageContentWrapper div.pageContent div.emailing-product-key-notification span.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div#pageContentWrapper div.pageContent div.emailing-product-key-notification span.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div#pageContentWrapper div.pageContent div.emailing-product-key-notification pre {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div#pageContentWrapper div.pageContent div.emailing-product-key-notification pre.hilight {
   color: #c01352;
 }
 div#pageContentWrapper div.pageContent div.emailing-product-key-notification pre.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div#pageContentWrapper div.pageContent div.emailing-product-key-notification pre.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div#pageContentWrapper div.pageContent div.emailing-product-key-notification p span.name {
   vertical-align: baseline;
@@ -521,19 +519,16 @@ div#pageContentWrapper div.pageContent div.emailing-product-key-notification p s
   font-weight: 900;
   font-size: 20px;
 }
+div#pageContentWrapper div.pageContent div.svg-header {
+  margin-bottom: 10px;
+}
 div#pageContentWrapper div.pageContent div#sampleTests {
   text-align: center;
+  display: flex;
+  width: fit-content;
 }
 div#pageContentWrapper div.pageContent div#sampleTests div.sampleTestsColumn {
-  display: inline-block;
   vertical-align: top;
-  width: 575px;
-}
-div#pageContentWrapper div.pageContent div#sampleTests div.sampleTestsColumn div.sampleTest:nth-child(odd) {
-  display: inline-block;
-}
-div#pageContentWrapper div.pageContent div#sampleTests div.sampleTestsColumn div.sampleTest:nth-child(even) {
-  display: block;
 }
 div#pageContentWrapper div.pageContent div#sampleTests div.sampleTestsColumn div.sampleTest {
   border-image: url("../images/purple-ice-border.png");
@@ -547,8 +542,8 @@ div#pageContentWrapper div.pageContent div#sampleTests div.sampleTestsColumn div
   margin-left: 15px;
   margin-right: 15px;
   margin-bottom: 30px;
-  width: 525px;
-  background: #807396;
+  width: min-content;
+  background: rgb(128, 115, 150);
 }
 div#pageContentWrapper div.pageContent div#sampleTests div.sampleTestsColumn div.sampleTest div.header {
   margin-top: 35px;
@@ -558,7 +553,7 @@ div#pageContentWrapper div.pageContent div#sampleTests div.sampleTestsColumn div
   text-align: left;
   font-family: TektonPro-BoldExt;
   font-size: 24px;
-  color: #7b4368;
+  color: rgb(123, 67, 104);
   text-shadow: 1px 1px 0px #000;
   text-indent: 25px;
   padding: 20px;
@@ -568,16 +563,16 @@ div#pageContentWrapper div.pageContent div.serverError {
 }
 div#pageContentWrapper div.pageContent div.serverError p {
   font-family: myriad-pro;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
   letter-spacing: 2px;
-  color: #88b04b;
-  text-shadow: 1px 1px 0px #5f5b4c;
-  line-height: 18px;
+  color: rgb(136, 176, 75);
+  text-shadow: 1px 1px 0px rgb(95, 91, 76);
+  line-height: 20px;
   font-size: 24px;
   line-height: 26px;
 }
-div#pageContentWrapper div.pageContent img#contactEmail {
+div#pageContentWrapper div.pageContent div#contactEmail {
   width: 800px;
   margin-left: 250px;
   margin-bottom: 50px;
@@ -585,7 +580,6 @@ div#pageContentWrapper div.pageContent img#contactEmail {
 div#pageContentWrapper div#features div.featureMenu {
   vertical-align: top;
   display: inline-block;
-  width: 18%;
 }
 div#pageContentWrapper div#features div.featureMenu div.featureButton {
   cursor: pointer;
@@ -598,65 +592,59 @@ div#pageContentWrapper div#features div.featureMenu div.featureButton svg text {
   font-weight: 900;
 }
 div#pageContentWrapper div#features div.featureMenu div.featureButton svg.unselected g.inner rect {
-  fill: white;
+  fill: rgb(255, 255, 255);
   opacity: 0.5;
 }
 div#pageContentWrapper div#features div.featureMenu div.featureButton svg.unselected g.inner text {
-  fill: #7b4368;
+  fill: rgb(123, 67, 104);
 }
 div#pageContentWrapper div#features div.featureMenu div.featureButton svg.selected g.inner rect {
-  fill: white;
+  fill: rgb(255, 255, 255);
   opacity: 0.5;
 }
 div#pageContentWrapper div#features div.featureMenu div.featureButton svg.selected g.inner text {
-  fill: #ce3175;
+  fill: rgb(206, 49, 117);
 }
 div#pageContentWrapper div#features div.featureMenu div.featureButton svg.hilighted g.inner rect {
-  fill: #7b4368;
+  fill: rgb(123, 67, 104);
   opacity: 0.5;
 }
 div#pageContentWrapper div#features div.featureMenu div.featureButton svg.hilighted g.inner text {
-  fill: #ce3175;
+  fill: rgb(206, 49, 117);
 }
 div#pageContentWrapper div#features div.featuresContent {
   display: inline-block;
-  width: 80%;
+  width: 75%;
 }
 div#pageContentWrapper div#sectionTheIat div.leftResponseKey {
   position: absolute;
-  left: 75px;
-  top: 0px;
+  left: 0px;
   width: 250px;
   height: 265px;
 }
 div#pageContentWrapper div#sectionTheIat div.rightResponseKey {
   position: absolute;
-  left: 900px;
+  right: 0px;
   width: 250px;
-  top: 0px;
   height: 265px;
 }
 div#pageContentWrapper div#sectionTheIat div#mlkSample {
   display: block;
-  height: 760px;
+  height: 800px;
+  text-align: center;
 }
 div#pageContentWrapper div#sectionTheIat div#mlkSample img.stimulus {
-  position: absolute;
-  left: 350px;
-  top: 180px;
-  width: 500px;
-  height: 570px;
+  position: relative;
+  top: 225px;
 }
 div#pageContentWrapper div#sectionTheIat div#brokenHeartSample {
   display: block;
+  text-align: center;
   height: 560px;
 }
 div#pageContentWrapper div#sectionTheIat div#brokenHeartSample img.stimulus {
-  position: absolute;
-  left: 375px;
+  position: relative;
   top: 140px;
-  width: 453px;
-  height: 401px;
 }
 
 /* greenery palettes */
@@ -793,84 +781,84 @@ div#pageContentWrapper div.pageContent form {
   width: 60%;
 }
 div#pageContentWrapper div.pageContent form p {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div#pageContentWrapper div.pageContent form p.hilight {
   color: #c01352;
 }
 div#pageContentWrapper div.pageContent form p.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div#pageContentWrapper div.pageContent form p.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div#pageContentWrapper div.pageContent form li {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div#pageContentWrapper div.pageContent form li.hilight {
   color: #c01352;
 }
 div#pageContentWrapper div.pageContent form li.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div#pageContentWrapper div.pageContent form li.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div#pageContentWrapper div.pageContent form h2 {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div#pageContentWrapper div.pageContent form h2.hilight {
   color: #c01352;
 }
 div#pageContentWrapper div.pageContent form h2.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div#pageContentWrapper div.pageContent form h2.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div#pageContentWrapper div.pageContent form span {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div#pageContentWrapper div.pageContent form span.hilight {
   color: #c01352;
 }
 div#pageContentWrapper div.pageContent form span.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div#pageContentWrapper div.pageContent form span.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div#pageContentWrapper div.pageContent form pre {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div#pageContentWrapper div.pageContent form pre.hilight {
   color: #c01352;
 }
 div#pageContentWrapper div.pageContent form pre.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div#pageContentWrapper div.pageContent form pre.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div#pageContentWrapper div.pageContent form h2 {
   font-size: 22px;
@@ -878,8 +866,8 @@ div#pageContentWrapper div.pageContent form h2 {
 }
 div#pageContentWrapper div.pageContent form p.errorMessage,
 div#pageContentWrapper div.pageContent form h2.globalErrorMessage {
-  color: #982027;
-  text-shadow: 1px 1px 0px #7b4368;
+  color: rgb(152, 32, 39);
+  text-shadow: 1px 1px 0px rgb(123, 67, 104);
 }
 div#pageContentWrapper div.pageContent form span.pleaseWait {
   text-align: center;
@@ -895,7 +883,7 @@ div#pageContentWrapper div.pageContent form div.columns div:nth-of-type(n) {
   box-sizing: border-box;
 }
 div#pageContentWrapper div.pageContent form div.columns div:nth-of-type(n) div {
-  border-left: 1px solid #807396;
+  border-left: 1px solid rgb(128, 115, 150);
   padding: 20px 0px 20px 10px;
 }
 div#pageContentWrapper div.pageContent form div.columns div:first-of-type div {
@@ -904,25 +892,20 @@ div#pageContentWrapper div.pageContent form div.columns div:first-of-type div {
 div#pageContentWrapper div.pageContent form div.formDataGrid {
   text-align: left;
   display: grid;
-  grid-template-columns: max-content max-content minmax(50%, 450px) auto;
-  grid-auto-rows: minmax(40px, auto);
+  grid-template-columns: min-content 2fr 4fr 5fr;
+  grid-auto-rows: minmax(60px, auto);
   min-width: 100%;
 }
 div#pageContentWrapper div.pageContent form div.formDataGrid p {
-  grid-column: 1/5;
-}
-div#pageContentWrapper div.pageContent form div.formDataGrid p.rightInputLabel,
-div#pageContentWrapper div.pageContent form div.formDataGrid p.leftInputLabel {
-  margin: auto 10px 15px auto;
-  margin: 0px;
-  align-self: center;
+  grid-column: 1/4;
 }
 div#pageContentWrapper div.pageContent form div.formDataGrid p.leftInputLabel {
-  grid-column: 2/3;
+  grid-column: 1;
   justify-self: flex-end;
+  white-space: nowrap;
 }
 div#pageContentWrapper div.pageContent form div.formDataGrid p.leftInputLabel + input[type=text] {
-  grid-column: 3;
+  grid-column: 2/5;
   align-self: center;
   min-width: 65%;
   margin-left: 5px;
@@ -930,15 +913,16 @@ div#pageContentWrapper div.pageContent form div.formDataGrid p.leftInputLabel + 
 div#pageContentWrapper div.pageContent form div.formDataGrid input[type=checkbox],
 div#pageContentWrapper div.pageContent form div.formDataGrid input[type=radio] {
   grid-column: 1;
-  margin-right: 5px;
+  margin-right: 10px;
   align-self: center;
+  justify-self: flex-end;
 }
 div#pageContentWrapper div.pageContent form div.formDataGrid p.rightInputLabel {
-  grid-column: 2/4;
+  grid-column: 2/5;
   justify-self: flex-start;
 }
 div#pageContentWrapper div.pageContent form div.formDataGrid p.errorMessage {
-  grid-column: 3/5;
+  grid-column: 2/5;
   margin: 0px;
   align-self: end;
 }
@@ -966,10 +950,10 @@ div#pageContentWrapper div.pageContent form div.formDataGrid span.pleaseWait {
   min-width: 100px;
 }
 div#pageContentWrapper div.pageContent form span.pleaseWait {
-  font-family: oxtail;
+  font-family: museo-sans-rounded;
   font-weight: 900;
   font-size: 20px;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
   text-shadow: 1px 1px 0px #c01352;
 }
 div#pageContentWrapper div.pageContent form div.fieldSummary p,
@@ -981,15 +965,15 @@ div#pageContentWrapper div.pageContent form div.fieldSummary h2 {
 }
 div#pageContentWrapper div.pageContent form div.fieldSummary p span.fieldName,
 div#pageContentWrapper div.pageContent form div.fieldSummary h2 span.fieldName {
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
   font-size: 18px;
 }
 div#pageContentWrapper div.pageContent form div.fieldSummary p {
-  color: #a35776;
+  color: rgb(163, 87, 118);
   font-size: 18px;
 }
 div#pageContentWrapper div.pageContent form div.fieldSummary h2 {
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
   font-size: 22px;
   margin-left: 100px;
 }
@@ -1007,14 +991,14 @@ div#pageContentWrapper div.pageContent form#oauthConfirmation div.oauthCredentia
   margin: inherit;
 }
 div#pageContentWrapper div.pageContent form#oauthConfirmation div.oauthCredentials p:nth-of-type(2n - 1) {
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
   grid-column: 1;
   justify-self: flex-end;
   align-self: center;
   margin-right: 10px;
 }
 div#pageContentWrapper div.pageContent form#oauthConfirmation div.oauthCredentials p:nth-of-type(2n) {
-  color: #a35776;
+  color: rgb(163, 87, 118);
   grid-column: 2;
   justify-self: flex-start;
   align-self: center;
@@ -1028,8 +1012,8 @@ div#pageContentWrapper div.pageContent form#oauthConfirmation div.oauthCredentia
   font-weight: 700;
   font-size: 18px;
   background-color: #fff;
-  color: #a35776;
-  text-shadow: 1px 1px 0px #47243b;
+  color: rgb(163, 87, 118);
+  text-shadow: 1px 1px 0px rgb(71, 36, 59);
   grid-column: 2;
 }
 div#pageContentWrapper div.pageContent form#oauthConfirmation div.oauthCredentials input[type=button] {
@@ -1054,7 +1038,7 @@ div.manualContent div.json p {
   margin: 0px;
   padding: 0px;
   line-height: 18px;
-  color: #982027;
+  color: rgb(152, 32, 39);
   text-align: left;
   margin: 0px;
   padding: 0px;
@@ -1062,8 +1046,8 @@ div.manualContent div.json p {
   font-family: source-code-pro;
 }
 div.manualContent div.json p span.hilight {
-  color: #ff3ea5;
-  text-shadow: 1px 1px 0px #982027;
+  color: rgb(255, 62, 165);
+  text-shadow: 1px 1px 0px rgb(152, 32, 39);
 }
 div.manualContent div.sidebar {
   background: url("../images/white-silk.svg");
@@ -1079,25 +1063,25 @@ div.manualContent div.sidebar p {
   margin: 0px;
   padding: 0px;
   line-height: 18px;
-  color: #982027;
+  color: rgb(152, 32, 39);
   text-align: left;
 }
 div.manualContent div.sidebar p span.hilight {
-  color: #ff3ea5;
-  text-shadow: 1px 1px 0px #982027;
+  color: rgb(255, 62, 165);
+  text-shadow: 1px 1px 0px rgb(152, 32, 39);
 }
 div.manualContent p {
-  color: #a6594c;
-  text-shadow: 1px 1px 0px #7b4368;
-  font-family: oxtail;
+  color: rgb(166, 89, 76);
+  text-shadow: 1px 1px 0px rgb(123, 67, 104);
+  font-family: museo-sans-rounded;
   font-size: 20px;
   line-height: 22px;
 }
 div.manualContent p span.buttonReference {
-  color: #7b4368;
+  color: rgb(123, 67, 104);
 }
 div.manualContent p span.hilight {
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div.manualContent p span,
 div.manualContent p a .hilightHover {
@@ -1107,15 +1091,15 @@ div.manualContent p a .hilightHover {
 }
 div.manualContent p span:hover,
 div.manualContent p a .hilightHover:hover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
   cursor: pointer;
 }
 div.manualContent p a {
-  color: #426972;
+  color: rgb(66, 105, 114);
   text-decoration: none;
 }
 div.manualContent p a:hover {
-  color: #88b04b;
+  color: rgb(136, 176, 75);
 }
 div.manualContent div.inlineImgDiv div.picture {
   text-align: left;
@@ -1141,12 +1125,12 @@ div.manualContent div.inlineImgDiv div.sidebar p {
   margin: 0px;
   padding: 0px;
   line-height: 18px;
-  color: #982027;
+  color: rgb(152, 32, 39);
   text-align: left;
 }
 div.manualContent div.inlineImgDiv div.sidebar p span.hilight {
-  color: #ff3ea5;
-  text-shadow: 1px 1px 0px #982027;
+  color: rgb(255, 62, 165);
+  text-shadow: 1px 1px 0px rgb(152, 32, 39);
 }
 div.manualContent div.inline2ImgDiv {
   text-align: center;
@@ -1176,12 +1160,12 @@ div.manualContent div.inline2ImgDiv div.sidebar p {
   margin: 0px;
   padding: 0px;
   line-height: 18px;
-  color: #982027;
+  color: rgb(152, 32, 39);
   text-align: left;
 }
 div.manualContent div.inline2ImgDiv div.sidebar p span.hilight {
-  color: #ff3ea5;
-  text-shadow: 1px 1px 0px #982027;
+  color: rgb(255, 62, 165);
+  text-shadow: 1px 1px 0px rgb(152, 32, 39);
 }
 div.manualContent div.html-code {
   text-align: center;
@@ -1206,33 +1190,33 @@ div.manualContent div#stimulusTableDiv table {
   border-collapse: collapse;
   border: none;
   font-family: myriad-pro;
-  text-shadow: 1px 1px 0px #426972;
-  color: #b91228;
+  text-shadow: 1px 1px 0px rgb(66, 105, 114);
+  color: rgb(185, 18, 40);
   font-weight: 700;
   border: none;
   width: 100%;
 }
 div.manualContent div#stimulusTableDiv table tr th {
-  background-color: #ab9895;
-  border-bottom: 1px #47243b solid;
+  background-color: rgb(171, 152, 149);
+  border-bottom: 1px rgb(71, 36, 59) solid;
   font-weight: bold;
   text-align: center;
   font-size: 18px;
 }
 div.manualContent div#stimulusTableDiv table tr td {
   padding: 3px 25px;
-  text-shadow: 1px 1px 0px #807396;
-  color: #88b04b;
+  text-shadow: 1px 1px 0px rgb(128, 115, 150);
+  color: rgb(136, 176, 75);
   letter-spacing: 1px;
   font-style: italic;
   font-size: 16px;
-  border-right: 1px #47243b solid;
+  border-right: 1px rgb(71, 36, 59) solid;
 }
 div.manualContent div#stimulusTableDiv table tr:nth-child(2n) td {
-  background: #d37f6f;
+  background: rgb(211, 127, 111);
 }
 div.manualContent div#stimulusTableDiv table tr:nth-child(2n+1) td {
-  background: #dab965;
+  background: rgb(218, 185, 101);
 }
 div.manualContent div .imageOverText {
   max-width: 90%;
@@ -1248,17 +1232,17 @@ div.manualContent div#blockInstructions div {
   vertical-align: top;
 }
 div.manualContent div#blockInstructions div p {
-  color: #a6594c;
-  text-shadow: 1px 1px 0px #7b4368;
-  font-family: oxtail;
+  color: rgb(166, 89, 76);
+  text-shadow: 1px 1px 0px rgb(123, 67, 104);
+  font-family: museo-sans-rounded;
   font-size: 20px;
   line-height: 22px;
 }
 div.manualContent div#blockInstructions div p span.buttonReference {
-  color: #7b4368;
+  color: rgb(123, 67, 104);
 }
 div.manualContent div#blockInstructions div p span.hilight {
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div.manualContent div#blockInstructions div p span,
 div.manualContent div#blockInstructions div p a .hilightHover {
@@ -1268,15 +1252,15 @@ div.manualContent div#blockInstructions div p a .hilightHover {
 }
 div.manualContent div#blockInstructions div p span:hover,
 div.manualContent div#blockInstructions div p a .hilightHover:hover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
   cursor: pointer;
 }
 div.manualContent div#blockInstructions div p a {
-  color: #426972;
+  color: rgb(66, 105, 114);
   text-decoration: none;
 }
 div.manualContent div#blockInstructions div p a:hover {
-  color: #88b04b;
+  color: rgb(136, 176, 75);
 }
 div.manualContent div#blockInstructions div.left {
   width: 150px;
@@ -1284,8 +1268,8 @@ div.manualContent div#blockInstructions div.left {
   display: inline-block;
 }
 div.manualContent div#blockInstructions div.left p {
-  color: #7b4368;
-  text-shadow: 1px 1px 0px #807396;
+  color: rgb(123, 67, 104);
+  text-shadow: 1px 1px 0px rgb(128, 115, 150);
   text-align: right;
   font-weight: bold;
 }
@@ -1295,8 +1279,8 @@ div.manualContent div#blockInstructions div.right {
   display: inline-block;
 }
 div.manualContent div#blockInstructions div.right p {
-  color: #426972;
-  text-shadow: 1px 1px 0px #7b4368;
+  color: rgb(66, 105, 114);
+  text-shadow: 1px 1px 0px rgb(123, 67, 104);
   text-indent: -15px;
   text-align: left;
   font-style: italic;
@@ -1321,12 +1305,12 @@ div.manualContent div.smallInlineImgDiv div.sidebar p {
   margin: 0px;
   padding: 0px;
   line-height: 18px;
-  color: #982027;
+  color: rgb(152, 32, 39);
   text-align: left;
 }
 div.manualContent div.smallInlineImgDiv div.sidebar p span.hilight {
-  color: #ff3ea5;
-  text-shadow: 1px 1px 0px #982027;
+  color: rgb(255, 62, 165);
+  text-shadow: 1px 1px 0px rgb(152, 32, 39);
 }
 div.manualContent div#questionnaireResponses {
   display: flex;
@@ -1355,25 +1339,25 @@ div.manualContent div#questionnaireResponses div.questionnaireItem div.responseE
   margin: 0px;
   padding: 0px;
   line-height: 18px;
-  color: #982027;
+  color: rgb(152, 32, 39);
   text-align: left;
 }
 div.manualContent div#questionnaireResponses div.questionnaireItem div.responseExplanation p span.hilight {
-  color: #ff3ea5;
-  text-shadow: 1px 1px 0px #982027;
+  color: rgb(255, 62, 165);
+  text-shadow: 1px 1px 0px rgb(152, 32, 39);
 }
 div.manualContent div.tertiary p {
   font-family: myriad-pro;
   font-size: 16px;
   font-weight: 700;
   letter-spacing: 2px;
-  color: #426972;
-  text-shadow: 1px 1px 0px #7b4368;
+  color: rgb(66, 105, 114);
+  text-shadow: 1px 1px 0px rgb(123, 67, 104);
   line-height: 18px;
 }
 div.manualContent div.tertiary p span.hilight {
-  color: #f45520;
-  text-shadow: 1px 1px 0px #88b04b;
+  color: rgb(244, 85, 32);
+  text-shadow: 1px 1px 0px rgb(136, 176, 75);
 }
 div.manualContent div.sourceCode {
   background: #000;
@@ -1404,84 +1388,84 @@ div.manualContent div#manual-oauth form.oauthRegistration {
   width: 60%;
 }
 div.manualContent div#manual-oauth form.oauthRegistration p {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div.manualContent div#manual-oauth form.oauthRegistration p.hilight {
   color: #c01352;
 }
 div.manualContent div#manual-oauth form.oauthRegistration p.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div.manualContent div#manual-oauth form.oauthRegistration p.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div.manualContent div#manual-oauth form.oauthRegistration li {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div.manualContent div#manual-oauth form.oauthRegistration li.hilight {
   color: #c01352;
 }
 div.manualContent div#manual-oauth form.oauthRegistration li.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div.manualContent div#manual-oauth form.oauthRegistration li.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div.manualContent div#manual-oauth form.oauthRegistration h2 {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div.manualContent div#manual-oauth form.oauthRegistration h2.hilight {
   color: #c01352;
 }
 div.manualContent div#manual-oauth form.oauthRegistration h2.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div.manualContent div#manual-oauth form.oauthRegistration h2.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div.manualContent div#manual-oauth form.oauthRegistration span {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div.manualContent div#manual-oauth form.oauthRegistration span.hilight {
   color: #c01352;
 }
 div.manualContent div#manual-oauth form.oauthRegistration span.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div.manualContent div#manual-oauth form.oauthRegistration span.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div.manualContent div#manual-oauth form.oauthRegistration pre {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div.manualContent div#manual-oauth form.oauthRegistration pre.hilight {
   color: #c01352;
 }
 div.manualContent div#manual-oauth form.oauthRegistration pre.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div.manualContent div#manual-oauth form.oauthRegistration pre.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div.manualContent div#manual-oauth form.oauthRegistration h2 {
   font-size: 22px;
@@ -1489,8 +1473,8 @@ div.manualContent div#manual-oauth form.oauthRegistration h2 {
 }
 div.manualContent div#manual-oauth form.oauthRegistration p.errorMessage,
 div.manualContent div#manual-oauth form.oauthRegistration h2.globalErrorMessage {
-  color: #982027;
-  text-shadow: 1px 1px 0px #7b4368;
+  color: rgb(152, 32, 39);
+  text-shadow: 1px 1px 0px rgb(123, 67, 104);
 }
 div.manualContent div#manual-oauth form.oauthRegistration span.pleaseWait {
   text-align: center;
@@ -1506,7 +1490,7 @@ div.manualContent div#manual-oauth form.oauthRegistration div.columns div:nth-of
   box-sizing: border-box;
 }
 div.manualContent div#manual-oauth form.oauthRegistration div.columns div:nth-of-type(n) div {
-  border-left: 1px solid #807396;
+  border-left: 1px solid rgb(128, 115, 150);
   padding: 20px 0px 20px 10px;
 }
 div.manualContent div#manual-oauth form.oauthRegistration div.columns div:first-of-type div {
@@ -1515,25 +1499,20 @@ div.manualContent div#manual-oauth form.oauthRegistration div.columns div:first-
 div.manualContent div#manual-oauth form.oauthRegistration div.formDataGrid {
   text-align: left;
   display: grid;
-  grid-template-columns: max-content max-content minmax(50%, 450px) auto;
-  grid-auto-rows: minmax(40px, auto);
+  grid-template-columns: min-content 2fr 4fr 5fr;
+  grid-auto-rows: minmax(60px, auto);
   min-width: 100%;
 }
 div.manualContent div#manual-oauth form.oauthRegistration div.formDataGrid p {
-  grid-column: 1/5;
-}
-div.manualContent div#manual-oauth form.oauthRegistration div.formDataGrid p.rightInputLabel,
-div.manualContent div#manual-oauth form.oauthRegistration div.formDataGrid p.leftInputLabel {
-  margin: auto 10px 15px auto;
-  margin: 0px;
-  align-self: center;
+  grid-column: 1/4;
 }
 div.manualContent div#manual-oauth form.oauthRegistration div.formDataGrid p.leftInputLabel {
-  grid-column: 2/3;
+  grid-column: 1;
   justify-self: flex-end;
+  white-space: nowrap;
 }
 div.manualContent div#manual-oauth form.oauthRegistration div.formDataGrid p.leftInputLabel + input[type=text] {
-  grid-column: 3;
+  grid-column: 2/5;
   align-self: center;
   min-width: 65%;
   margin-left: 5px;
@@ -1541,15 +1520,16 @@ div.manualContent div#manual-oauth form.oauthRegistration div.formDataGrid p.lef
 div.manualContent div#manual-oauth form.oauthRegistration div.formDataGrid input[type=checkbox],
 div.manualContent div#manual-oauth form.oauthRegistration div.formDataGrid input[type=radio] {
   grid-column: 1;
-  margin-right: 5px;
+  margin-right: 10px;
   align-self: center;
+  justify-self: flex-end;
 }
 div.manualContent div#manual-oauth form.oauthRegistration div.formDataGrid p.rightInputLabel {
-  grid-column: 2/4;
+  grid-column: 2/5;
   justify-self: flex-start;
 }
 div.manualContent div#manual-oauth form.oauthRegistration div.formDataGrid p.errorMessage {
-  grid-column: 3/5;
+  grid-column: 2/5;
   margin: 0px;
   align-self: end;
 }
@@ -1577,10 +1557,10 @@ div.manualContent div#manual-oauth form.oauthRegistration div.formDataGrid span.
   min-width: 100px;
 }
 div.manualContent div#manual-oauth form.oauthRegistration span.pleaseWait {
-  font-family: oxtail;
+  font-family: museo-sans-rounded;
   font-weight: 900;
   font-size: 20px;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
   text-shadow: 1px 1px 0px #c01352;
 }
 div.manualContent div#manual-oauth form.oauthRegistration div.fieldSummary p,
@@ -1592,15 +1572,15 @@ div.manualContent div#manual-oauth form.oauthRegistration div.fieldSummary h2 {
 }
 div.manualContent div#manual-oauth form.oauthRegistration div.fieldSummary p span.fieldName,
 div.manualContent div#manual-oauth form.oauthRegistration div.fieldSummary h2 span.fieldName {
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
   font-size: 18px;
 }
 div.manualContent div#manual-oauth form.oauthRegistration div.fieldSummary p {
-  color: #a35776;
+  color: rgb(163, 87, 118);
   font-size: 18px;
 }
 div.manualContent div#manual-oauth form.oauthRegistration div.fieldSummary h2 {
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
   font-size: 22px;
   margin-left: 100px;
 }
@@ -1618,14 +1598,14 @@ div.manualContent div#manual-oauth form.oauthRegistration#oauthConfirmation div.
   margin: inherit;
 }
 div.manualContent div#manual-oauth form.oauthRegistration#oauthConfirmation div.oauthCredentials p:nth-of-type(2n - 1) {
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
   grid-column: 1;
   justify-self: flex-end;
   align-self: center;
   margin-right: 10px;
 }
 div.manualContent div#manual-oauth form.oauthRegistration#oauthConfirmation div.oauthCredentials p:nth-of-type(2n) {
-  color: #a35776;
+  color: rgb(163, 87, 118);
   grid-column: 2;
   justify-self: flex-start;
   align-self: center;
@@ -1639,8 +1619,8 @@ div.manualContent div#manual-oauth form.oauthRegistration#oauthConfirmation div.
   font-weight: 700;
   font-size: 18px;
   background-color: #fff;
-  color: #a35776;
-  text-shadow: 1px 1px 0px #47243b;
+  color: rgb(163, 87, 118);
+  text-shadow: 1px 1px 0px rgb(71, 36, 59);
   grid-column: 2;
 }
 div.manualContent div#manual-oauth form.oauthRegistration#oauthConfirmation div.oauthCredentials input[type=button] {
@@ -1666,84 +1646,84 @@ div.manualContent div#manual-oauth form.oauthConfirmation {
   width: 60%;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation p {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation p.hilight {
   color: #c01352;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation p.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div.manualContent div#manual-oauth form.oauthConfirmation p.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div.manualContent div#manual-oauth form.oauthConfirmation li {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation li.hilight {
   color: #c01352;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation li.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div.manualContent div#manual-oauth form.oauthConfirmation li.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div.manualContent div#manual-oauth form.oauthConfirmation h2 {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation h2.hilight {
   color: #c01352;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation h2.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div.manualContent div#manual-oauth form.oauthConfirmation h2.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div.manualContent div#manual-oauth form.oauthConfirmation span {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation span.hilight {
   color: #c01352;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation span.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div.manualContent div#manual-oauth form.oauthConfirmation span.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div.manualContent div#manual-oauth form.oauthConfirmation pre {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation pre.hilight {
   color: #c01352;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation pre.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div.manualContent div#manual-oauth form.oauthConfirmation pre.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div.manualContent div#manual-oauth form.oauthConfirmation h2 {
   font-size: 22px;
@@ -1751,8 +1731,8 @@ div.manualContent div#manual-oauth form.oauthConfirmation h2 {
 }
 div.manualContent div#manual-oauth form.oauthConfirmation p.errorMessage,
 div.manualContent div#manual-oauth form.oauthConfirmation h2.globalErrorMessage {
-  color: #982027;
-  text-shadow: 1px 1px 0px #7b4368;
+  color: rgb(152, 32, 39);
+  text-shadow: 1px 1px 0px rgb(123, 67, 104);
 }
 div.manualContent div#manual-oauth form.oauthConfirmation span.pleaseWait {
   text-align: center;
@@ -1768,7 +1748,7 @@ div.manualContent div#manual-oauth form.oauthConfirmation div.columns div:nth-of
   box-sizing: border-box;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation div.columns div:nth-of-type(n) div {
-  border-left: 1px solid #807396;
+  border-left: 1px solid rgb(128, 115, 150);
   padding: 20px 0px 20px 10px;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation div.columns div:first-of-type div {
@@ -1777,25 +1757,20 @@ div.manualContent div#manual-oauth form.oauthConfirmation div.columns div:first-
 div.manualContent div#manual-oauth form.oauthConfirmation div.formDataGrid {
   text-align: left;
   display: grid;
-  grid-template-columns: max-content max-content minmax(50%, 450px) auto;
-  grid-auto-rows: minmax(40px, auto);
+  grid-template-columns: min-content 2fr 4fr 5fr;
+  grid-auto-rows: minmax(60px, auto);
   min-width: 100%;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation div.formDataGrid p {
-  grid-column: 1/5;
-}
-div.manualContent div#manual-oauth form.oauthConfirmation div.formDataGrid p.rightInputLabel,
-div.manualContent div#manual-oauth form.oauthConfirmation div.formDataGrid p.leftInputLabel {
-  margin: auto 10px 15px auto;
-  margin: 0px;
-  align-self: center;
+  grid-column: 1/4;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation div.formDataGrid p.leftInputLabel {
-  grid-column: 2/3;
+  grid-column: 1;
   justify-self: flex-end;
+  white-space: nowrap;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation div.formDataGrid p.leftInputLabel + input[type=text] {
-  grid-column: 3;
+  grid-column: 2/5;
   align-self: center;
   min-width: 65%;
   margin-left: 5px;
@@ -1803,15 +1778,16 @@ div.manualContent div#manual-oauth form.oauthConfirmation div.formDataGrid p.lef
 div.manualContent div#manual-oauth form.oauthConfirmation div.formDataGrid input[type=checkbox],
 div.manualContent div#manual-oauth form.oauthConfirmation div.formDataGrid input[type=radio] {
   grid-column: 1;
-  margin-right: 5px;
+  margin-right: 10px;
   align-self: center;
+  justify-self: flex-end;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation div.formDataGrid p.rightInputLabel {
-  grid-column: 2/4;
+  grid-column: 2/5;
   justify-self: flex-start;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation div.formDataGrid p.errorMessage {
-  grid-column: 3/5;
+  grid-column: 2/5;
   margin: 0px;
   align-self: end;
 }
@@ -1839,10 +1815,10 @@ div.manualContent div#manual-oauth form.oauthConfirmation div.formDataGrid span.
   min-width: 100px;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation span.pleaseWait {
-  font-family: oxtail;
+  font-family: museo-sans-rounded;
   font-weight: 900;
   font-size: 20px;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
   text-shadow: 1px 1px 0px #c01352;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation div.fieldSummary p,
@@ -1854,15 +1830,15 @@ div.manualContent div#manual-oauth form.oauthConfirmation div.fieldSummary h2 {
 }
 div.manualContent div#manual-oauth form.oauthConfirmation div.fieldSummary p span.fieldName,
 div.manualContent div#manual-oauth form.oauthConfirmation div.fieldSummary h2 span.fieldName {
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
   font-size: 18px;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation div.fieldSummary p {
-  color: #a35776;
+  color: rgb(163, 87, 118);
   font-size: 18px;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation div.fieldSummary h2 {
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
   font-size: 22px;
   margin-left: 100px;
 }
@@ -1880,14 +1856,14 @@ div.manualContent div#manual-oauth form.oauthConfirmation#oauthConfirmation div.
   margin: inherit;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation#oauthConfirmation div.oauthCredentials p:nth-of-type(2n - 1) {
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
   grid-column: 1;
   justify-self: flex-end;
   align-self: center;
   margin-right: 10px;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation#oauthConfirmation div.oauthCredentials p:nth-of-type(2n) {
-  color: #a35776;
+  color: rgb(163, 87, 118);
   grid-column: 2;
   justify-self: flex-start;
   align-self: center;
@@ -1901,8 +1877,8 @@ div.manualContent div#manual-oauth form.oauthConfirmation#oauthConfirmation div.
   font-weight: 700;
   font-size: 18px;
   background-color: #fff;
-  color: #a35776;
-  text-shadow: 1px 1px 0px #47243b;
+  color: rgb(163, 87, 118);
+  text-shadow: 1px 1px 0px rgb(71, 36, 59);
   grid-column: 2;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation#oauthConfirmation div.oauthCredentials input[type=button] {
@@ -1921,8 +1897,8 @@ div.manualContent div#manual-oauth form.oauthConfirmation div.dataDisplay p {
 }
 div.manualContent div#manual-oauth form.oauthConfirmation div.dataDisplay p:nth-of-type(2n - 1) {
   font-family: hobeaux-rococeaux-sherman;
-  color: #807396;
-  text-shadow: 1px 1px 0px #47243b;
+  color: rgb(128, 115, 150);
+  text-shadow: 1px 1px 0px rgb(71, 36, 59);
   justify-self: right;
   padding-right: 10px;
   padding-left: 30px;
@@ -1930,8 +1906,8 @@ div.manualContent div#manual-oauth form.oauthConfirmation div.dataDisplay p:nth-
 div.manualContent div#manual-oauth form.oauthConfirmation div.dataDisplay p:nth-of-type(2n) {
   font-family: myriad-pro;
   font-size: 18px;
-  color: #a35776;
-  text-shadow: 1px 1px 0px #7b4368;
+  color: rgb(163, 87, 118);
+  text-shadow: 1px 1px 0px rgb(123, 67, 104);
   font-weight: 700;
   justify-self: left;
 }
@@ -1940,8 +1916,8 @@ div.manualContent div#manual-oauth form.oauthConfirmation div.dataDisplay input[
   align-self: center;
   font-family: myriad-pro;
   font-weight: 700;
-  color: #a35776;
-  text-shadow: 1px 1px 0px #47243b;
+  color: rgb(163, 87, 118);
+  text-shadow: 1px 1px 0px rgb(71, 36, 59);
 }
 div.manualContent div#manual-oauth form.oauthConfirmation div.dataDisplay input[type=button] {
   grid-column: 1/3;
@@ -1949,15 +1925,15 @@ div.manualContent div#manual-oauth form.oauthConfirmation div.dataDisplay input[
   justify-self: center;
   margin-top: 10px;
   font-family: myriad-pro;
-  color: #a35776;
-  text-shadow: 1px 1px 0px #47243b;
+  color: rgb(163, 87, 118);
+  text-shadow: 1px 1px 0px rgb(71, 36, 59);
 }
 div.manualContent div#manual-oauth div#oauth-walkthrough1 {
   background-image: url("../images/code-background.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  color: #b63e5b;
+  color: rgb(182, 62, 91);
   text-align: left;
   max-width: 100%;
   margin: 0px;
@@ -1977,7 +1953,7 @@ div.manualContent div#manual-oauth div#oauth-walkthrough1 div#container div#page
 div.manualContent div#manual-oauth div#oauth-walkthrough1 div#container div#page h1 {
   text-align: center;
   font-size: 2.5em;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   font-family: co-headline, sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -1992,11 +1968,11 @@ div.manualContent div#manual-oauth div#oauth-walkthrough1 div#container div#page
   margin: 5px 0px;
 }
 div.manualContent div#manual-oauth div#oauth-walkthrough1 div#container div#page div.authContent p.highlight {
-  color: #8c3573;
+  color: rgb(140, 53, 115);
 }
 div.manualContent div#manual-oauth div#oauth-walkthrough1 div#container div#page div.authContent p:nth-of-type(2n-1) {
   grid-column: 1;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   justify-self: right;
   margin-right: 10px;
 }
@@ -2015,7 +1991,7 @@ div.manualContent div#manual-oauth div#oauth-walkthrough1 div#container div#page
   font-weight: 400;
   font-style: normal;
   font-size: 0.8rem;
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
   margin: 0px;
 }
 div.manualContent div#manual-oauth div#oauth-walkthrough1 div#container div#code {
@@ -2115,84 +2091,84 @@ div#pageContentWrapper div.pageContent form {
   width: 60%;
 }
 div#pageContentWrapper div.pageContent form p {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div#pageContentWrapper div.pageContent form p.hilight {
   color: #c01352;
 }
 div#pageContentWrapper div.pageContent form p.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div#pageContentWrapper div.pageContent form p.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div#pageContentWrapper div.pageContent form li {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div#pageContentWrapper div.pageContent form li.hilight {
   color: #c01352;
 }
 div#pageContentWrapper div.pageContent form li.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div#pageContentWrapper div.pageContent form li.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div#pageContentWrapper div.pageContent form h2 {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div#pageContentWrapper div.pageContent form h2.hilight {
   color: #c01352;
 }
 div#pageContentWrapper div.pageContent form h2.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div#pageContentWrapper div.pageContent form h2.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div#pageContentWrapper div.pageContent form span {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div#pageContentWrapper div.pageContent form span.hilight {
   color: #c01352;
 }
 div#pageContentWrapper div.pageContent form span.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div#pageContentWrapper div.pageContent form span.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div#pageContentWrapper div.pageContent form pre {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div#pageContentWrapper div.pageContent form pre.hilight {
   color: #c01352;
 }
 div#pageContentWrapper div.pageContent form pre.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div#pageContentWrapper div.pageContent form pre.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div#pageContentWrapper div.pageContent form h2 {
   font-size: 22px;
@@ -2200,8 +2176,8 @@ div#pageContentWrapper div.pageContent form h2 {
 }
 div#pageContentWrapper div.pageContent form p.errorMessage,
 div#pageContentWrapper div.pageContent form h2.globalErrorMessage {
-  color: #982027;
-  text-shadow: 1px 1px 0px #7b4368;
+  color: rgb(152, 32, 39);
+  text-shadow: 1px 1px 0px rgb(123, 67, 104);
 }
 div#pageContentWrapper div.pageContent form span.pleaseWait {
   text-align: center;
@@ -2217,7 +2193,7 @@ div#pageContentWrapper div.pageContent form div.columns div:nth-of-type(n) {
   box-sizing: border-box;
 }
 div#pageContentWrapper div.pageContent form div.columns div:nth-of-type(n) div {
-  border-left: 1px solid #807396;
+  border-left: 1px solid rgb(128, 115, 150);
   padding: 20px 0px 20px 10px;
 }
 div#pageContentWrapper div.pageContent form div.columns div:first-of-type div {
@@ -2226,25 +2202,20 @@ div#pageContentWrapper div.pageContent form div.columns div:first-of-type div {
 div#pageContentWrapper div.pageContent form div.formDataGrid {
   text-align: left;
   display: grid;
-  grid-template-columns: max-content max-content minmax(50%, 450px) auto;
-  grid-auto-rows: minmax(40px, auto);
+  grid-template-columns: min-content 2fr 4fr 5fr;
+  grid-auto-rows: minmax(60px, auto);
   min-width: 100%;
 }
 div#pageContentWrapper div.pageContent form div.formDataGrid p {
-  grid-column: 1/5;
-}
-div#pageContentWrapper div.pageContent form div.formDataGrid p.rightInputLabel,
-div#pageContentWrapper div.pageContent form div.formDataGrid p.leftInputLabel {
-  margin: auto 10px 15px auto;
-  margin: 0px;
-  align-self: center;
+  grid-column: 1/4;
 }
 div#pageContentWrapper div.pageContent form div.formDataGrid p.leftInputLabel {
-  grid-column: 2/3;
+  grid-column: 1;
   justify-self: flex-end;
+  white-space: nowrap;
 }
 div#pageContentWrapper div.pageContent form div.formDataGrid p.leftInputLabel + input[type=text] {
-  grid-column: 3;
+  grid-column: 2/5;
   align-self: center;
   min-width: 65%;
   margin-left: 5px;
@@ -2252,15 +2223,16 @@ div#pageContentWrapper div.pageContent form div.formDataGrid p.leftInputLabel + 
 div#pageContentWrapper div.pageContent form div.formDataGrid input[type=checkbox],
 div#pageContentWrapper div.pageContent form div.formDataGrid input[type=radio] {
   grid-column: 1;
-  margin-right: 5px;
+  margin-right: 10px;
   align-self: center;
+  justify-self: flex-end;
 }
 div#pageContentWrapper div.pageContent form div.formDataGrid p.rightInputLabel {
-  grid-column: 2/4;
+  grid-column: 2/5;
   justify-self: flex-start;
 }
 div#pageContentWrapper div.pageContent form div.formDataGrid p.errorMessage {
-  grid-column: 3/5;
+  grid-column: 2/5;
   margin: 0px;
   align-self: end;
 }
@@ -2288,10 +2260,10 @@ div#pageContentWrapper div.pageContent form div.formDataGrid span.pleaseWait {
   min-width: 100px;
 }
 div#pageContentWrapper div.pageContent form span.pleaseWait {
-  font-family: oxtail;
+  font-family: museo-sans-rounded;
   font-weight: 900;
   font-size: 20px;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
   text-shadow: 1px 1px 0px #c01352;
 }
 div#pageContentWrapper div.pageContent form div.fieldSummary p,
@@ -2303,15 +2275,15 @@ div#pageContentWrapper div.pageContent form div.fieldSummary h2 {
 }
 div#pageContentWrapper div.pageContent form div.fieldSummary p span.fieldName,
 div#pageContentWrapper div.pageContent form div.fieldSummary h2 span.fieldName {
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
   font-size: 18px;
 }
 div#pageContentWrapper div.pageContent form div.fieldSummary p {
-  color: #a35776;
+  color: rgb(163, 87, 118);
   font-size: 18px;
 }
 div#pageContentWrapper div.pageContent form div.fieldSummary h2 {
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
   font-size: 22px;
   margin-left: 100px;
 }
@@ -2329,14 +2301,14 @@ div#pageContentWrapper div.pageContent form#oauthConfirmation div.oauthCredentia
   margin: inherit;
 }
 div#pageContentWrapper div.pageContent form#oauthConfirmation div.oauthCredentials p:nth-of-type(2n - 1) {
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
   grid-column: 1;
   justify-self: flex-end;
   align-self: center;
   margin-right: 10px;
 }
 div#pageContentWrapper div.pageContent form#oauthConfirmation div.oauthCredentials p:nth-of-type(2n) {
-  color: #a35776;
+  color: rgb(163, 87, 118);
   grid-column: 2;
   justify-self: flex-start;
   align-self: center;
@@ -2350,8 +2322,8 @@ div#pageContentWrapper div.pageContent form#oauthConfirmation div.oauthCredentia
   font-weight: 700;
   font-size: 18px;
   background-color: #fff;
-  color: #a35776;
-  text-shadow: 1px 1px 0px #47243b;
+  color: rgb(163, 87, 118);
+  text-shadow: 1px 1px 0px rgb(71, 36, 59);
   grid-column: 2;
 }
 div#pageContentWrapper div.pageContent form#oauthConfirmation div.oauthCredentials input[type=button] {
@@ -2361,9 +2333,10 @@ div#pageContentWrapper div.pageContent form#oauthConfirmation div.oauthCredentia
 }
 
 body {
-  background: #edf1fe;
+  background: white;
   padding-bottom: 50px;
   margin: 0px;
+  min-width: 100%;
 }
 body div.relativeZero {
   position: relative;

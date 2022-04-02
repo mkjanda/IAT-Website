@@ -7,8 +7,7 @@ $subHeaderFontSize: 36px;
 
 
 div#pageContentWrapper {
-	text-align: center;
-	background: $brilliantWhite; 
+	background: white;
 	position: relative;
 	top: 450px;
 	left: 0px;
@@ -16,7 +15,7 @@ div#pageContentWrapper {
 	min-width: 100%;
 
 	div.pageContent {
-		width: $contentWidth;
+		width: min(1000px, 100%);
 		text-align: left;
 		margin: 20px auto 0px auto;
 
@@ -26,7 +25,7 @@ div#pageContentWrapper {
 
 		div.finePrint p {
 			@include secondaryParagraph;
-			font-size: 11px;
+			font-size: 16px;
 		}
 
 		div {
@@ -71,21 +70,18 @@ div#pageContentWrapper {
 			}
 		}
 
+		div.svg-header {
+			margin-bottom: 10px;
+		}
+
 		div#sampleTests {
 			text-align: center;
+			display: flex;
+			width: fit-content;
 
 			div.sampleTestsColumn {
-				display: inline-block;
 				vertical-align: top;
-				width: 575px;
 
-				div.sampleTest:nth-child(odd) {
-					display: inline-block;
-				}
-
-				div.sampleTest:nth-child(even) {
-					display: block;
-				}
 
 				div.sampleTest {
 					border-image: url('../images/purple-ice-border.png');
@@ -99,7 +95,7 @@ div#pageContentWrapper {
 					margin-left: 15px;
 					margin-right: 15px;
 					margin-bottom: 30px;
-					width: 525px;
+					width: min-content;
 					background: $purpleHaze;
 
 					div.header {
@@ -130,7 +126,7 @@ div#pageContentWrapper {
 			}
 		}
 
-		img#contactEmail {
+		div#contactEmail {
 			width: 800px;
 			margin-left: 250px;
 			margin-bottom: 50px;
@@ -141,7 +137,6 @@ div#pageContentWrapper {
 		div.featureMenu {
 			vertical-align: top;
 			display: inline-block;
-			width: 18%;
 
 			div.featureButton {
 				cursor: pointer;
@@ -196,50 +191,44 @@ div#pageContentWrapper {
 
 		div.featuresContent {
 			display: inline-block;
-			width: 80%;
+			width: 75%;
 		}
 	}
 
 	div#sectionTheIat {
 		div.leftResponseKey {
 			position: absolute;
-			left: 75px;
-			top: 0px;
+			left: 0px;
 			width: 250px;
 			height: 265px;
 		}
 
 		div.rightResponseKey {
 			position: absolute;
-			left: 900px;
+			right: 0px;
 			width: 250px;
-			top: 0px;
 			height: 265px;
 		}
 
 		div#mlkSample {
 			display: block;
-			height: 760px;
+			height: 800px;
+			text-align: center;
 
 			img.stimulus {
-				position: absolute;
-				left: 350px;
-				top: 180px;
-				width: 500px;
-				height: 570px;
+				position: relative;
+				top: 225px;
 			}
 		}
 
 		div#brokenHeartSample {
 			display: block;
+			text-align: center;
 			height: 560px;
 
 			img.stimulus {
-				position: absolute;
-				left: 375px;
+				position: relative;
 				top: 140px;
-				width: 453px;
-				height: 401px;
 			}
 		}
 	}

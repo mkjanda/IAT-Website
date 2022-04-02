@@ -14,7 +14,7 @@
     </div>
     <div class="formDataGrid">
         <p style="grid-column: 1/3">Already Registered?</p>
-        <span class="hilightHover" style="grid-column: 3/4; align-self: center; margin: 0px 15px;" data-bind="click : showAlreadyRegistered">Click Here</span>
+        <p style="grid-column: 3"><span class="hilightHover" style="margin: 0px 15px;" data-bind="click : showAlreadyRegistered">Click Here</span></p>
         <!-- ko foreach: errors().filter(e => { return e.field === 'firstName' }) -->
         <p class="errorMessage" data-bind="text : $data.message"></p>
         <!-- /ko -->

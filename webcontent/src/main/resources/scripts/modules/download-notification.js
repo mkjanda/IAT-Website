@@ -20,10 +20,10 @@ define(['knockout', 'text!templates/download-notification.html', 'text!json/svg-
         }, 100);
     }
 
-    DownloadNotification.prototype.downloadSoftware = function () {
+    DownloadNotification.prototype.download = function() {
         var self = this;
-        window.location.assign(self.downloadLink());
-    };
+        window.location.replace(self.downloadLink());
+    }
 
     DownloadNotification.prototype.goToPrivacy = function () {
         var self = this;

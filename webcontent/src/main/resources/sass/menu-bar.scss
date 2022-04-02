@@ -74,14 +74,15 @@ div#mainMenuBarWrapper {
 
         svg.menuBarBackground {
             width: 100%;
+            height: $menuBarHeight;
             margin: 0px;
             padding: 0px;
         }
 
         div#mainMenuButtonWrapper {
-            display: block;
-            text-align: center;
-            width: 1200px;
+            display: flex;
+            flex-flow: row nowrap;
+            width: max-content;
             z-index: 101;
             margin: 0px auto;
             padding: 0px;
@@ -103,25 +104,25 @@ div#mainMenuBarWrapper {
                 }
 
             } 
+            div.expandedMenuButton {
+                cursor: pointer;
+                text-align: center;
+        
+                svg {
+                    margin: 0px 0px 0px 0px;
+                    padding: 0px;
+        
+                    text {
+                        font-family: $readableSansSerif;
+                        font-weight: 900;
+                    } 
+                }
+            }
+        
 
             text.mousedOver {
                 fill : $greenery;
             }
-        }
-    }
-
-    div.expandedMenuButton {
-        cursor: pointer;
-        text-align: center;
-
-        svg {
-            margin: 0px 0px 0px 0px;
-            padding: 0px;
-
-            text {
-                font-family: $readableSansSerif;
-                font-weight: 900;
-            } 
         }
     }
 }

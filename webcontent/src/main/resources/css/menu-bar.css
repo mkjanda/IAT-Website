@@ -14,7 +14,7 @@ div#mainMenuBarWrapper {
   padding: 0px;
   width: 100%;
   z-index: 10;
-  height: 40px;
+  height: 60px;
   font-size: 0px;
 }
 div#mainMenuBarWrapper div {
@@ -26,22 +26,22 @@ div#mainMenuBarWrapper svg {
   padding: 0px;
 }
 div#mainMenuBarWrapper svg linearGradient.menuButtonTextGradient stop:nth-of-type(1) {
-  stop-color: #47243b;
+  stop-color: rgb(71, 36, 59);
 }
 div#mainMenuBarWrapper svg linearGradient.menuButtonTextGradient stop:nth-of-type(2) {
-  stop-color: #973c6c;
+  stop-color: rgb(151, 60, 108);
 }
 div#mainMenuBarWrapper svg linearGradient.menuButtonTextGradient stop:nth-of-type(3) {
-  stop-color: black;
+  stop-color: rgb(0, 0, 0);
 }
 div#mainMenuBarWrapper svg linearGradient.menuButtonHilightedGradient stop:nth-of-type(1) {
-  stop-color: #982027;
+  stop-color: rgb(152, 32, 39);
 }
 div#mainMenuBarWrapper svg linearGradient.menuButtonHilightedGradient stop:nth-of-type(2) {
-  stop-color: #ce3175;
+  stop-color: rgb(206, 49, 117);
 }
 div#mainMenuBarWrapper svg linearGradient.menuButtonHilightedGradient stop:nth-of-type(3) {
-  stop-color: #b91228;
+  stop-color: rgb(185, 18, 40);
 }
 div#mainMenuBarWrapper div#mainMenuBar {
   display: inline-block;
@@ -49,59 +49,60 @@ div#mainMenuBarWrapper div#mainMenuBar {
   margin: 0px;
   padding: 0px;
   text-align: center;
-  height: 40px;
+  height: 60px;
 }
 div#mainMenuBarWrapper div#mainMenuBar svg linearGradient.menuBarGradient stop:nth-of-type(1) {
-  stop-color: #ab9895;
+  stop-color: rgb(171, 152, 149);
 }
 div#mainMenuBarWrapper div#mainMenuBar svg linearGradient.menuBarGradient stop:nth-of-type(2) {
-  stop-color: #807396;
+  stop-color: rgb(128, 115, 150);
 }
 div#mainMenuBarWrapper div#mainMenuBar svg linearGradient.menuBarGradient stop:nth-of-type(3) {
-  stop-color: #ab9895;
+  stop-color: rgb(171, 152, 149);
 }
 div#mainMenuBarWrapper div#mainMenuBar svg.menuBarBackground {
   width: 100%;
+  height: 60px;
   margin: 0px;
   padding: 0px;
 }
 div#mainMenuBarWrapper div#mainMenuBar div#mainMenuButtonWrapper {
-  display: block;
-  text-align: center;
-  width: 1200px;
+  display: flex;
+  flex-flow: row nowrap;
+  width: max-content;
   z-index: 101;
   margin: 0px auto;
   padding: 0px;
   position: relative;
-  top: -40px;
+  top: -60px;
   left: 0px;
-  height: 40px;
+  height: 60px;
 }
 div#mainMenuBarWrapper div#mainMenuBar div#mainMenuButtonWrapper div.menuButton {
   display: inline-block;
   text-align: left;
   cursor: pointer;
-  height: 40px;
+  height: 60px;
   font-family: myriad-pro;
   font-weight: 900;
 }
 div#mainMenuBarWrapper div#mainMenuBar div#mainMenuButtonWrapper div.menuButton svg {
-  height: 40px;
+  height: 60px;
 }
-div#mainMenuBarWrapper div#mainMenuBar div#mainMenuButtonWrapper text.mousedOver {
-  fill: #88b04b;
-}
-div#mainMenuBarWrapper div.expandedMenuButton {
+div#mainMenuBarWrapper div#mainMenuBar div#mainMenuButtonWrapper div.expandedMenuButton {
   cursor: pointer;
   text-align: center;
 }
-div#mainMenuBarWrapper div.expandedMenuButton svg {
+div#mainMenuBarWrapper div#mainMenuBar div#mainMenuButtonWrapper div.expandedMenuButton svg {
   margin: 0px 0px 0px 0px;
   padding: 0px;
 }
-div#mainMenuBarWrapper div.expandedMenuButton svg text {
+div#mainMenuBarWrapper div#mainMenuBar div#mainMenuButtonWrapper div.expandedMenuButton svg text {
   font-family: myriad-pro;
   font-weight: 900;
+}
+div#mainMenuBarWrapper div#mainMenuBar div#mainMenuButtonWrapper text.mousedOver {
+  fill: rgb(136, 176, 75);
 }
 
 /*# sourceMappingURL=menu-bar.css.map */

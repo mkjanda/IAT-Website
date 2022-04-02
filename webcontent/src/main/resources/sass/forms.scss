@@ -35,23 +35,18 @@
     div.formDataGrid {
         text-align: left;
         display: grid;
-        grid-template-columns: max-content max-content minmax(50%, 450px) auto;
-        grid-auto-rows: minmax(40px, auto);
+        grid-template-columns: min-content 2fr 4fr 5fr;
+        grid-auto-rows: minmax(60px, auto);
         min-width: 100%;
         p {
-            grid-column: 1 / 5;
-        }
-        p.rightInputLabel,
-        p.leftInputLabel {
-            margin: auto 10px 15px auto;
-            margin: 0px;
-            align-self: center;
+            grid-column: 1 / 4;
         }
         p.leftInputLabel {
-            grid-column: 2 / 3;
+            grid-column: 1;
             justify-self: flex-end;
+            white-space: nowrap;
             &+input[type="text"] {
-                grid-column: 3;
+                grid-column: 2/5;
                 align-self: center;
                 min-width: 65%;
                 margin-left: 5px;
@@ -60,15 +55,16 @@
         input[type='checkbox'],
         input[type="radio"] {
             grid-column: 1;
-            margin-right: 5px;
+            margin-right: 10px;
             align-self: center;
+            justify-self: flex-end;
         }
         p.rightInputLabel {
-            grid-column: 2 / 4;
+            grid-column: 2 / 5;
             justify-self: flex-start;
         }
         p.errorMessage {
-            grid-column: 3 / 5;
+            grid-column: 2 / 5;
             margin: 0px;
             align-self: end;
         }

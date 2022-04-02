@@ -44,6 +44,10 @@
             <name>apache maven</name>
             <url>https://mvnrepository.com</url>
         </pluginRepository>	
+<pluginRepository>
+    <id>uglifyjs-maven-plugin</id>
+    <url>https://raw.github.com/tqh/uglifyjs-maven-plugin/master/repo</url>
+  </pluginRepository>        
     </pluginRepositories>
     <build>
         <pluginManagement>

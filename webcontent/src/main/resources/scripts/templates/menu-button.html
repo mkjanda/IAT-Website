@@ -1,5 +1,5 @@
 <div class="menuButton" data-bind="attr : { id : id }">
-	<svg data-bind="style : { width : width }, click: buttonClick, attr : { width : width.toString(), height : height.toString() }, 
+	<svg data-bind="style : { width : width.toString() + 'px' }, click: buttonClick, attr : { width : width.toString(), height : height.toString() }, 
             event : { mouseover : function() { isMousedOver(true) }, mouseout : function() { isMousedOver(false) }}">
 		<defs>
 			<linearGradient x1="0" y1="0" x2="0" y2="1" data-bind="attr : { id : backgroundGradientId} " class="menuBarGradient"> 

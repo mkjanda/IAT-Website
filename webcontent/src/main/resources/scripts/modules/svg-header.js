@@ -3,6 +3,7 @@ function (ko, htmlString, fontFaceMap) {
     function SvgHeader(params) {
         SvgHeader.Count++;
         var self = this;
+        self.loaded = ko.observable(false);
         self.display = params.display;
         self.caption = params.caption;
         self.captionText = ko.pureComputed(function () {
@@ -19,15 +20,31 @@ function (ko, htmlString, fontFaceMap) {
             self.captions.push(self.caption);
         }
         self.template = params.template;
-        self.viewBox = function (width, height) {
-            return "0 0 " + width.toString() + " " + height.toString();
-        };
-        self.textX = function (template) {
-            return (template.textAnchor === "start") ? 0 : (template.width / 2);
-        };
-        self.textY = function (template) {
-            return (template.textAnchor === "start") ? template.font.match(/^[0-9]+.+?([0-9]+).+$/)[1] : (template.height * 7 / 11);
-        };
+        const template = self.template;
+//        self.template.displayWidth = Math.min(self.template.displayWidth, 1000);
+        const textMetrics = ko.observable(undefined);
+        if (self.template.displayWidth > self.template.width)
+            self.template.displayWidth = self.template.width;
+        let canvas = document.createElement('canvas');
+        let ctx = canvas.getContext('2d');
+        fontFaceMap[self.template.font].subscribe(newVal => {
+            ctx.font = newVal;
+            textMetrics(ctx.measureText(self.captionText()));
+            self.loaded(true);
+        });
+        self.width = ko.pureComputed(() =>  textMetrics() ? textMetrics().width : 0);
+        self.height = ko.pureComputed(() => textMetrics() ? (textMetrics().actualBoundingBoxAscent + 
+            textMetrics().actualBoundingBoxDescent) : 0);
+        self.viewBox = ko.pureComputed(() => {
+            "0 0 " + self.width().toString() + " " + self.height().toString();
+        });
+        self.textX = ko.computed(() => 
+            (template.textAnchor === "start") ? 0 : (self.width() / 2)
+        );
+        self.textY = ko.pureComputed(() => 
+            (template.textAnchor === "start") ? textMetrics().actualBoundingBoxAscent + 
+                textMetrics().actualBoundingBoxDescent : textMetrics().actualBoundingBoxAscent
+        );
         self.filterX = function (template) {
             return "-" + ((template.blurSize - 100) / 2).toString() + "%";
         };

@@ -23,9 +23,11 @@ define(['knockout', 'text!templates/slideshow-canvas.html'], function (ko, htmlS
     SlideShowCanvas.prototype._loadImages = function() {
         let self = this;
         self.imageNames.forEach((name) => {
-            require(["image!" + name], (img) => {
-               self.images.push(img); 
-            });
+            let img = new Image();
+            img.onload = (evt) => {
+                self.images.push(img);
+            };
+            img.src = name;
         });
     };
     SlideShowCanvas.prototype.sizeImage = function (img) {

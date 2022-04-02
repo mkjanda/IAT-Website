@@ -7,9 +7,10 @@
 @import 'fonts';
 
 body {
-    background: $brilliantWhite; 
+    background: white;
     padding-bottom: 50px;
     margin: 0px;
+    min-width: 100%;
     
     div.relativeZero {
         position: relative;

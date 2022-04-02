@@ -20,8 +20,8 @@
 
 	@each $element in ('p', 'li', 'h2', 'span', 'pre') {
 		#{$element} {
-			@if $element in ('p', 'li', 'span') {
-				font-size: 16px;
+			@if $element in ('p', 'li', 'span', 'a') {
+				font-size: 18px;
 				font-family: $cartoonish;
 				color: $purpleWine;
 			}
@@ -34,16 +34,17 @@
 
 			@else if $element == 'pre' {
 				font-family: $mono;
-				font-size: 16px;
+				font-size: 18px;
 			}
 			text-align: left;
 
-			@if $element in ('span', 'pre', 'h2') {
+			@if $element in ('span', 'pre', 'h2', 'a') {
 				&.hilight {
 					color: $lovePotion;
 				}
 
-				&.hilightHover {
+				&.hilightHover
+				{
 					color: $knockoutPink;
 
 					&:hover {
@@ -57,11 +58,10 @@
 }
 
 @mixin primaryParagraph {
-	color: $redwood;
-	text-shadow: 1px 1px 0px rgba($grapeKiss, 0.5);
+	color: $ultraViolet;
 	font-family: $readableSerif;
-	font-size: 20px;
-	line-height: 22px;
+	font-size: 26px;
+	line-height: 30px;
 
 	span.buttonReference {
 		color: $grapeKiss;
@@ -93,12 +93,12 @@
 
 @mixin secondaryParagraph {
 	font-family: $readableSansSerif;
-	font-size: 16px;
+	font-size: 18px;
 	font-weight: 700;
 	letter-spacing: 2px;
 	color: $greenery;
 	text-shadow: 1px 1px 0px $kalamata;
-	line-height: 18px;
+	line-height: 20px;
 }
 
 /*

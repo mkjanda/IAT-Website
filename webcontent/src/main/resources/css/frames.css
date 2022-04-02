@@ -11,7 +11,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  color: #b63e5b;
+  color: rgb(182, 62, 91);
   text-align: left;
   margin: 0px;
   max-width: 100%;
@@ -30,7 +30,7 @@ body div#container div.page {
 body div#container div.page h1 {
   text-align: center;
   font-size: 2.5em;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   font-family: co-headline, sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -45,11 +45,11 @@ body div#container div.page div.authContent p {
   margin: 5px 0px;
 }
 body div#container div.page div.authContent p.highlight {
-  color: #8c3573;
+  color: rgb(140, 53, 115);
 }
 body div#container div.page div.authContent p:nth-of-type(2n-1) {
   grid-column: 1;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   justify-self: right;
   margin-right: 10px;
 }
@@ -68,7 +68,7 @@ body div#container div.page div.serverResponse pre {
   font-weight: 400;
   font-style: normal;
   font-size: 0.8rem;
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
   margin: 0px;
 }
 body div#container div#code {

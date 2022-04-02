@@ -8,18 +8,18 @@ body div#headerWrapper {
 
     top: 0px;
     left: 0px;
-    width: 100%;
     z-index: -10;
     display: inline-block;
 
     div {
-        width: 100%;
-        min-height: 100%;
         margin: 0px auto 25px auto;
         position: absolute;
         top: 0px;
         left: 0px;
-        display: block;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        overflow: hidden;
         background-size: cover;
 
         &.lowRes {

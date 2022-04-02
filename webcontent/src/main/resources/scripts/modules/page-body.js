@@ -6,6 +6,7 @@ define(['knockout', 'modules/font-face-map', 'text!templates/page-body.html', 't
             self.sections = JSON.parse(sectionsJson);
             self.logoImageHeight = ko.observable(0);
             self.isPoppingState = false;
+            let search = new URLSearchParams(window.location.search);
             self.display = ko.observable({ page: "page", section: null });
             self.display.subscribe((newVal) => {
                 if (!self.isPoppingState) {
@@ -43,10 +44,28 @@ define(['knockout', 'modules/font-face-map', 'text!templates/page-body.html', 't
                 self.currentPage = newVal.page;
             });
             self.currentPage = "page";
+            if (search.has("page") && search.has("section")) {
+                let page = search.get("page");
+                let section = search.get("section");
+                if ((page === 'page') || (page === 'manual')) {
+                    let validSections = [];
+                    self.sections.pageSections.forEach(s => validSections.push(s.id));
+                    self.sections.manual.forEach(s => validSections.push(s.component));
+                    if (validSections.find((s) => { return s === section; }))
+                        self.display( { page : page, section : section });
+                } else if ((page === 'page') && !section) 
+                    self.display( { page : 'page', section : null });
+            }
+            self.onDescendantsComplete = self._onDescendantsComplete.bind(self);
         }
 
-        PageBody.prototype.koDescendantsComplete = function () {
-            var self = this;
+        PageBody.prototype.menuLoaded= function () {
+//            document.querySelector("div#pageContentWrapper div.manualContent").style.width = menuWidth.toString() + 'px';
+        };
+
+
+        PageBody.prototype._onDescendantsComplete = function () {
+            let self = this;
             require(['https://use.typekit.net/sra2zjj.js'], function () {
                 Typekit.load({
                     async: true,
@@ -63,11 +82,27 @@ define(['knockout', 'modules/font-face-map', 'text!templates/page-body.html', 't
                                 });
                             });
                         };
-                        document.dispatchEvent(new Event("descendantsComplete"));
                     }
-                })
+                });
+                document.dispatchEvent(new Event("descendantsComplete"));
             });
-            self.descendantsComplete(true);
+             let lastWidth = null;
+            let resizeFunc = rect => {
+                if (lastWidth === rect.width) 
+                    return;
+               //let elem = document.getElementById('pageContentWrapper');
+               if (screen.availWidth > screen.availHeight) {
+                   document.body.style.width = (rect.width > 1200 ? 1200 : rect.width).toString() + 'px';
+               } else {
+                   document.body.style.width = rect.width.toString() + "px";
+               }
+               lastWidth = rect.width;
+            };
+/*            let observer = new ResizeObserver(es => {
+                es.forEach(e => resizeFunc(e.contentRect));
+            });
+            observer.observe(document.getElementById('mainMenuButtonWrapper')); */
+            resizeFunc({ width : 1200 });
         };
 
         PageBody.prototype.getScrollBarWidth = function () {

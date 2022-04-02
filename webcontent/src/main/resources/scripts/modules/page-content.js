@@ -8,7 +8,7 @@ define(['knockout', 'text!templates/page-content.html', 'text!json/page-sections
 
     PageContent.prototype.koDescendantsComplete = function (node) {
         var self = this;
-        if (self.display().section === null)
+        if ((self.display().section === null) || (self.display().section === undefined))
             window.scrollTo(0, 0);
         else
             window.scrollTo(0, document.getElementById(self.display().section).offsetTop + document.getElementById("headerWrapper").offsetHeight -

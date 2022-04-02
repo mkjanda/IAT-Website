@@ -141,84 +141,84 @@ div#pageContentWrapper div.pageContent form {
   width: 60%;
 }
 div#pageContentWrapper div.pageContent form p {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div#pageContentWrapper div.pageContent form p.hilight {
   color: #c01352;
 }
 div#pageContentWrapper div.pageContent form p.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div#pageContentWrapper div.pageContent form p.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div#pageContentWrapper div.pageContent form li {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div#pageContentWrapper div.pageContent form li.hilight {
   color: #c01352;
 }
 div#pageContentWrapper div.pageContent form li.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div#pageContentWrapper div.pageContent form li.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div#pageContentWrapper div.pageContent form h2 {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div#pageContentWrapper div.pageContent form h2.hilight {
   color: #c01352;
 }
 div#pageContentWrapper div.pageContent form h2.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div#pageContentWrapper div.pageContent form h2.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div#pageContentWrapper div.pageContent form span {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div#pageContentWrapper div.pageContent form span.hilight {
   color: #c01352;
 }
 div#pageContentWrapper div.pageContent form span.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div#pageContentWrapper div.pageContent form span.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div#pageContentWrapper div.pageContent form pre {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div#pageContentWrapper div.pageContent form pre.hilight {
   color: #c01352;
 }
 div#pageContentWrapper div.pageContent form pre.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div#pageContentWrapper div.pageContent form pre.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div#pageContentWrapper div.pageContent form h2 {
   font-size: 22px;
@@ -226,8 +226,8 @@ div#pageContentWrapper div.pageContent form h2 {
 }
 div#pageContentWrapper div.pageContent form p.errorMessage,
 div#pageContentWrapper div.pageContent form h2.globalErrorMessage {
-  color: #982027;
-  text-shadow: 1px 1px 0px #7b4368;
+  color: rgb(152, 32, 39);
+  text-shadow: 1px 1px 0px rgb(123, 67, 104);
 }
 div#pageContentWrapper div.pageContent form span.pleaseWait {
   text-align: center;
@@ -243,7 +243,7 @@ div#pageContentWrapper div.pageContent form div.columns div:nth-of-type(n) {
   box-sizing: border-box;
 }
 div#pageContentWrapper div.pageContent form div.columns div:nth-of-type(n) div {
-  border-left: 1px solid #807396;
+  border-left: 1px solid rgb(128, 115, 150);
   padding: 20px 0px 20px 10px;
 }
 div#pageContentWrapper div.pageContent form div.columns div:first-of-type div {
@@ -252,25 +252,20 @@ div#pageContentWrapper div.pageContent form div.columns div:first-of-type div {
 div#pageContentWrapper div.pageContent form div.formDataGrid {
   text-align: left;
   display: grid;
-  grid-template-columns: max-content max-content minmax(50%, 450px) auto;
-  grid-auto-rows: minmax(40px, auto);
+  grid-template-columns: min-content 2fr 4fr 5fr;
+  grid-auto-rows: minmax(60px, auto);
   min-width: 100%;
 }
 div#pageContentWrapper div.pageContent form div.formDataGrid p {
-  grid-column: 1/5;
-}
-div#pageContentWrapper div.pageContent form div.formDataGrid p.rightInputLabel,
-div#pageContentWrapper div.pageContent form div.formDataGrid p.leftInputLabel {
-  margin: auto 10px 15px auto;
-  margin: 0px;
-  align-self: center;
+  grid-column: 1/4;
 }
 div#pageContentWrapper div.pageContent form div.formDataGrid p.leftInputLabel {
-  grid-column: 2/3;
+  grid-column: 1;
   justify-self: flex-end;
+  white-space: nowrap;
 }
 div#pageContentWrapper div.pageContent form div.formDataGrid p.leftInputLabel + input[type=text] {
-  grid-column: 3;
+  grid-column: 2/5;
   align-self: center;
   min-width: 65%;
   margin-left: 5px;
@@ -278,15 +273,16 @@ div#pageContentWrapper div.pageContent form div.formDataGrid p.leftInputLabel + 
 div#pageContentWrapper div.pageContent form div.formDataGrid input[type=checkbox],
 div#pageContentWrapper div.pageContent form div.formDataGrid input[type=radio] {
   grid-column: 1;
-  margin-right: 5px;
+  margin-right: 10px;
   align-self: center;
+  justify-self: flex-end;
 }
 div#pageContentWrapper div.pageContent form div.formDataGrid p.rightInputLabel {
-  grid-column: 2/4;
+  grid-column: 2/5;
   justify-self: flex-start;
 }
 div#pageContentWrapper div.pageContent form div.formDataGrid p.errorMessage {
-  grid-column: 3/5;
+  grid-column: 2/5;
   margin: 0px;
   align-self: end;
 }
@@ -314,10 +310,10 @@ div#pageContentWrapper div.pageContent form div.formDataGrid span.pleaseWait {
   min-width: 100px;
 }
 div#pageContentWrapper div.pageContent form span.pleaseWait {
-  font-family: oxtail;
+  font-family: museo-sans-rounded;
   font-weight: 900;
   font-size: 20px;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
   text-shadow: 1px 1px 0px #c01352;
 }
 div#pageContentWrapper div.pageContent form div.fieldSummary p,
@@ -329,15 +325,15 @@ div#pageContentWrapper div.pageContent form div.fieldSummary h2 {
 }
 div#pageContentWrapper div.pageContent form div.fieldSummary p span.fieldName,
 div#pageContentWrapper div.pageContent form div.fieldSummary h2 span.fieldName {
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
   font-size: 18px;
 }
 div#pageContentWrapper div.pageContent form div.fieldSummary p {
-  color: #a35776;
+  color: rgb(163, 87, 118);
   font-size: 18px;
 }
 div#pageContentWrapper div.pageContent form div.fieldSummary h2 {
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
   font-size: 22px;
   margin-left: 100px;
 }
@@ -355,14 +351,14 @@ div#pageContentWrapper div.pageContent form#oauthConfirmation div.oauthCredentia
   margin: inherit;
 }
 div#pageContentWrapper div.pageContent form#oauthConfirmation div.oauthCredentials p:nth-of-type(2n - 1) {
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
   grid-column: 1;
   justify-self: flex-end;
   align-self: center;
   margin-right: 10px;
 }
 div#pageContentWrapper div.pageContent form#oauthConfirmation div.oauthCredentials p:nth-of-type(2n) {
-  color: #a35776;
+  color: rgb(163, 87, 118);
   grid-column: 2;
   justify-self: flex-start;
   align-self: center;
@@ -376,8 +372,8 @@ div#pageContentWrapper div.pageContent form#oauthConfirmation div.oauthCredentia
   font-weight: 700;
   font-size: 18px;
   background-color: #fff;
-  color: #a35776;
-  text-shadow: 1px 1px 0px #47243b;
+  color: rgb(163, 87, 118);
+  text-shadow: 1px 1px 0px rgb(71, 36, 59);
   grid-column: 2;
 }
 div#pageContentWrapper div.pageContent form#oauthConfirmation div.oauthCredentials input[type=button] {
@@ -402,7 +398,7 @@ div.manualContent div.json p {
   margin: 0px;
   padding: 0px;
   line-height: 18px;
-  color: #982027;
+  color: rgb(152, 32, 39);
   text-align: left;
   margin: 0px;
   padding: 0px;
@@ -410,8 +406,8 @@ div.manualContent div.json p {
   font-family: source-code-pro;
 }
 div.manualContent div.json p span.hilight {
-  color: #ff3ea5;
-  text-shadow: 1px 1px 0px #982027;
+  color: rgb(255, 62, 165);
+  text-shadow: 1px 1px 0px rgb(152, 32, 39);
 }
 div.manualContent div.sidebar {
   background: url("../images/white-silk.svg");
@@ -427,25 +423,25 @@ div.manualContent div.sidebar p {
   margin: 0px;
   padding: 0px;
   line-height: 18px;
-  color: #982027;
+  color: rgb(152, 32, 39);
   text-align: left;
 }
 div.manualContent div.sidebar p span.hilight {
-  color: #ff3ea5;
-  text-shadow: 1px 1px 0px #982027;
+  color: rgb(255, 62, 165);
+  text-shadow: 1px 1px 0px rgb(152, 32, 39);
 }
 div.manualContent p {
-  color: #a6594c;
-  text-shadow: 1px 1px 0px #7b4368;
-  font-family: oxtail;
+  color: rgb(166, 89, 76);
+  text-shadow: 1px 1px 0px rgb(123, 67, 104);
+  font-family: museo-sans-rounded;
   font-size: 20px;
   line-height: 22px;
 }
 div.manualContent p span.buttonReference {
-  color: #7b4368;
+  color: rgb(123, 67, 104);
 }
 div.manualContent p span.hilight {
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div.manualContent p span,
 div.manualContent p a .hilightHover {
@@ -455,15 +451,15 @@ div.manualContent p a .hilightHover {
 }
 div.manualContent p span:hover,
 div.manualContent p a .hilightHover:hover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
   cursor: pointer;
 }
 div.manualContent p a {
-  color: #426972;
+  color: rgb(66, 105, 114);
   text-decoration: none;
 }
 div.manualContent p a:hover {
-  color: #88b04b;
+  color: rgb(136, 176, 75);
 }
 div.manualContent div.inlineImgDiv div.picture {
   text-align: left;
@@ -489,12 +485,12 @@ div.manualContent div.inlineImgDiv div.sidebar p {
   margin: 0px;
   padding: 0px;
   line-height: 18px;
-  color: #982027;
+  color: rgb(152, 32, 39);
   text-align: left;
 }
 div.manualContent div.inlineImgDiv div.sidebar p span.hilight {
-  color: #ff3ea5;
-  text-shadow: 1px 1px 0px #982027;
+  color: rgb(255, 62, 165);
+  text-shadow: 1px 1px 0px rgb(152, 32, 39);
 }
 div.manualContent div.inline2ImgDiv {
   text-align: center;
@@ -524,12 +520,12 @@ div.manualContent div.inline2ImgDiv div.sidebar p {
   margin: 0px;
   padding: 0px;
   line-height: 18px;
-  color: #982027;
+  color: rgb(152, 32, 39);
   text-align: left;
 }
 div.manualContent div.inline2ImgDiv div.sidebar p span.hilight {
-  color: #ff3ea5;
-  text-shadow: 1px 1px 0px #982027;
+  color: rgb(255, 62, 165);
+  text-shadow: 1px 1px 0px rgb(152, 32, 39);
 }
 div.manualContent div.html-code {
   text-align: center;
@@ -554,33 +550,33 @@ div.manualContent div#stimulusTableDiv table {
   border-collapse: collapse;
   border: none;
   font-family: myriad-pro;
-  text-shadow: 1px 1px 0px #426972;
-  color: #b91228;
+  text-shadow: 1px 1px 0px rgb(66, 105, 114);
+  color: rgb(185, 18, 40);
   font-weight: 700;
   border: none;
   width: 100%;
 }
 div.manualContent div#stimulusTableDiv table tr th {
-  background-color: #ab9895;
-  border-bottom: 1px #47243b solid;
+  background-color: rgb(171, 152, 149);
+  border-bottom: 1px rgb(71, 36, 59) solid;
   font-weight: bold;
   text-align: center;
   font-size: 18px;
 }
 div.manualContent div#stimulusTableDiv table tr td {
   padding: 3px 25px;
-  text-shadow: 1px 1px 0px #807396;
-  color: #88b04b;
+  text-shadow: 1px 1px 0px rgb(128, 115, 150);
+  color: rgb(136, 176, 75);
   letter-spacing: 1px;
   font-style: italic;
   font-size: 16px;
-  border-right: 1px #47243b solid;
+  border-right: 1px rgb(71, 36, 59) solid;
 }
 div.manualContent div#stimulusTableDiv table tr:nth-child(2n) td {
-  background: #d37f6f;
+  background: rgb(211, 127, 111);
 }
 div.manualContent div#stimulusTableDiv table tr:nth-child(2n+1) td {
-  background: #dab965;
+  background: rgb(218, 185, 101);
 }
 div.manualContent div .imageOverText {
   max-width: 90%;
@@ -596,17 +592,17 @@ div.manualContent div#blockInstructions div {
   vertical-align: top;
 }
 div.manualContent div#blockInstructions div p {
-  color: #a6594c;
-  text-shadow: 1px 1px 0px #7b4368;
-  font-family: oxtail;
+  color: rgb(166, 89, 76);
+  text-shadow: 1px 1px 0px rgb(123, 67, 104);
+  font-family: museo-sans-rounded;
   font-size: 20px;
   line-height: 22px;
 }
 div.manualContent div#blockInstructions div p span.buttonReference {
-  color: #7b4368;
+  color: rgb(123, 67, 104);
 }
 div.manualContent div#blockInstructions div p span.hilight {
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div.manualContent div#blockInstructions div p span,
 div.manualContent div#blockInstructions div p a .hilightHover {
@@ -616,15 +612,15 @@ div.manualContent div#blockInstructions div p a .hilightHover {
 }
 div.manualContent div#blockInstructions div p span:hover,
 div.manualContent div#blockInstructions div p a .hilightHover:hover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
   cursor: pointer;
 }
 div.manualContent div#blockInstructions div p a {
-  color: #426972;
+  color: rgb(66, 105, 114);
   text-decoration: none;
 }
 div.manualContent div#blockInstructions div p a:hover {
-  color: #88b04b;
+  color: rgb(136, 176, 75);
 }
 div.manualContent div#blockInstructions div.left {
   width: 150px;
@@ -632,8 +628,8 @@ div.manualContent div#blockInstructions div.left {
   display: inline-block;
 }
 div.manualContent div#blockInstructions div.left p {
-  color: #7b4368;
-  text-shadow: 1px 1px 0px #807396;
+  color: rgb(123, 67, 104);
+  text-shadow: 1px 1px 0px rgb(128, 115, 150);
   text-align: right;
   font-weight: bold;
 }
@@ -643,8 +639,8 @@ div.manualContent div#blockInstructions div.right {
   display: inline-block;
 }
 div.manualContent div#blockInstructions div.right p {
-  color: #426972;
-  text-shadow: 1px 1px 0px #7b4368;
+  color: rgb(66, 105, 114);
+  text-shadow: 1px 1px 0px rgb(123, 67, 104);
   text-indent: -15px;
   text-align: left;
   font-style: italic;
@@ -669,12 +665,12 @@ div.manualContent div.smallInlineImgDiv div.sidebar p {
   margin: 0px;
   padding: 0px;
   line-height: 18px;
-  color: #982027;
+  color: rgb(152, 32, 39);
   text-align: left;
 }
 div.manualContent div.smallInlineImgDiv div.sidebar p span.hilight {
-  color: #ff3ea5;
-  text-shadow: 1px 1px 0px #982027;
+  color: rgb(255, 62, 165);
+  text-shadow: 1px 1px 0px rgb(152, 32, 39);
 }
 div.manualContent div#questionnaireResponses {
   display: flex;
@@ -703,25 +699,25 @@ div.manualContent div#questionnaireResponses div.questionnaireItem div.responseE
   margin: 0px;
   padding: 0px;
   line-height: 18px;
-  color: #982027;
+  color: rgb(152, 32, 39);
   text-align: left;
 }
 div.manualContent div#questionnaireResponses div.questionnaireItem div.responseExplanation p span.hilight {
-  color: #ff3ea5;
-  text-shadow: 1px 1px 0px #982027;
+  color: rgb(255, 62, 165);
+  text-shadow: 1px 1px 0px rgb(152, 32, 39);
 }
 div.manualContent div.tertiary p {
   font-family: myriad-pro;
   font-size: 16px;
   font-weight: 700;
   letter-spacing: 2px;
-  color: #426972;
-  text-shadow: 1px 1px 0px #7b4368;
+  color: rgb(66, 105, 114);
+  text-shadow: 1px 1px 0px rgb(123, 67, 104);
   line-height: 18px;
 }
 div.manualContent div.tertiary p span.hilight {
-  color: #f45520;
-  text-shadow: 1px 1px 0px #88b04b;
+  color: rgb(244, 85, 32);
+  text-shadow: 1px 1px 0px rgb(136, 176, 75);
 }
 div.manualContent div.sourceCode {
   background: #000;
@@ -752,84 +748,84 @@ div.manualContent div#manual-oauth form.oauthRegistration {
   width: 60%;
 }
 div.manualContent div#manual-oauth form.oauthRegistration p {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div.manualContent div#manual-oauth form.oauthRegistration p.hilight {
   color: #c01352;
 }
 div.manualContent div#manual-oauth form.oauthRegistration p.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div.manualContent div#manual-oauth form.oauthRegistration p.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div.manualContent div#manual-oauth form.oauthRegistration li {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div.manualContent div#manual-oauth form.oauthRegistration li.hilight {
   color: #c01352;
 }
 div.manualContent div#manual-oauth form.oauthRegistration li.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div.manualContent div#manual-oauth form.oauthRegistration li.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div.manualContent div#manual-oauth form.oauthRegistration h2 {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div.manualContent div#manual-oauth form.oauthRegistration h2.hilight {
   color: #c01352;
 }
 div.manualContent div#manual-oauth form.oauthRegistration h2.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div.manualContent div#manual-oauth form.oauthRegistration h2.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div.manualContent div#manual-oauth form.oauthRegistration span {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div.manualContent div#manual-oauth form.oauthRegistration span.hilight {
   color: #c01352;
 }
 div.manualContent div#manual-oauth form.oauthRegistration span.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div.manualContent div#manual-oauth form.oauthRegistration span.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div.manualContent div#manual-oauth form.oauthRegistration pre {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div.manualContent div#manual-oauth form.oauthRegistration pre.hilight {
   color: #c01352;
 }
 div.manualContent div#manual-oauth form.oauthRegistration pre.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div.manualContent div#manual-oauth form.oauthRegistration pre.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div.manualContent div#manual-oauth form.oauthRegistration h2 {
   font-size: 22px;
@@ -837,8 +833,8 @@ div.manualContent div#manual-oauth form.oauthRegistration h2 {
 }
 div.manualContent div#manual-oauth form.oauthRegistration p.errorMessage,
 div.manualContent div#manual-oauth form.oauthRegistration h2.globalErrorMessage {
-  color: #982027;
-  text-shadow: 1px 1px 0px #7b4368;
+  color: rgb(152, 32, 39);
+  text-shadow: 1px 1px 0px rgb(123, 67, 104);
 }
 div.manualContent div#manual-oauth form.oauthRegistration span.pleaseWait {
   text-align: center;
@@ -854,7 +850,7 @@ div.manualContent div#manual-oauth form.oauthRegistration div.columns div:nth-of
   box-sizing: border-box;
 }
 div.manualContent div#manual-oauth form.oauthRegistration div.columns div:nth-of-type(n) div {
-  border-left: 1px solid #807396;
+  border-left: 1px solid rgb(128, 115, 150);
   padding: 20px 0px 20px 10px;
 }
 div.manualContent div#manual-oauth form.oauthRegistration div.columns div:first-of-type div {
@@ -863,25 +859,20 @@ div.manualContent div#manual-oauth form.oauthRegistration div.columns div:first-
 div.manualContent div#manual-oauth form.oauthRegistration div.formDataGrid {
   text-align: left;
   display: grid;
-  grid-template-columns: max-content max-content minmax(50%, 450px) auto;
-  grid-auto-rows: minmax(40px, auto);
+  grid-template-columns: min-content 2fr 4fr 5fr;
+  grid-auto-rows: minmax(60px, auto);
   min-width: 100%;
 }
 div.manualContent div#manual-oauth form.oauthRegistration div.formDataGrid p {
-  grid-column: 1/5;
-}
-div.manualContent div#manual-oauth form.oauthRegistration div.formDataGrid p.rightInputLabel,
-div.manualContent div#manual-oauth form.oauthRegistration div.formDataGrid p.leftInputLabel {
-  margin: auto 10px 15px auto;
-  margin: 0px;
-  align-self: center;
+  grid-column: 1/4;
 }
 div.manualContent div#manual-oauth form.oauthRegistration div.formDataGrid p.leftInputLabel {
-  grid-column: 2/3;
+  grid-column: 1;
   justify-self: flex-end;
+  white-space: nowrap;
 }
 div.manualContent div#manual-oauth form.oauthRegistration div.formDataGrid p.leftInputLabel + input[type=text] {
-  grid-column: 3;
+  grid-column: 2/5;
   align-self: center;
   min-width: 65%;
   margin-left: 5px;
@@ -889,15 +880,16 @@ div.manualContent div#manual-oauth form.oauthRegistration div.formDataGrid p.lef
 div.manualContent div#manual-oauth form.oauthRegistration div.formDataGrid input[type=checkbox],
 div.manualContent div#manual-oauth form.oauthRegistration div.formDataGrid input[type=radio] {
   grid-column: 1;
-  margin-right: 5px;
+  margin-right: 10px;
   align-self: center;
+  justify-self: flex-end;
 }
 div.manualContent div#manual-oauth form.oauthRegistration div.formDataGrid p.rightInputLabel {
-  grid-column: 2/4;
+  grid-column: 2/5;
   justify-self: flex-start;
 }
 div.manualContent div#manual-oauth form.oauthRegistration div.formDataGrid p.errorMessage {
-  grid-column: 3/5;
+  grid-column: 2/5;
   margin: 0px;
   align-self: end;
 }
@@ -925,10 +917,10 @@ div.manualContent div#manual-oauth form.oauthRegistration div.formDataGrid span.
   min-width: 100px;
 }
 div.manualContent div#manual-oauth form.oauthRegistration span.pleaseWait {
-  font-family: oxtail;
+  font-family: museo-sans-rounded;
   font-weight: 900;
   font-size: 20px;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
   text-shadow: 1px 1px 0px #c01352;
 }
 div.manualContent div#manual-oauth form.oauthRegistration div.fieldSummary p,
@@ -940,15 +932,15 @@ div.manualContent div#manual-oauth form.oauthRegistration div.fieldSummary h2 {
 }
 div.manualContent div#manual-oauth form.oauthRegistration div.fieldSummary p span.fieldName,
 div.manualContent div#manual-oauth form.oauthRegistration div.fieldSummary h2 span.fieldName {
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
   font-size: 18px;
 }
 div.manualContent div#manual-oauth form.oauthRegistration div.fieldSummary p {
-  color: #a35776;
+  color: rgb(163, 87, 118);
   font-size: 18px;
 }
 div.manualContent div#manual-oauth form.oauthRegistration div.fieldSummary h2 {
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
   font-size: 22px;
   margin-left: 100px;
 }
@@ -966,14 +958,14 @@ div.manualContent div#manual-oauth form.oauthRegistration#oauthConfirmation div.
   margin: inherit;
 }
 div.manualContent div#manual-oauth form.oauthRegistration#oauthConfirmation div.oauthCredentials p:nth-of-type(2n - 1) {
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
   grid-column: 1;
   justify-self: flex-end;
   align-self: center;
   margin-right: 10px;
 }
 div.manualContent div#manual-oauth form.oauthRegistration#oauthConfirmation div.oauthCredentials p:nth-of-type(2n) {
-  color: #a35776;
+  color: rgb(163, 87, 118);
   grid-column: 2;
   justify-self: flex-start;
   align-self: center;
@@ -987,8 +979,8 @@ div.manualContent div#manual-oauth form.oauthRegistration#oauthConfirmation div.
   font-weight: 700;
   font-size: 18px;
   background-color: #fff;
-  color: #a35776;
-  text-shadow: 1px 1px 0px #47243b;
+  color: rgb(163, 87, 118);
+  text-shadow: 1px 1px 0px rgb(71, 36, 59);
   grid-column: 2;
 }
 div.manualContent div#manual-oauth form.oauthRegistration#oauthConfirmation div.oauthCredentials input[type=button] {
@@ -1014,84 +1006,84 @@ div.manualContent div#manual-oauth form.oauthConfirmation {
   width: 60%;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation p {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation p.hilight {
   color: #c01352;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation p.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div.manualContent div#manual-oauth form.oauthConfirmation p.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div.manualContent div#manual-oauth form.oauthConfirmation li {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation li.hilight {
   color: #c01352;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation li.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div.manualContent div#manual-oauth form.oauthConfirmation li.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div.manualContent div#manual-oauth form.oauthConfirmation h2 {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation h2.hilight {
   color: #c01352;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation h2.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div.manualContent div#manual-oauth form.oauthConfirmation h2.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div.manualContent div#manual-oauth form.oauthConfirmation span {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation span.hilight {
   color: #c01352;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation span.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div.manualContent div#manual-oauth form.oauthConfirmation span.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div.manualContent div#manual-oauth form.oauthConfirmation pre {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation pre.hilight {
   color: #c01352;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation pre.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div.manualContent div#manual-oauth form.oauthConfirmation pre.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div.manualContent div#manual-oauth form.oauthConfirmation h2 {
   font-size: 22px;
@@ -1099,8 +1091,8 @@ div.manualContent div#manual-oauth form.oauthConfirmation h2 {
 }
 div.manualContent div#manual-oauth form.oauthConfirmation p.errorMessage,
 div.manualContent div#manual-oauth form.oauthConfirmation h2.globalErrorMessage {
-  color: #982027;
-  text-shadow: 1px 1px 0px #7b4368;
+  color: rgb(152, 32, 39);
+  text-shadow: 1px 1px 0px rgb(123, 67, 104);
 }
 div.manualContent div#manual-oauth form.oauthConfirmation span.pleaseWait {
   text-align: center;
@@ -1116,7 +1108,7 @@ div.manualContent div#manual-oauth form.oauthConfirmation div.columns div:nth-of
   box-sizing: border-box;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation div.columns div:nth-of-type(n) div {
-  border-left: 1px solid #807396;
+  border-left: 1px solid rgb(128, 115, 150);
   padding: 20px 0px 20px 10px;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation div.columns div:first-of-type div {
@@ -1125,25 +1117,20 @@ div.manualContent div#manual-oauth form.oauthConfirmation div.columns div:first-
 div.manualContent div#manual-oauth form.oauthConfirmation div.formDataGrid {
   text-align: left;
   display: grid;
-  grid-template-columns: max-content max-content minmax(50%, 450px) auto;
-  grid-auto-rows: minmax(40px, auto);
+  grid-template-columns: min-content 2fr 4fr 5fr;
+  grid-auto-rows: minmax(60px, auto);
   min-width: 100%;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation div.formDataGrid p {
-  grid-column: 1/5;
-}
-div.manualContent div#manual-oauth form.oauthConfirmation div.formDataGrid p.rightInputLabel,
-div.manualContent div#manual-oauth form.oauthConfirmation div.formDataGrid p.leftInputLabel {
-  margin: auto 10px 15px auto;
-  margin: 0px;
-  align-self: center;
+  grid-column: 1/4;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation div.formDataGrid p.leftInputLabel {
-  grid-column: 2/3;
+  grid-column: 1;
   justify-self: flex-end;
+  white-space: nowrap;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation div.formDataGrid p.leftInputLabel + input[type=text] {
-  grid-column: 3;
+  grid-column: 2/5;
   align-self: center;
   min-width: 65%;
   margin-left: 5px;
@@ -1151,15 +1138,16 @@ div.manualContent div#manual-oauth form.oauthConfirmation div.formDataGrid p.lef
 div.manualContent div#manual-oauth form.oauthConfirmation div.formDataGrid input[type=checkbox],
 div.manualContent div#manual-oauth form.oauthConfirmation div.formDataGrid input[type=radio] {
   grid-column: 1;
-  margin-right: 5px;
+  margin-right: 10px;
   align-self: center;
+  justify-self: flex-end;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation div.formDataGrid p.rightInputLabel {
-  grid-column: 2/4;
+  grid-column: 2/5;
   justify-self: flex-start;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation div.formDataGrid p.errorMessage {
-  grid-column: 3/5;
+  grid-column: 2/5;
   margin: 0px;
   align-self: end;
 }
@@ -1187,10 +1175,10 @@ div.manualContent div#manual-oauth form.oauthConfirmation div.formDataGrid span.
   min-width: 100px;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation span.pleaseWait {
-  font-family: oxtail;
+  font-family: museo-sans-rounded;
   font-weight: 900;
   font-size: 20px;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
   text-shadow: 1px 1px 0px #c01352;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation div.fieldSummary p,
@@ -1202,15 +1190,15 @@ div.manualContent div#manual-oauth form.oauthConfirmation div.fieldSummary h2 {
 }
 div.manualContent div#manual-oauth form.oauthConfirmation div.fieldSummary p span.fieldName,
 div.manualContent div#manual-oauth form.oauthConfirmation div.fieldSummary h2 span.fieldName {
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
   font-size: 18px;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation div.fieldSummary p {
-  color: #a35776;
+  color: rgb(163, 87, 118);
   font-size: 18px;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation div.fieldSummary h2 {
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
   font-size: 22px;
   margin-left: 100px;
 }
@@ -1228,14 +1216,14 @@ div.manualContent div#manual-oauth form.oauthConfirmation#oauthConfirmation div.
   margin: inherit;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation#oauthConfirmation div.oauthCredentials p:nth-of-type(2n - 1) {
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
   grid-column: 1;
   justify-self: flex-end;
   align-self: center;
   margin-right: 10px;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation#oauthConfirmation div.oauthCredentials p:nth-of-type(2n) {
-  color: #a35776;
+  color: rgb(163, 87, 118);
   grid-column: 2;
   justify-self: flex-start;
   align-self: center;
@@ -1249,8 +1237,8 @@ div.manualContent div#manual-oauth form.oauthConfirmation#oauthConfirmation div.
   font-weight: 700;
   font-size: 18px;
   background-color: #fff;
-  color: #a35776;
-  text-shadow: 1px 1px 0px #47243b;
+  color: rgb(163, 87, 118);
+  text-shadow: 1px 1px 0px rgb(71, 36, 59);
   grid-column: 2;
 }
 div.manualContent div#manual-oauth form.oauthConfirmation#oauthConfirmation div.oauthCredentials input[type=button] {
@@ -1269,8 +1257,8 @@ div.manualContent div#manual-oauth form.oauthConfirmation div.dataDisplay p {
 }
 div.manualContent div#manual-oauth form.oauthConfirmation div.dataDisplay p:nth-of-type(2n - 1) {
   font-family: hobeaux-rococeaux-sherman;
-  color: #807396;
-  text-shadow: 1px 1px 0px #47243b;
+  color: rgb(128, 115, 150);
+  text-shadow: 1px 1px 0px rgb(71, 36, 59);
   justify-self: right;
   padding-right: 10px;
   padding-left: 30px;
@@ -1278,8 +1266,8 @@ div.manualContent div#manual-oauth form.oauthConfirmation div.dataDisplay p:nth-
 div.manualContent div#manual-oauth form.oauthConfirmation div.dataDisplay p:nth-of-type(2n) {
   font-family: myriad-pro;
   font-size: 18px;
-  color: #a35776;
-  text-shadow: 1px 1px 0px #7b4368;
+  color: rgb(163, 87, 118);
+  text-shadow: 1px 1px 0px rgb(123, 67, 104);
   font-weight: 700;
   justify-self: left;
 }
@@ -1288,8 +1276,8 @@ div.manualContent div#manual-oauth form.oauthConfirmation div.dataDisplay input[
   align-self: center;
   font-family: myriad-pro;
   font-weight: 700;
-  color: #a35776;
-  text-shadow: 1px 1px 0px #47243b;
+  color: rgb(163, 87, 118);
+  text-shadow: 1px 1px 0px rgb(71, 36, 59);
 }
 div.manualContent div#manual-oauth form.oauthConfirmation div.dataDisplay input[type=button] {
   grid-column: 1/3;
@@ -1297,15 +1285,15 @@ div.manualContent div#manual-oauth form.oauthConfirmation div.dataDisplay input[
   justify-self: center;
   margin-top: 10px;
   font-family: myriad-pro;
-  color: #a35776;
-  text-shadow: 1px 1px 0px #47243b;
+  color: rgb(163, 87, 118);
+  text-shadow: 1px 1px 0px rgb(71, 36, 59);
 }
 div.manualContent div#manual-oauth div#oauth-walkthrough1 {
   background-image: url("../images/code-background.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  color: #b63e5b;
+  color: rgb(182, 62, 91);
   text-align: left;
   max-width: 100%;
   margin: 0px;
@@ -1325,7 +1313,7 @@ div.manualContent div#manual-oauth div#oauth-walkthrough1 div#container div#page
 div.manualContent div#manual-oauth div#oauth-walkthrough1 div#container div#page h1 {
   text-align: center;
   font-size: 2.5em;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   font-family: co-headline, sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -1340,11 +1328,11 @@ div.manualContent div#manual-oauth div#oauth-walkthrough1 div#container div#page
   margin: 5px 0px;
 }
 div.manualContent div#manual-oauth div#oauth-walkthrough1 div#container div#page div.authContent p.highlight {
-  color: #8c3573;
+  color: rgb(140, 53, 115);
 }
 div.manualContent div#manual-oauth div#oauth-walkthrough1 div#container div#page div.authContent p:nth-of-type(2n-1) {
   grid-column: 1;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   justify-self: right;
   margin-right: 10px;
 }
@@ -1363,7 +1351,7 @@ div.manualContent div#manual-oauth div#oauth-walkthrough1 div#container div#page
   font-weight: 400;
   font-style: normal;
   font-size: 0.8rem;
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
   margin: 0px;
 }
 div.manualContent div#manual-oauth div#oauth-walkthrough1 div#container div#code {

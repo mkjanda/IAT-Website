@@ -77,84 +77,84 @@ div#pageContentWrapper div.pageContent form {
   width: 60%;
 }
 div#pageContentWrapper div.pageContent form p {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div#pageContentWrapper div.pageContent form p.hilight {
   color: #c01352;
 }
 div#pageContentWrapper div.pageContent form p.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div#pageContentWrapper div.pageContent form p.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div#pageContentWrapper div.pageContent form li {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div#pageContentWrapper div.pageContent form li.hilight {
   color: #c01352;
 }
 div#pageContentWrapper div.pageContent form li.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div#pageContentWrapper div.pageContent form li.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div#pageContentWrapper div.pageContent form h2 {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div#pageContentWrapper div.pageContent form h2.hilight {
   color: #c01352;
 }
 div#pageContentWrapper div.pageContent form h2.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div#pageContentWrapper div.pageContent form h2.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div#pageContentWrapper div.pageContent form span {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div#pageContentWrapper div.pageContent form span.hilight {
   color: #c01352;
 }
 div#pageContentWrapper div.pageContent form span.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div#pageContentWrapper div.pageContent form span.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div#pageContentWrapper div.pageContent form pre {
-  font-size: 16px;
+  font-size: 18px;
   font-family: hobeaux-rococeaux-sherman;
-  color: #8c3573;
+  color: rgb(140, 53, 115);
   text-align: left;
 }
 div#pageContentWrapper div.pageContent form pre.hilight {
   color: #c01352;
 }
 div#pageContentWrapper div.pageContent form pre.hilightHover {
-  color: #ff3ea5;
+  color: rgb(255, 62, 165);
 }
 div#pageContentWrapper div.pageContent form pre.hilightHover:hover {
   cursor: pointer;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
 }
 div#pageContentWrapper div.pageContent form h2 {
   font-size: 22px;
@@ -162,8 +162,8 @@ div#pageContentWrapper div.pageContent form h2 {
 }
 div#pageContentWrapper div.pageContent form p.errorMessage,
 div#pageContentWrapper div.pageContent form h2.globalErrorMessage {
-  color: #982027;
-  text-shadow: 1px 1px 0px #7b4368;
+  color: rgb(152, 32, 39);
+  text-shadow: 1px 1px 0px rgb(123, 67, 104);
 }
 div#pageContentWrapper div.pageContent form span.pleaseWait {
   text-align: center;
@@ -179,7 +179,7 @@ div#pageContentWrapper div.pageContent form div.columns div:nth-of-type(n) {
   box-sizing: border-box;
 }
 div#pageContentWrapper div.pageContent form div.columns div:nth-of-type(n) div {
-  border-left: 1px solid #807396;
+  border-left: 1px solid rgb(128, 115, 150);
   padding: 20px 0px 20px 10px;
 }
 div#pageContentWrapper div.pageContent form div.columns div:first-of-type div {
@@ -188,25 +188,20 @@ div#pageContentWrapper div.pageContent form div.columns div:first-of-type div {
 div#pageContentWrapper div.pageContent form div.formDataGrid {
   text-align: left;
   display: grid;
-  grid-template-columns: max-content max-content minmax(50%, 450px) auto;
-  grid-auto-rows: minmax(40px, auto);
+  grid-template-columns: min-content 2fr 4fr 5fr;
+  grid-auto-rows: minmax(60px, auto);
   min-width: 100%;
 }
 div#pageContentWrapper div.pageContent form div.formDataGrid p {
-  grid-column: 1/5;
-}
-div#pageContentWrapper div.pageContent form div.formDataGrid p.rightInputLabel,
-div#pageContentWrapper div.pageContent form div.formDataGrid p.leftInputLabel {
-  margin: auto 10px 15px auto;
-  margin: 0px;
-  align-self: center;
+  grid-column: 1/4;
 }
 div#pageContentWrapper div.pageContent form div.formDataGrid p.leftInputLabel {
-  grid-column: 2/3;
+  grid-column: 1;
   justify-self: flex-end;
+  white-space: nowrap;
 }
 div#pageContentWrapper div.pageContent form div.formDataGrid p.leftInputLabel + input[type=text] {
-  grid-column: 3;
+  grid-column: 2/5;
   align-self: center;
   min-width: 65%;
   margin-left: 5px;
@@ -214,15 +209,16 @@ div#pageContentWrapper div.pageContent form div.formDataGrid p.leftInputLabel + 
 div#pageContentWrapper div.pageContent form div.formDataGrid input[type=checkbox],
 div#pageContentWrapper div.pageContent form div.formDataGrid input[type=radio] {
   grid-column: 1;
-  margin-right: 5px;
+  margin-right: 10px;
   align-self: center;
+  justify-self: flex-end;
 }
 div#pageContentWrapper div.pageContent form div.formDataGrid p.rightInputLabel {
-  grid-column: 2/4;
+  grid-column: 2/5;
   justify-self: flex-start;
 }
 div#pageContentWrapper div.pageContent form div.formDataGrid p.errorMessage {
-  grid-column: 3/5;
+  grid-column: 2/5;
   margin: 0px;
   align-self: end;
 }
@@ -250,10 +246,10 @@ div#pageContentWrapper div.pageContent form div.formDataGrid span.pleaseWait {
   min-width: 100px;
 }
 div#pageContentWrapper div.pageContent form span.pleaseWait {
-  font-family: oxtail;
+  font-family: museo-sans-rounded;
   font-weight: 900;
   font-size: 20px;
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
   text-shadow: 1px 1px 0px #c01352;
 }
 div#pageContentWrapper div.pageContent form div.fieldSummary p,
@@ -265,15 +261,15 @@ div#pageContentWrapper div.pageContent form div.fieldSummary h2 {
 }
 div#pageContentWrapper div.pageContent form div.fieldSummary p span.fieldName,
 div#pageContentWrapper div.pageContent form div.fieldSummary h2 span.fieldName {
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
   font-size: 18px;
 }
 div#pageContentWrapper div.pageContent form div.fieldSummary p {
-  color: #a35776;
+  color: rgb(163, 87, 118);
   font-size: 18px;
 }
 div#pageContentWrapper div.pageContent form div.fieldSummary h2 {
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
   font-size: 22px;
   margin-left: 100px;
 }
@@ -291,14 +287,14 @@ div#pageContentWrapper div.pageContent form#oauthConfirmation div.oauthCredentia
   margin: inherit;
 }
 div#pageContentWrapper div.pageContent form#oauthConfirmation div.oauthCredentials p:nth-of-type(2n - 1) {
-  color: #5f4b8b;
+  color: rgb(95, 75, 139);
   grid-column: 1;
   justify-self: flex-end;
   align-self: center;
   margin-right: 10px;
 }
 div#pageContentWrapper div.pageContent form#oauthConfirmation div.oauthCredentials p:nth-of-type(2n) {
-  color: #a35776;
+  color: rgb(163, 87, 118);
   grid-column: 2;
   justify-self: flex-start;
   align-self: center;
@@ -312,8 +308,8 @@ div#pageContentWrapper div.pageContent form#oauthConfirmation div.oauthCredentia
   font-weight: 700;
   font-size: 18px;
   background-color: #fff;
-  color: #a35776;
-  text-shadow: 1px 1px 0px #47243b;
+  color: rgb(163, 87, 118);
+  text-shadow: 1px 1px 0px rgb(71, 36, 59);
   grid-column: 2;
 }
 div#pageContentWrapper div.pageContent form#oauthConfirmation div.oauthCredentials input[type=button] {

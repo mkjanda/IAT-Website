@@ -1,14 +1,14 @@
 { 
         "pageSections" : [
 		{"id" : "sectionIntro", "componentName" : "section-intro", "template" : "text!templates/section-intro.html"},
-		{"label" : "The Software", "labelWidth" : 200, "id" : "sectionTheSoftware", "componentName" : "section-the-software", "module" : "section-the-software", "template" : "text!templates/section-the-software.html"},
+		{"label" : "The Software", "labelWidth" : 220, "id" : "sectionTheSoftware", "componentName" : "section-the-software", "module" : "section-the-software", "template" : "text!templates/section-the-software.html"},
                 {"id" : "sectionTheIat", "componentName" : "section-the-iat", "module" : "section-the-iat", "template" : "text!templates/section-the-iat"},
-		{"label" : "Download", "labelWidth" : 200, "id" : "sectionDownload", "componentName" : "section-download", "module" : "section-download", "template" : "text!templates/section-download.html"},
-                {"label" : "Sample IATs", "labelWidth" : 200, "id" : "sectionSampleTests", "componentName" : "sample-tests", "module" : "sample-tests", "template" : "test!templates/sample-tests.html"},
-                {"label" : "Commercial Use", "labelWidth" : 200, "id" : "sectionCommercialUse", "componentName" : "section-commmercial-use", "module" : "section-commercial-use", "template" : "text!templates/section-commercial-use.html"},
+		{"label" : "Download", "labelWidth" : 220, "id" : "sectionDownload", "componentName" : "section-download", "module" : "section-download", "template" : "text!templates/section-download.html"},
+                {"label" : "Sample IATs", "labelWidth" : 220, "id" : "sectionSampleTests", "componentName" : "sample-tests", "module" : "sample-tests", "template" : "test!templates/sample-tests.html"},
+                {"id" : "sectionCommercialUse", "componentName" : "section-commmercial-use", "module" : "section-commercial-use", "template" : "text!templates/section-commercial-use.html"},
                 {"id" : "sectionOauth", "componentName" : "section-oauth", "module" : "section-oauth",  "template" : "text!templates/section-oauth.html"},
                 {"id" : "sectionCors", "componentName" : "section-cors", "module" : "section-cors", "template" : "text!templates/section-cors.html"},
-                {"label" : "Contact", "labelWidth" : 200, "id" : "sectionContact", "componentName" : "section-contact", "module" : "section-contact", "template" : "text!templates/section-contact.html"}
+                {"label" : "Contact", "labelWidth" : 220, "id" : "sectionContact", "componentName" : "section-contact", "module" : "section-contact", "template" : "text!templates/section-contact.html"}
         ],
         "manual":
         [

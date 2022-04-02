@@ -1,15 +1,13 @@
+<div data-bind="if: loaded()" class="svg-header">
 <div data-bind="foreach: captions">
-    <div data-bind="if: ($data === $component.captionText()) && $component.font(), 
-        style : { textAlign : ($component.template.textAnchor === 'middle') ? 'center' : 'left' }">
-<svg data-bind="attr : { viewBox : $component.viewBox($component.template.width, $component.template.height), 
-        width : ($component.template.displayWidth ? $component.template.displayWidth : $component.template.width).toString() + 'px', 
-        height : ($component.template.displayHeight ? $component.template.displayHeight : $component.template.height).toString() + 'px' }, 
-        styles : $component.template.styles" >
+    <div data-bind="style : { textAlign : ($component.template.textAnchor === 'middle') ? 'center' : 'left' }">
+<svg data-bind="attr : { viewBox : $component.viewBox(), width : $component.width().toString(), 
+        height : $component.height().toString()  }, styles : $component.template.styles" >
     <g overflow="hidden" class="outer">
         <defs>
             <mask data-bind="attr : { id : $component.textMaskId }">
-                <text fill="white" data-bind="text: $data, attr : { x : $component.textX($component.template), 
-                    y : $component.textY($component.template) }, style : { font : $component.font() }"></text>
+                <text fill="white" data-bind="text: $data, attr : { x : $component.textX(), 
+                    y : $component.textY() }, style : { font : $component.font() }"></text>
                 <filter data-bind="attr : { id : $component.innerShadowId, x : $component.filterX($component.template), 
                     y : $component.filterY($component.template), width : $component.filterWidth($component.template), 
                     height : $component.filterHeight($component.template) }">
@@ -25,17 +23,16 @@
             </lineargradient>
         </defs>
         <g class="inner" data-bind="attr : { mask : $component.textMaskUrl }">
-            <rect x="0" y="0" data-bind="attr : { width: $component.template.width, 
-                height : $component.template.height, fill: $component.template.bevelColor }" />
+            <rect x="0" y="0" data-bind="attr : { width: $component.width(), 
+                height : $component.height(), fill: $component.template.bevelColor }" />
             <!-- ko if: $component.id -->
-            <text data-bind="text : $data, attr : { x : $component.textX($component.template), 
-                y : $component.textY($component.template), filter : $component.innerShadowUrl, 
+            <text data-bind="text : $data, attr : { x : $component.textX(), 
+                y : $component.textY(), filter : $component.innerShadowUrl, 
                 fill : $component.linearGradientUrl, id : $component.id }, style : { font : $component.font() }"></text>
                   
             <!-- /ko -->
             <!-- ko ifnot: $component.id -->
-            <text data-bind="text : $data, attr : { x : $component.textX($component.template), 
-                y : $component.textY($component.template), 
+            <text data-bind="text : $data, attr : { x : $component.textX(), y : $component.textY(), 
                 filter : $component.innerShadowUrl, fill : $component.linearGradientUrl },
                 style : { font : $component.font() }"></text>
             <!-- /ko -->
@@ -43,4 +40,5 @@
     </g>
 </svg>
     </div>
+</div>
 </div>

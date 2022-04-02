@@ -8,22 +8,22 @@
 }
 body div#headerWrapper {
   text-align: center;
-  background: #807396;
+  background: rgb(128, 115, 150);
   position: fixed;
   top: 0px;
   left: 0px;
-  width: 100%;
   z-index: -10;
   display: inline-block;
 }
 body div#headerWrapper div {
-  width: 100%;
-  min-height: 100%;
   margin: 0px auto 25px auto;
   position: absolute;
   top: 0px;
   left: 0px;
-  display: block;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  overflow: hidden;
   background-size: cover;
 }
 body div#headerWrapper div.lowRes {
