@@ -9,7 +9,7 @@ define(['knockout', 'text!templates/expanding-menu-button.html'], function (ko, 
         self.display = params.display;
         self.height = params.height;
         self.label = params.label;
-        self.expandedWidth = params.width + 120;
+        self.expandedWidth = params.width + 200;
         self.id = "expanding-menu-button-" + n.toString();
         self.backgroundGradientId = self.id + "-background-gradient";
         self.textGradientId = self.id + "-text-gradient";
@@ -19,7 +19,8 @@ define(['knockout', 'text!templates/expanding-menu-button.html'], function (ko, 
         self.hilightedGradientUrl = "url(#" + self.hilightedGradientId + ")";
         self.cornerRadius = 40;
         self.choiceHeight = 30;
-        self.expandedHeight = self.height + self.choiceHeight * (self.selections.length - .5) + (.67 * self.cornerRadius);
+        self.expandedHeight = self.height + (self.choiceHeight * 0.5) + self.choiceHeight * (self.selections.length) + 
+            (0.67 * self.cornerRadius);
         self.expandedPath = "M " + (self.expandedWidth - self.width).toString() + " 0 v " + (self.height - 1).toString() + " h -" +
                 (self.expandedWidth - self.width).toString() + " v " + (self.expandedHeight - self.height - self.cornerRadius).toString() + " c 0 " +
                 self.cornerRadius.toString() + " 0 " + self.cornerRadius.toString() + " " + self.cornerRadius.toString() + " " +
@@ -50,7 +51,7 @@ define(['knockout', 'text!templates/expanding-menu-button.html'], function (ko, 
             self.isMousedOver(true);
         else
             self.isMousedOver(false);
-        var hilightNdx = Math.floor(y / 30);
+        var hilightNdx = Math.floor((y - self.choiceHeight * 0.5) / self.choiceHeight);
         for (var ctr = 0; ctr < self.selected.length; ctr++) {
             if (ctr === hilightNdx)
                 self.selected[ctr](true);
@@ -62,7 +63,7 @@ define(['knockout', 'text!templates/expanding-menu-button.html'], function (ko, 
     ExpandingMenuButton.prototype.onMouseClick = function (data, evt) {
         var self = this;
         var y = evt.offsetY - self.height;
-        var selectionNdx = Math.floor(y / 30);
+        var selectionNdx = Math.floor((y - 0.5 * self.choiceHeight) / self.choiceHeight);
         if ((selectionNdx < self.selections.length) && (selectionNdx >= 0)) {
             self.display({page: 'manual', section: self.selections[selectionNdx].component });
         }
