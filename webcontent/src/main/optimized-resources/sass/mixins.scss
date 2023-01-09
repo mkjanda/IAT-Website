@@ -1,0 +1,103 @@
+// _mixins.scss
+@import 'fonts';
+@import 'resources';
+
+@mixin electricBorder {
+	background-image: url('../images/whitetexture.svg');
+	border-image: url('../images/steel-blue-border.png');
+	border-image-repeat: repeat;
+	border-image-slice: 20%;
+	border-image-width: 10px;
+	border-image-outset: 8px;
+	border-style: solid;
+	padding-top: 30px;
+	padding-left: 100px;
+	padding-right: 100px;
+	padding-bottom: 60px;
+	background-repeat: repeat;
+	margin: 30px auto 50px auto;
+	width: 60%;
+
+	@each $element in ('p', 'li', 'h2', 'span', 'pre') {
+		#{$element} {
+			@if $element in ('p', 'li', 'span', 'a') {
+				font-size: 22px;
+				font-family: $cartoonish;
+				color: $purpleWine;
+			}
+
+			@else if $element=='h2' {
+				font-size: 22px;
+				font-family: $tekton;
+
+			}
+
+			@else if $element=='pre' {
+				font-family: $mono;
+				font-size: 18px;
+			}
+
+			text-align: left;
+
+			@if $element in ('span', 'pre', 'h2', 'a') {
+				&.hilight {
+					color: $lovePotion;
+				}
+
+				&.hilightHover {
+					color: $knockoutPink;
+
+					&:hover {
+						cursor: pointer;
+						color: $ultraViolet;
+					}
+				}
+			}
+		}
+	}
+}
+
+@mixin primaryParagraph {
+	color: $ultraViolet;
+	font-family: $museo;
+	font-weight: 500;
+	font-size: 26px;
+	line-height: 30px;
+
+	span.buttonReference {
+		color: $lovePotion;
+	}
+
+	span.hilight {
+		color: $lovePotion;
+	}
+
+	span.hilightHover {
+		color: $knockoutPink;
+		cursor: pointer;
+
+		&:hover {
+			color: $ultraViolet;
+		}
+	}
+
+	a {
+		color: $knockoutPink;
+		text-decoration: none;
+
+		&:hover {
+			color: $lovePotion;
+			cursor: $ultraViolet;
+		}
+	}
+}
+
+@mixin secondaryParagraph {
+	font-family: $museo;
+	font-size: 18px;
+	font-weight: 700;
+	letter-spacing: 2px;
+	color: $greenery;
+	text-shadow: 1px 1px 0px $kalamata;
+	line-height: 20px;
+}

@@ -1,0 +1,202 @@
+
+<div id="manual-oauth">
+    <svg-header params="caption: 'Direct Data Retrieval', template : smallHeaderTemplate, display : display">
+    </svg-header>
+    <p>The most powerful use of <span class="hilightHover" data-bind="event : { click : () => { navigate('manual', 'manual-tokens'); } }">Tokens</span> --> is that they allow you to retrieve results for individual test-takers without using
+        <span class="hilight">IAT Design</span>. This feature is invaluable for constructing applications that demand real time integration of test results with other data. To implement such an app, you must utilize OAuth to negoltiate authentication
+        with <span class="hilight">iatsoftware.net</span> before retrieving your results via what amounts to a REST request that includes an access token. A thorough example follows.
+    </p>
+    <svg-header params="caption : 'OAuth Registration', template : subHeaderTemplate, display : display"></svg-header>
+    <p>
+        Before obtaining an access token from <span class="hilight">iatsoftware.net</span>, it is necessary that you register your test for remote data retrieval to obtain a "client id" and "client secret." These are not the authentication items you will
+        supply to obtain your test data. They are part of a security procedure known as OAuth that ensures requests to retrieve result data originate from a party you authorize. After completing authentication, you will use the access token provided to
+        you when you submit the request for test data.
+    </p>
+    <form class="oauthRegistration">
+        <p>
+            Complete the following form to enable result retrieval via an application other than
+            <span class="hilight">IAT Design</span>. You will be issued a client id and client secret that you must use when retrieving data. If you have lost your client id or client secret, submitting this form again will retrieve them for you. It is
+            highly recommended that you
+            <span class="clickable" data-bind="event : { click : () => { navigate('manual', 'manual-oauth'); } }">consult the
+                documentation</span> for the mechanics of data retrieval using OAuth to ensure it meets your needs and also to understand what information is required in the form below before proceeding.
+        </p>
+        <div class="fieldSummary">
+            <h2>Field Summary</h2>
+            <p><span class="fieldName">product key &ndash;</span> This is accessible via the Help&mdash;&gt;About menu in the test design program.</p>
+            <p><span class="fieldName">test &ndash;</span> The name of the test you are registering</p>
+            <p><span class="fieldName">password &ndash;</span> The password you selected for the test</p>
+            <p><span class="fieldName">redirect url &ndash;</span> The URL that you will be redirected back to during the authentication process. This should reference a domain you own. You may enter a minimal path for the URL and allow redirections to explicitly
+                specified subpaths or if you may specify a unique URL. This can be modified if you have already registered your test by completing the remainder of the form.</p>
+        </div>
+        <div class="formDataGrid">
+            <p class="leftInputLabel">Product key:</p>
+            <input type="text" name="productKey" readonly value="12345678901234567890" /></td>
+            <p class="leftInputLabel">Test name:</p>
+            <input type="text" name="testName" readonly value="straight-drag" />
+            <p class="leftInputLabel">Test password:</p>
+            <input type="text" name="password" readonly value="password" />
+            <p class="leftInputLabel">Redirect URL:</p>
+            <input type="text" name="redirect" readonly data-bind="attr : { value : redirect }" />
+            <input id="subpaths" type="checkbox" name="subpaths" readonly />
+            <p class="rightInputLabel">Allow explicit redirects to subpaths of redirection URL</p>
+            <input type="button" value="Submit" disabled />
+        </div>
+    </form>
+    <p>Two fields bear explanations. The first is <span class="hilight">Redirect Url</span>. To ensure that OAuth requests originate from a party you permit, the initial authorization request will be answered with a redirection (HTTP Status Code 302) to
+        the URL you provide here. The reason for this will become apparent as you continue reading. It is not likely that you will choose to redirect to an HTML page. I am using one for simplicity's sake. The <span class="hilight">
+            Allow explicit redirects to subpaths of the redirection URL</span>, if checked, would permit you to supply a host name as the redirection URL and a path on its URL as the precise relocation destination. By default, OAuth will redirect to the
+        pre-agreed upon URL. If you desire redirection to a subpath, you must supply a full URL to that subpath in your request for authentication. For the purpose of this example, we will use the product key <span class="hilight">12345678901234567890</span>        a test named
+        <span class="hilight">
+            OauthSampleTest</span> with a test password of <span class="hilight">ezasabcdefg</span>. After the <span class="hilight">
+            Submit</span> button, which is disabled in this exercise, you should see the following form.</p>
+    <svg-header params="caption : 'OAuth Credentials', template : subHeaderTemplate, display : display"></svg-header>
+    <form class='oauthConfirmation'>
+        <div>
+            <p>Below is the client id and client secret you will use to authenticate your application with the server. Also listed is the URL the server will redirect your application to in the first stage of authentication. You can revisit this page to
+                change that URL later.</p>
+            <p>If you have any questions about OAuth or the RESTful interface used to retrieve data, feel free to contact me at <span class="hilight">
+                    michael@iatsoftware.net</span>. I will assist you as I am able and provide links to further reading material.
+            </p>
+        </div>
+        <div class="dataDisplay">
+            <p>client id:</p>
+            <p data-bind="text : clientId"></p>
+            <p>client secret:</p>
+            <p data-bind="text : clientSecret"></p>
+            <p>redirect url:</p>
+            <p data-bind="text : redirect"></p>
+            <input type="button" value='Change' disabled />
+        </div>
+    </form>
+    <p>The OAuth redirect URL can be modified via the Change button. You may return to this form at any time to alter it by completing the OAuth Registration form which will redirect you here.</p>
+    <svg-header params="caption : 'Conducting Authentication', template : subHeaderTemplate, display : display"></svg-header>
+    <p>
+        The first step in authenticating with the server to request test results programically is to issue a GET request to the URL below. Note that a <span class="hilight">client_id</span> parameter scripts at the end of the query string, the same client
+        id as above. When you issue the GET request, the server will respond with a 302 (redirect) to the agreed upon URL. You may optionally include a <span class="hilight">state</span> query parameter that will be appended in the query string of the
+        URL that you are redirected to. It might be wise to pass a session state token. Click the link below to submit a GET request to see the results of that request or copy and paste the link in your own browser bar.
+    </p>
+    <p>
+        <span class="hilightHover" data-bind="event : { click : oauthGetRequest }, text : authUrl"></span>
+    </p>
+    <!-- ko if: oauthGetLinkClicked() -->
+    <div style="background-image: url(../../images/oauth-sample-background.png); background-size: 100% auto; overflow: clip; background-repeat: repeat-y; padding: 20px 4%;" 
+        data-bind="foreach: oauthLines.html">
+        <p style="margin: 0px 0px;" data-bind="html: $data"></p>
+    </div>
+    <p>
+        Again, you should <span class="hilight">NEVER</span>, embed your client secret in a webpage or mobile app. Client secrets are preceded with the word "secret" specifically to discourage you from doing so. Click one of the two authentication methods
+        above.
+    </p>
+    <!-- /ko -->
+    <!-- ko if: oauthGetLinkClicked() && oauthSuccess() -->
+    <p>
+        If all the information you supply is valid, the server will return a JSON object of the form:
+    </p>
+    <div class="json">
+        <p>{</p>
+        <div style="margin-left: 100px;">
+            <p>access_token : &quot;{access_token}&quot;,</p>
+            <p>refresh_token : &quot;{refresh_token}&quot;,</p>
+            <p>token_type : &quot;bearer&quot;,</p>
+            <p>expires : {expiration time in seconds}</p>
+        </div>
+        <p>}</p>
+    </div>
+    <p>
+        At the time of this writing, access tokens have a lifetime of 20 minutes and refresh tokens have a lifetime of 24 hours. It is not anticipated that you will distribute your access token and process third-party refresh requests, but you may do so by making
+        a GET request to:
+    </p>
+    <div style="margin-left: 150px;">
+        <p>
+            <span class="hilight" style="white-space: pre-wrap;">https://www.iatsoftware.net/IAT/OAuth/Refresh?client_id={client
+                id}&amp;client_secret={client secret}
+                &amp;refresh_token={refresh token}&amp;grant_type=refresh_token</span>
+        </p>
+    </div>
+    <p>
+        The same object as that listed above will be returned. In either case, if there is an error,
+        <span class="hilight">access_token</span> and <span class="hilight">refresh_token</span> will both be set to &quot;error&quot;, <span class="hilight">token_type</span> will be set to &quot;none&quot; and an
+        <span class="hilight">error</span> field will be present with a description of the error. Otherwise, you are ready to retrieve data.
+    </p>
+    <svg-header params="caption : 'OAuth Step 3', template : subHeaderTemplate, display : display"></svg-header>
+    <p>
+        There are two options for retrieving data. The first is a GET request. You simply put all the parameters in the query string and post to the following address:
+    </p>
+    <div style="margin-left: 150px;">
+        <p>
+            <span class="hilight">https://www.iatsoftware.net/IAT/Restful/RetrieveResult?access_token={access_token}
+                &amp;test_name={test_name}&amp;test_password={test_password}&amp;product_key={product_key}
+                &amp;token={test_taker_token}&amp;results_format={results_format}</span>
+        </p>
+    </div>
+    <p>
+        Alternatively, you may use a POST request and include the data in JSON within the request body. In this instance, the query string need only contain the <span class="hilight">access_token</span>.
+    </p>
+    <div style="margin-left: 150px;">
+        <p>
+            <span class="hilight">https://www.iatsoftware.net/IAT/Restful/RetrieveResult?access_token={access_token}</span>
+        </p>
+    </div>
+    <p>Request body:</p>
+    <div class="json">
+        <p>{</p>
+        <div style="margin-left: 100px;">
+            <p>&quot;test_name&quot; : &quot;{test name}&quot;,</p>
+            <p>&quot;test_password&quot; : &quot;{test password}&quot;,</p>
+            <p>&quot;token&quot; : &quot;{test taker token}&quot;,</p>
+            <p>&quot;results_format&quot; : &quot;{results format}&quot;</p>
+        </div>
+        <p>}</p>
+    </div>
+    <p>
+        In either case, &quot;results_format&quot; may be omitted. The default value is &quot;ResultsSummary&quot;, which returns the IAT score and all questionnaire answers, &quot;DScore&quot; which returns only the IAT score, and &quot;FullResults,&quot; which
+        returns all data collected for that test-taker.
+    </p>
+    <!-- /ko -->
+
+</div>
+<!--ffdfdfdfdf
+ko if: viewState() === 'requestAuthResponse' 
+<div id="oauthWalkthrough1">
+    <svg-header params="caption : 'Requesting Authentication', template : sectionHeaderTemplate, display : display">
+    </svg-header>
+    <div id="container">
+        <div class="page">
+            <h1>Redirect Complete</h1>
+            <div class="authContent">
+                <p>client_id:</p>
+                <p>CLIENT611:straight-drag:16269d02f38b4e3a</p>
+                <p>client_secret:</p>
+                <p>secret:481dd7bce7f17ec6bf3f71345af4a1c7</p>
+                <p>code:</p>
+                <p class="code"></p>
+                <p>state:</p>
+                <p class="state"></p>
+            </div>
+            <br />
+            <p>
+                Please note that you should <span class="hilight">NEVER</span> embed your client secret into a webpage or even a mobile app. Practice is to issue client secrets that begin with &quot;secret:&quot; to discourage such behavior. It is embedded
+                here for simplicity's sake.
+            </p>
+            <p>
+                The &quot;code&quot; and &quot;state&quot; parameters are retrieved from the query string, not from the respose body. Again, when the GET request was issued, the server responded with a redirect (302) which has no response body. Instead, it sends you
+                to the pre-agreed upon URL with the query parameters shown. Let us suppose that the state token that was issued in the GET request makes reference to some key on this server that the test, test password, and test-taker token can be gotten
+                with. Additionally, this value could perhaps be used to retrieve the client id and client secret. The &quot;code&quot; parameters will be supplied in the next step to complete authentication.
+            </p>
+            <p>
+                The next step is to issue a POST request back to
+                <span style="color: #c01352">
+                    https://iatsoftware.net/IAT/OAuth/RequestAuth</span> that contains the client id, client secret, authentication code, and a &quot;grant_type&quot; parameter that must be set equal to &quot;code&quot;. You may pack the
+                four values into a query string and submit a POST, you may send a JSON object via AJAX, you may send a FormData object via AJAX. Sending them as request headers is impermissable because request headers are not encrypted. Look at the example
+                code to the right for options.
+            </p>
+            <div style="display: flex; flex-flow: row; justify-content: space-around">
+                <input type="button" value="Auth with JSON" onclick="authWithJson()" />
+                <input type="button" value="Auth with Form Data" onclick="authWithFormData()" />
+            </div>
+            <div id="authResponse"></div>
+        </div>
+
+    </div>
+</div>
+-->

@@ -1,0 +1,40 @@
+@import url("https://use.typekit.net/ssx7rnd.css");
+@import url("https://use.typekit.net/lxb3sjv.css");
+@import url("https://use.typekit.net/sra2zjj.css");
+/* greenery palettes */
+@font-face {
+  font-family: TektonPro-BoldExt;
+  src: url("../fonts/TektonPro-BoldExt.otf");
+}
+body div#headerWrapper {
+  text-align: center;
+  background: rgb(128, 115, 150);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: -10;
+  display: inline-block;
+}
+body div#headerWrapper div {
+  margin: 0px auto 25px auto;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  overflow: hidden;
+  background-size: cover;
+}
+body div#headerWrapper div.lowRes {
+  z-index: -3;
+  background-image: url("../images/iat-website-header-lowres.jpg");
+}
+body div#headerWrapper div.highRes {
+  z-index: -2;
+}
+body div#headerWrapper div.highRes img {
+  max-width: 100%;
+}
+
+/*# sourceMappingURL=header.css.map */

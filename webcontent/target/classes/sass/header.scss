@@ -1,0 +1,37 @@
+@import 'fonts';
+@import 'resources';
+
+body div#headerWrapper {
+    text-align: center;
+    background: $purpleHaze;
+    position: fixed;
+
+    top: 0px;
+    left: 0px;
+    z-index: -10;
+    display: inline-block;
+
+    div {
+        margin: 0px auto 25px auto;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        overflow: hidden;
+        background-size: cover;
+
+        &.lowRes {
+            z-index: -3;
+            background-image: url("../images/iat-website-header-lowres.jpg");
+        }
+
+        &.highRes {
+            z-index: -2;
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<style th:insert="email/shared-email-styles.css"></style>
+	</head>
+	<body>
+		<table style="width: 800px; border-collapse: collapse;">
+			<tr>
+			<td style="width: 320px;"></td>
+			<td style="width: 300px;"></td>
+			<td style="width: 180px;"></td>
+			</tr>
+			<td></td>
+			<tr>
+			<td></td>
+				<td colspan=2 th:insert="email/logo.html :: logo"></td>
+			</tr>
+			<tr>
+				<td colspan="3">
+		<div id="content">
+			<p style="font-family: oxtail, serif; font-size: 16px;" th:text="${userName + ','}"></p>
+			<p style="font-family: oxtail, serif; font-size: 16px;">You are receiving this email because someone requested the product key associated with the account
+			this address is tied. That product key is <span style="font-weight: bold; color: rgb(163, 87, 118);" th:text="${productKey}"></span>.
+			If you need to download the software again, click here:</p> 
+			<p style="font-family: oxtail, serif; font-size: 16px;"><a th:href="@{https://iatsoftware.net/DownloadSoftware(password=${downloadPassword},clientId=${clientId})}" 
+			th:text="${downloadUrl}"></a>.
+			</p>
+			<p style="font-family: oxtail, serif; font-size: 16px;">If you encounter problems, write me at the address below.</p>
+		</div>
+		</td>
+		</tr>
+		<tr>
+		<td colspan=2></td>
+		<td th:insert="email/signature.html :: signature"></td>
+		</tr>
+		</table>
+	</body>
+</html>

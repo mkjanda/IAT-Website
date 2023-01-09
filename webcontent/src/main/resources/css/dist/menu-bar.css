@@ -1,0 +1,140 @@
+@import url("https://use.typekit.net/ssx7rnd.css");
+@import url("https://use.typekit.net/lxb3sjv.css");
+@import url("https://use.typekit.net/sra2zjj.css");
+/* greenery palettes */
+@font-face {
+  font-family: TektonPro-BoldExt;
+  src: url("../fonts/TektonPro-BoldExt.otf");
+}
+div#mainMenuBarWrapper {
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  display: block;
+  padding: 0px;
+  width: 100%;
+  z-index: 10;
+  height: 60px;
+  box-sizing: border-box;
+}
+
+div#mainMenuBarWrapper div {
+  margin: 0px;
+  padding: 0px;
+}
+
+div#mainMenuBarWrapper svg {
+  margin: 0px;
+  padding: 0px;
+}
+
+div#mainMenuBarWrapper svg linearGradient.menuButtonTextGradient stop:nth-of-type(1) {
+  stop-color: #47243b;
+}
+
+div#mainMenuBarWrapper svg linearGradient.menuButtonTextGradient stop:nth-of-type(2) {
+  stop-color: #973c6c;
+}
+
+div#mainMenuBarWrapper svg linearGradient.menuButtonTextGradient stop:nth-of-type(3) {
+  stop-color: black;
+}
+
+div#mainMenuBarWrapper svg linearGradient.menuButtonHilightedGradient stop:nth-of-type(1) {
+  stop-color: #982027;
+}
+
+div#mainMenuBarWrapper svg linearGradient.menuButtonHilightedGradient stop:nth-of-type(2) {
+  stop-color: #ce3175;
+}
+
+div#mainMenuBarWrapper svg linearGradient.menuButtonHilightedGradient stop:nth-of-type(3) {
+  stop-color: #b91228;
+}
+
+div#mainMenuBarWrapper div#mainMenuBar {
+  display: inline-block;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  height: 60px;
+}
+
+div#mainMenuBarWrapper div#mainMenuBar svg linearGradient.menuBarGradient stop:nth-of-type(1) {
+  stop-color: #ab9895;
+}
+
+div#mainMenuBarWrapper div#mainMenuBar svg linearGradient.menuBarGradient stop:nth-of-type(2) {
+  stop-color: #807396;
+}
+
+div#mainMenuBarWrapper div#mainMenuBar svg linearGradient.menuBarGradient stop:nth-of-type(3) {
+  stop-color: #ab9895;
+}
+
+div#mainMenuBarWrapper div#mainMenuBar svg.menuBarBackground {
+  width: 100%;
+  height: 60px;
+  margin: 0px;
+  padding: 0px;
+}
+
+div#mainMenuBarWrapper div#mainMenuBar div#mainMenuButtonWrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  width: max-content;
+  justify-content: flex-start;
+  align-items: flex-start;
+  z-index: 101;
+  margin: 0px auto;
+  padding: 0px;
+  position: relative;
+  top: -64px;
+  left: 0px;
+  height: 60px;
+}
+
+div#mainMenuBarWrapper div#mainMenuBar div#mainMenuButtonWrapper div .buttonWrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+}
+
+div#mainMenuBarWrapper div#mainMenuBar div#mainMenuButtonWrapper div .buttonWrapper div.menuButton {
+  text-align: left;
+  cursor: pointer;
+  height: 60px;
+  box-sizing: border-box;
+}
+
+div#mainMenuBarWrapper div#mainMenuBar div#mainMenuButtonWrapper div .buttonWrapper div.menuButton svg {
+  height: 60px;
+}
+
+div#mainMenuBarWrapper div#mainMenuBar div#mainMenuButtonWrapper div .buttonWrapper div.menuButton svg text {
+  font-family: myriad-pro, sans-serif;
+  font-weight: 400;
+}
+
+div#mainMenuBarWrapper div#mainMenuBar div#mainMenuButtonWrapper div.expandedMenuButton {
+  cursor: pointer;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+div#mainMenuBarWrapper div#mainMenuBar div#mainMenuButtonWrapper div.expandedMenuButton svg {
+  margin: 0px 0px 0px 0px;
+  padding: 0px;
+}
+
+div#mainMenuBarWrapper div#mainMenuBar div#mainMenuButtonWrapper div.expandedMenuButton svg text {
+  font-family: myriad-pro, sans-serif;
+  font-weight: 400;
+}
+
+div#mainMenuBarWrapper div#mainMenuBar div#mainMenuButtonWrapper text.mousedOver {
+  fill: #88b04b;
+}
+
+/*# sourceMappingURL=menu-bar.css.map */

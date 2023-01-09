@@ -1,0 +1,12 @@
+<iat-header params='logoImageHeight : logoImageHeight, displaySections: display'></iat-header>
+
+<div id="pageContentWrapper" data-bind="style : { top : logoImageHeight() }, descendantsComplete : onDescendantsComplete">
+    <menu-bar style="width: 100%; position: sticky; top: 0px; z-index: 100;" params='headerHeight : logoImageHeight(), height : 60, display : display'></menu-bar>    
+    <div id="pageContent" data-bind="if : display().page === 'page'">
+        <page-content params='display : display'></page-content>
+    </div>
+    
+    <div class="manualContent" data-bind="if : display().page === 'manual'">
+        <manual-wrapper params="display : display"></manual-wrapper>
+    </div>
+</div>

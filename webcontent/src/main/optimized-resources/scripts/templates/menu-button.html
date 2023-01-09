@@ -1,0 +1,29 @@
+<div class="menuButton" data-bind="attr : { id : id }">
+	<svg data-bind="style : { width : width.toString() + 'px' }, click: buttonClick, attr : { width : width.toString(), height : height.toString() }, 
+            event : { mouseover : function() { isMousedOver(true) }, mouseout : function() { isMousedOver(false) }}">
+		<defs>
+			<linearGradient x1="0" y1="0" x2="0" y2="1" data-bind="attr : { id : backgroundGradientId} " class="menuBarGradient"> 
+                            <stop offset="0" />
+                            <stop offset=".83" />
+                            <stop offset="1"/>
+			</linearGradient>
+                        <linearGradient x1="0" y1="0" x2="0" y2="1" data-bind="attr : { id : textGradientId }" class="menuButtonTextGradient">
+                            <stop offset="0" />
+                            <stop offset=".15" />
+                            <stop offset="1" />
+                        </linearGradient>
+                        <linearGradient x1="0" y1="0" x2="0" y2="1" data-bind="attr : { id : hilightedGradientId }" class="menuButtonHilightedGradient">
+                            <stop offset="0" />
+                            <stop offset=".45" />
+                            <stop offset="1" />
+                        </linearGradient>
+		</defs>
+		<rect x="0" y="0" data-bind="attr : { width : width, height : height, fill : backgroundGradientUrl }" />
+		<path data-bind="attr : { d : pathString }" stroke="rgb(0, 0, 0)" fill="rgba(0, 0, 0, 0)" />
+		<text text-anchor="middle" data-bind="text: label, style : { fontSize : Math.floor(height / 2).toString() + 'px', 
+                fontFamily : fontFamily, fontWeight : fontWeight }, attr : { x : (width / 2).toString(), 
+                y : (height * 5 / 7).toString(), fill : isMousedOver() ? hilightedGradientUrl : textGradientUrl }" />
+	</svg>
+</div>
+
+

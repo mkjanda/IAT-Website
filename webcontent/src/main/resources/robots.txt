@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /IAT/
+Sitemap: https://iatsoftware.net/sitemap.xml

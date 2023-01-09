@@ -1,0 +1,54 @@
+@import 'resources';
+
+@keyframes flipOn {
+  from {
+    transform: rotateX(80deg) translateZ(-70px) scale(.2);
+  }
+
+  70% {
+    transform: scale(.6);
+  }
+
+  100% {
+    transform: rotateX(0deg) scale(1);
+  }
+}
+
+
+div#downloadPlacard {
+  z-index: 100;
+  perspective: 500px;
+  perspective-origin: 50% 0%;
+  background-color: rga(0, 0, 0, 0);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+
+  div {
+    transform-origin: -40% right;
+    animation-delay: 0s;
+    animation-duration: .5s;
+    margin-top: 50px;
+    margin-left: 10%;
+    width: 80%;
+    animation-name: flipOn;
+    background-color: $brilliantWhite;
+
+    /*
+        svg {
+            min-width: 50%;
+            margin-left: 25px;
+            margin-top: 25px;
+
+            text.header {
+                font-family: $cutesey, serif;
+                font-size: 4rem;
+            }
+        }*/
+    p {
+      font-family: $myriad, sans-serif;
+      font-size: 2rem;
+      color: $ultraViolet;
+    }
+  }
+}

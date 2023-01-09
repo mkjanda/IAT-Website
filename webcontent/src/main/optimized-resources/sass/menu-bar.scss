@@ -1,0 +1,144 @@
+@import 'fonts';
+@import 'resources';
+
+div#mainMenuBarWrapper {
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    display: block;
+    padding: 0px;
+    width: 100%;
+    z-index: 10;
+    height: $menuBarHeight;
+    box-sizing: border-box;
+
+    div {
+        margin: 0px;
+        padding: 0px;
+    }
+
+
+    svg {
+        margin: 0px;
+        padding: 0px;
+
+        linearGradient.menuButtonTextGradient {
+            stop:nth-of-type(1) {
+                stop-color: $winterBloom;
+            }
+
+            stop:nth-of-type(2) {
+                stop-color: $batonRouge;
+            }
+
+            stop:nth-of-type(3) {
+                stop-color: rgba(0, 0, 0, 1);
+            }
+        }
+
+        linearGradient.menuButtonHilightedGradient {
+            stop:nth-of-type(1) {
+                stop-color: $redDahlia;
+            }
+
+            stop:nth-of-type(2) {
+                stop-color: $pinkYarrow;
+            }
+
+            stop:nth-of-type(3) {
+                stop-color: $gojiBerry;
+            }
+        }
+    }
+
+    div#mainMenuBar {
+        display: inline-block;
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        text-align: center;
+
+        height: $menuBarHeight;
+
+        svg {
+            linearGradient.menuBarGradient {
+                stop:nth-of-type(1) {
+                    stop-color: $sphinx;
+                }
+
+                stop:nth-of-type(2) {
+                    stop-color: $purpleHaze;
+                }
+
+                stop:nth-of-type(3) {
+                    stop-color: $sphinx;
+                }
+            }
+        }
+
+        svg.menuBarBackground {
+            width: 100%;
+            height: $menuBarHeight;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        div#mainMenuButtonWrapper {
+            display: flex;
+            flex-flow: row nowrap;
+            width: max-content;
+            justify-content: flex-start;
+            align-items: flex-start;
+            z-index: 101;
+            margin: 0px auto;
+            padding: 0px;
+            position: relative;
+            top: calc(0px - ($menuButtonHeight + 4px));
+            left: 0px;
+            height: $menuButtonHeight;
+
+            div .buttonWrapper{
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: flex-start;
+
+                div.menuButton {
+                    text-align: left;
+                    cursor: pointer;
+                    height: $menuButtonHeight;
+                    box-sizing: border-box;
+
+                    svg {
+                        height: $menuButtonHeight;
+                        text {
+                            font-family: $myriad;
+                            font-weight: 400;
+                        }
+                    }
+
+                }
+            }
+
+            div.expandedMenuButton {
+                cursor: pointer;
+                text-align: center;
+                box-sizing: border-box;
+
+                svg {
+                    margin: 0px 0px 0px 0px;
+                    padding: 0px;
+
+                    text {
+                        font-family: $myriad;
+                        font-weight: 400;
+                    }
+                }
+            }
+
+
+            text.mousedOver {
+                fill: $greenery;
+            }
+        }
+    }
+}

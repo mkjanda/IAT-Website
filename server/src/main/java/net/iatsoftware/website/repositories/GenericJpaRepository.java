@@ -1,0 +1,63 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package net.iatsoftware.website.repositories;
+
+/**
+ *
+ * @author Michael Janda
+ */
+
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.CriteriaDelete;
+import java.io.Serializable;
+
+public abstract class GenericJpaRepository<I extends Serializable, E extends Serializable> extends GenericBaseRepository<I, E> {
+    @PersistenceContext EntityManager entityManager;
+    
+    @Override
+    public Iterable<E> getAll()
+    {
+        CriteriaBuilder cb = this.entityManager.getCriteriaBuilder();
+        CriteriaQuery<E> q = cb.createQuery(this.entityClass);
+        return entityManager.createQuery(q.select(q.from(this.entityClass))).getResultList();
+    }
+    
+    @Override
+    public E get(I id)
+    {
+        return this.entityManager.find(this.entityClass, id);
+    }
+    
+    @Override
+    public void add(E e)
+    {
+        this.entityManager.persist(e);
+    }
+    
+    @Override
+    public E update(E entity)
+    {
+        return this.entityManager.merge(entity);
+    }
+    
+    @Override
+    public void delete(E entity)
+    {
+        this.entityManager.remove(entity);
+    }
+    
+    @Override
+    public void deleteById(I id)
+    {
+        CriteriaBuilder cb = this.entityManager.getCriteriaBuilder();
+        CriteriaDelete<E> query = cb.createCriteriaDelete(this.entityClass);
+        this.entityManager.createQuery(query.where(cb.equal(query.from(this.entityClass).get("id"), id))).executeUpdate();
+    }
+}

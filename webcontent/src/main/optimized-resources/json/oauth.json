@@ -1,0 +1,8 @@
+{
+    "product_key" : "2X5D9YE5GRLSHNKRL2I0",
+    "test_name" : "straight-drag",
+    "test_password" : "1234",
+    "client_id" : "CLIENT1:straight-drag:c3bb1b8c77c18f7d",
+    "client_secret" : "secret:3dfc85e02c8ee877dbe84d9bea57ceaa",
+    "redirect" : "http://127.0.0.1/oauth-example/oauth-stub.html"
+}

@@ -1,0 +1,57 @@
+<svg-header params="caption : 'Download', template : headerTemplate, display : display"></svg-header>
+<p>The app is freely available to individuals wishing to create have no more than one test online at once
+    and administer a total of 5000 or fewer administrations. It is also available in its opensource form 
+    at <span class="hilightHover" data-bind="event : { click : function() { window.location = 'https://github.com/mkjanda' }}">
+    https://github.com/mkjanda</span>. It is also available freely to non-profit organizations
+    for unlimited use. If you have any questions or if you experience problems downloading the product,
+    please contact me at <span class="hilight">michael@iatsoftware.net</span>. If you do not have an Organization Id
+    that you are aware of, use your email address. <span class="highlight">The software requires Windows 8, 10, or 11.</span>
+</p>
+<form data-bind="attr : { id : formId }">
+    <div class="errorDiv" data-bind="if : hasErrors()">
+        <svg-header params="caption: 'Errors in Submission', template: errorCaptionTemplate, display : display">
+        </svg-header>
+        <div data-bind="foreach : { data : errors().filter(e => e.field === 'global') }">
+            <p class="errorMessage" data-bind='text : $data.message'></p>
+        </div>
+    </div>
+    <div class="formDataGrid">
+        <p style="grid-column: 1/4">Already Registered?</p>
+        <p style="grid-column: 4"><span class="hilightHover" style="margin: 0px 15px;" data-bind="click : showAlreadyRegistered">
+            Click Here</span></p>
+        <!-- ko foreach: errors().filter(e => { return e.field === 'firstName' }) -->
+        <p class="errorMessage" data-bind="text : $data.message"></p>
+        <!-- /ko -->
+        <p class="leftInputLabel">First name:</p>
+        <input type="text" name="firstName" />
+        <!-- ko foreach: errors().filter(e => { return e.field === 'lastName' }) -->
+        <p class="errorMessage" data-bind="text : $data.message"></p>
+        <!-- /ko -->
+        <p class="leftInputLabel">Last name:</p>
+        <input type="text" name="lastName" />
+        <!-- ko foreach: errors().filter(e => { return e.field === 'email' }) -->
+        <p class="errorMessage" data-bind="text : $data.message"></p>
+        <!-- /ko -->
+        <p class="leftInputLabel">eMail:</p>
+        <!-- ko if: state().email -->
+        <input type="text" name="email" maxLength="255" data-bind="attr : { 'value' : state().email }" />
+        <!-- /ko -->
+        <!-- ko ifnot : state().email -->
+        <input type="text" name="email" maxLength="255" />
+        <!-- /ko -->
+        <!-- ko foreach: errors().filter(e => { return e.field === 'use' }) -->
+        <p class="errorMessage" data-bind="text : $data.message"></p>
+        <!-- /ko -->
+        <p>Please enter a description of how you intend to use this product:</p>
+        <textarea name="use" rows="8"></textarea>
+        <!-- ko if: posting() -->
+        <span class="pleaseWait" data-bind="text : pleaseWaitText()"></span>
+        <!-- /ko -->
+        <!-- ko ifnot: posting() -->
+        <input name="Submit" type="button" value="Submit" data-bind="click: post" />
+        <!-- /ko -->
+    </div>
+    <p>If you are using this product through an institution that has acquired a site license, enter the value you were
+        provided instead of your email address. Otherwise,
+        enter your email address. If you have lost or forgotten your organization's id, email me.</p>
+</form>

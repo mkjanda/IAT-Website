@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="description" content="Download a free IAT (Implicit Association Test) design tool that features 
+test administration online, internet test administration. There is absolutely no programming or scripting involved in test creation.
+They can be put together in as little as two hours. Data exported in Excel format.">
+<title>IAT Software</title>
+<link rel="icon" type="image/x-icon" sizes="16x16 24x24 32x32 48x48 64x64" href="/images/pageicon.ico"/>
+<link rel="apple-touch-icon" href="/images/apple-touch-icon-64x64.png" />
+<link rel="apple-touch-startup-image" href="/images/apple-icon-256x256.png" />
+<link rel="stylesheet" href="css/main.css" />
+<script src="scripts/lib/require.js"></script>
+<script>
+  requirejs.config({
+    waitSeconds: 30,
+    baseUrl: "/scripts/lib",
+    paths: {
+        modules: "../modules",
+        templates: "../templates",
+        json: "../../json",
+        images : "../../images",
+        token : "/token"
+    }
+  });  
+  require(['text!token'], function(t) {
+    sessionStorage.setItem("iat-website-token", t);
+  });
+
+</script>
+<script src="scripts/main.js"></script>
+<link rel="canonical" href="https://www.iatsoftware.net" />
+</head>
+<body>
+<page-body></page-body>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    <url>
+        <loc>https://www.iatsoftware.net</loc>
+        <image:image>
+            <image:loc>https://iatsoftware.net/images/iat-website-header@1.0x.jpg</image:loc>
+            <image:caption>IAT Software: Helping people read minds since 2020</image:caption>
+            <image:title>IAT Software</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://iatsoftware.net/images/screenshot1.png</image:loc>
+            <image:caption>Creatingflower/insect IAT (Implicit Association Test)</image:caption>
+            <image:title>IAT Design</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://iatsoftware.net/images/screenshot2.png</image:loc>
+            <image:caption>IAT Design being used to edit an Implicit Association Test</image:caption>
+            <image:title>IAT Design</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://iatsoftware.net/images/screenshot3.png</image:loc>
+            <image:caption>Implicit Association Test data retrieved from iatsoftware.net with IAT Design</image:caption>
+            <image:title>IAT Design</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://iatsoftware.net/images/screenshot4.png</image:loc>
+            <image:caption>IAT Design being used to create an instruction screen</image:caption>
+            <image:title>IAT Design</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://iatsoftware.net/images/screenshot5.png</image:loc>
+            <image:caption>IAT Design being used to create a questionnaire</image:caption>
+            <image:title>IAT Design</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://iatsoftware.net/images/layout-screenshot.png</image:loc>
+            <image:caption>Changing the layout of an Implicit Association Test with IAT Design</image:caption>
+            <image:title>IAT Design</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://iatsoftware.net</loc>
+        <image:image>
+            <image:loc>https://iatsoftware.net/images/iat-website-header@1.0x.jpg</image:loc>
+            <image:caption>IAT Software: Helping people read minds since 2020</image:caption>
+            <image:title>IAT Software</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://iatsoftware.net/images/screenshot1.png</image:loc>
+            <image:caption>Creatingflower/insect IAT (Implicit Association Test)</image:caption>
+            <image:title>IAT Design</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://iatsoftware.net/images/screenshot2.png</image:loc>
+            <image:caption>IAT Design being used to edit an Implicit Association Test</image:caption>
+            <image:title>IAT Design</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://iatsoftware.net/images/screenshot3.png</image:loc>
+            <image:caption>Implicit Association Test data retrieved from iatsoftware.net with IAT Design</image:caption>
+            <image:title>IAT Design</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://iatsoftware.net/images/screenshot4.png</image:loc>
+            <image:caption>IAT Design being used to create an instruction screen</image:caption>
+            <image:title>IAT Design</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://iatsoftware.net/images/screenshot5.png</image:loc>
+            <image:caption>IAT Design being used to create a questionnaire</image:caption>
+            <image:title>IAT Design</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://iatsoftware.net/images/layout-screenshot.png</image:loc>
+            <image:caption>Changing the layout of an Implicit Association Test with IAT Design</image:caption>
+            <image:title>IAT Design</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>http://www.iatsoftware.net</loc>
+    </url>
+    <url>
+        <loc>http://iatsoftware.net</loc>
+    </url>            
+    <url>
+        <loc>https://www.iatsoftware.net?page=manual&amp;section=manual-your-first-iat</loc>
+    </url>
+    <url>
+        <loc>https://www.iatsoftware.net?page=manual&amp;section=manual-main-interface</loc>
+    </url>
+    <url>
+        <loc>https://www.iatsoftware.net?page=manual&amp;section=manual-block-design</loc>
+    </url>
+    <url>
+        <loc>https://www.iatsoftware.net?page=manual&amp;section=manual-response-keys</loc>
+    </url>
+    <url>
+        <loc>https://www.iatsoftware.net?page=manual&amp;section=manual-instruction-screens</loc>
+    </url>
+    <url>
+        <loc>https://www.iatsoftware.net?page=manual&amp;section=manual-questionnaires</loc>
+    </url>
+    <url>
+        <loc>https://www.iatsoftware.net?page=manual&amp;section=manual-layout</loc>
+    </url>
+    <url>
+        <loc>https://www.iatsoftware.net?page=manual&amp;section=manual-alternating-items</loc>
+    </url>
+    <url>
+        <loc>https://www.iatsoftware.net?page=manual&amp;section=manual-server-interface</loc>
+    </url>
+    <url>
+        <loc>https://www.iatsoftware.net?page=manual&amp;section=manual-privacy</loc>
+    </url>    
+    <url>
+        <loc>https://www.iatsoftware.net?page=manual&amp;section=manual-manual-tokens</loc>
+    </url>
+    <url>
+        <loc>https://www.iatsoftware.net?page=manual&amp;section=manual-oauth</loc>
+    </url>
+    <url>
+        <loc>https://www.iatsoftware.net?page=manual&amp;section=manual-cors</loc>
+    </url>
+    <url>
+        <loc>https://www.iatsoftware.net?page=manual&amp;Ssection=oauth-sample-html</loc>
+    </url>
+</urlset>

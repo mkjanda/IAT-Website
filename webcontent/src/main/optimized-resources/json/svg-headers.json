@@ -1,0 +1,423 @@
+{
+    "sectionHeader": {
+        "width": 1200,
+        "height": 154,
+        "blurSize": 140,
+        "textAnchor": "start",
+        "font": "400 92px hobeaux-rococeaux-sherman",
+        "bevelColor": "#000",
+        "styles": [{
+            "tagName": "svg",
+            "styleAttributes": [{
+                    "attribute": "left",
+                    "value": "130px"
+                },
+                {
+                    "attribute": "position",
+                    "value": "relative"
+                }
+            ]
+        }, {
+            "tagName": "text",
+            "styleAttributes": [{
+                "attribute": "text-anchor",
+                "value": "start"
+            }]
+        }, {
+            "tagName": "g",
+            "styleAttributes": [{
+                "attribute": "text-anchor",
+                "value": "start"
+            }]
+        }],
+        "gradient": {
+            "gradientStops": [{
+                    "stop": 0,
+                    "color": "rgb(136, 176, 75)"
+                }, {
+                    "stop": 0.10,
+                    "color": "rgb(184, 138, 172)"
+                },
+                {
+                    "stop": 0.20,
+                    "color": "rgb(128, 115, 150)"
+                }, {
+                    "stop": 0.32,
+                    "color": "rgb(211, 127, 111)"
+                }, {
+                    "stop": 0.50,
+                    "color": "rgb(218, 185, 101)"
+                },
+                {
+                    "stop": 0.67,
+                    "color": "rgb(171, 152, 149)"
+                }, {
+                    "stop": 0.80,
+                    "color": "rgb(174, 140, 142)"
+                }, {
+                    "stop": 0.90,
+                    "color": "rgb(239, 224, 205)"
+                },
+                {
+                    "stop": 1,
+                    "color": "rgb(136, 176, 75)"
+                }
+            ],
+            "x1": 0.25,
+            "y1": 0,
+            "x2": 1,
+            "y2": 1
+        }
+    },
+    "smallSectionHeader": {
+        "width": 1100,
+        "height": 80,
+        "blurSize": 120,
+        "textAnchor": "start",
+        "font": "400 72px hobeaux-rococeaux-sherman",
+        "bevelColor": "#000",
+        "styles": [{
+                "tagName": "svg",
+                "styleAttributes": [{
+                        "attribute": "left",
+                        "value": "100px"
+                    },
+                    {
+                        "attribute": "position",
+                        "value": "relative"
+                    }
+                ]
+            }, {
+                "tagName": "text",
+                "styleAttributes": [{
+                    "attribute": "text-anchor",
+                    "value": "start"
+                }]
+            },
+            {
+                "tagName": "g",
+                "styleAttributes": [{
+                    "attribute": "text-anchor",
+                    "value": "start"
+                }]
+            }
+        ],
+        "gradient": {
+            "gradientStops": [{
+                    "stop": 0,
+                    "color": "rgb(136, 176, 75)"
+                }, {
+                    "stop": 0.10,
+                    "color": "rgb(184, 138, 172)"
+                },
+                {
+                    "stop": 0.20,
+                    "color": "rgb(128, 115, 150)"
+                }, {
+                    "stop": 0.32,
+                    "color": "rgb(211, 127, 111)"
+                }, {
+                    "stop": 0.50,
+                    "color": "rgb(218, 185, 101)"
+                },
+                {
+                    "stop": 0.67,
+                    "color": "rgb(171, 152, 149)"
+                }, {
+                    "stop": 0.80,
+                    "color": "rgb(174, 140, 142)"
+                }, {
+                    "stop": 0.90,
+                    "color": "rgb(239, 224, 205)"
+                },
+                {
+                    "stop": 1,
+                    "color": "rgb(136, 176, 75)"
+                }
+            ],
+            "x1": 0.25,
+            "y1": 0,
+            "x2": 1,
+            "y2": 1
+        }
+    },
+    "subHeader": {
+        "width": 1100,
+        "height": 54,
+        "indent": 0,
+        "blurSize": 160,
+        "textAnchor": "middle",
+        "font": "900 48px oxtail",
+        "bevelColor": "rgb(95, 75, 139)",
+        "styles": [{
+                "tagName": "text",
+                "styleAttributes": [{
+                    "attribute": "text-anchor",
+                    "value": "middle"
+                }]
+            },
+            {
+                "tagName": "g",
+                "styleAttributes": [{
+                    "attribute": "text-anchor",
+                    "value": "middle"
+                }]
+            }
+        ],
+        "gradient": {
+            "gradientStops": [{
+                    "stop": 0,
+                    "color": "rgb(71, 36, 59)"
+                }, {
+                    "stop": 0.15,
+                    "color": "rgb(151, 60, 108)"
+                },
+                {
+                    "stop": 0.5,
+                    "color": "rgb(244, 85, 32)"
+                }, {
+                    "stop": 0.8,
+                    "color": "rgb(166, 89, 76)"
+                }, {
+                    "stop": 1,
+                    "color": "rgb(185, 18, 40)"
+                }
+            ],
+            "x1": 0,
+            "y1": 0,
+            "x2": 0.75,
+            "y2": 1
+        }
+    },
+    "sampleTestHeader": {
+        "width": 500,
+        "height": 92,
+        "blurSize": 160,
+        "font": "700 64px reklame-script",
+        "textAnchor": "middle",
+        "bevelColor": "rgba(123, 67, 104, .8)",
+        "styles": [{
+                "tagName": "svg",
+                "styleAttributes": [{
+                    "attribute": "position",
+                    "value": "relative"
+                }]
+            },
+            {
+                "tagName": "text",
+                "styleAttributes": [{
+                    "attribute": "text-anchor",
+                    "value": "middle"
+                }]
+            },
+            {
+                "tagName": "g",
+                "styleAttributes": [{
+                    "attribute": "text-anchor",
+                    "value": "middle"
+                }]
+            }
+        ],
+        "gradient": {
+            "gradientStops": [{
+                    "stop": 0,
+                    "color": "rgb(71, 36, 59)"
+                }, {
+                    "stop": 0.12,
+                    "color": "rgb(151, 60, 108)"
+                },
+                {
+                    "stop": 0.25,
+                    "color": "rgb(152, 32, 39)"
+                }, {
+                    "stop": 0.37,
+                    "color": "rgb(244, 85, 32)"
+                }, {
+                    "stop": 0.5,
+                    "color": "rgb(206, 49, 117)"
+                },
+                {
+                    "stop": 0.62,
+                    "color": "rgb(185, 18, 40)"
+                }, {
+                    "stop": 0.75,
+                    "color": "rgb(101, 102, 63)"
+                }, {
+                    "stop": 0.87,
+                    "color": "rgb(221, 182, 20)"
+                },
+                {
+                    "stop": 1.0,
+                    "color": "rgb(136, 176, 75)"
+                }
+            ],
+            "x1": 0,
+            "y1": 0.25,
+            "x2": 1,
+            "y2": 0.75
+        }
+    },
+    "attentionHeader": {
+        "width": 1200,
+        "height": 120,
+        "displayWidth": 800,
+        "displayHeight": 80,
+        "blurSize": 160,
+        "font": "900 64px coquette",
+        "textAnchor": "middle",
+        "bevelColor": "rgba(123, 67,, 104, .8)",
+        "styles": [{
+                "tagName": "svg",
+                "styleAttributes": [{
+                        "attribute": "opacity",
+                        "value": ".8"
+                    },
+                    {
+                        "attribute": "position",
+                        "value": "relative"
+                    }
+                ]
+            }, {
+                "tagName": "text",
+                "styleAttributes": [{
+                    "attribute": "text-anchor",
+                    "value": "middle"
+                }]
+            },
+            {
+                "tagName": "g",
+                "styleAttributes": [{
+                    "attribute": "text-anchor",
+                    "value": "middle"
+                }]
+            }
+        ],
+        "gradient": {
+            "gradientStops": [{
+                    "stop": 0,
+                    "color": "rgb(71, 36, 59)"
+                }, {
+                    "stop": 0.12,
+                    "color": "rgb(151, 60, 108)"
+                },
+                {
+                    "stop": 0.25,
+                    "color": "rgb(152, 32, 39)"
+                }, {
+                    "stop": 0.37,
+                    "color": "rgb(244, 85, 32)"
+                }, {
+                    "stop": 0.5,
+                    "color": "rgb(206, 49, 117)"
+                },
+                {
+                    "stop": 0.62,
+                    "color": "rgb(185, 18, 40)"
+                }, {
+                    "stop": 0.75,
+                    "color": "rgb(101, 102, 63)"
+                }, {
+                    "stop": 0.87,
+                    "color": "rgb(221, 182, 20)"
+                },
+                {
+                    "stop": 1.0,
+                    "color": "rgb(136, 176, 75)"
+                }
+            ],
+            "x1": 0,
+            "y1": 0.25,
+            "x2": 1,
+            "y2": 0.75
+        }
+    },
+    "productKey": {
+        "width": 700,
+        "height": 64,
+        "indent": 0,
+        "font": "900 48px oxtail",
+        "blurSize": 140,
+        "textAnchor": "middle",
+        "bevelColor": "rgb(0, 0, 0)",
+        "styles": [{
+            "tagName": "text",
+            "styleAttributes": [{
+                "attribute": "text-anchor",
+                "value": "middle"
+            }]
+        }, {
+            "tagName": "g",
+            "styleAttributes": [{
+                "attribute": "text-anchor",
+                "value": "middle"
+            }]
+        }],
+        "gradient": {
+            "gradientStops": [{
+                    "stop": 0,
+                    "color": "rgb(136, 176, 75)"
+                }, {
+                    "stop": 0.25,
+                    "color": "rgb(136, 176, 75)"
+                },
+                {
+                    "stop": 0.5,
+                    "color": "rgb(136, 176, 75)"
+                }, {
+                    "stop": 0.75,
+                    "color": "rgb(136, 176, 75)"
+                }, {
+                    "stop": 1,
+                    "color": "rgb(136, 176, 75)"
+                }
+            ],
+            "x1": 0,
+            "y1": 0.25,
+            "x2": 1,
+            "y2": 0.75
+        }
+    },
+    "errorCaption": {
+        "width": 500,
+        "height": 70,
+        "indent": 0,
+        "blurSize": 160,
+        "font": "500 48px cuisine",
+        "textAnchor": "middle",
+        "bevelColor": "rgb(0, 0, 0)",
+        "styles": [{
+            "tagName": "text",
+            "styleAttributes": [{
+                "attribute": "text-anchor",
+                "value": "middle"
+            }]
+        }, {
+            "tagName": "g",
+            "styleAttributes": [{
+                "attribute": "text-anchor",
+                "value": "middle"
+            }]
+        }],
+        "gradient": {
+            "gradientStops": [{
+                    "stop": 0,
+                    "color": "rgb(206, 49, 117)"
+                }, {
+                    "stop": 0.5,
+                    "color": "rgb(206, 49, 117)"
+                },
+                {
+                    "stop": 0.7,
+                    "color": "rgb(152, 32, 39)"
+                }, {
+                    "stop": 1,
+                    "color": "rgb(152, 32, 39)"
+                }
+            ],
+            "x1": 0,
+            "y1": 0.25,
+            "x2": 1,
+            "y2": 0.75
+        }
+    }
+}

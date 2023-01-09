@@ -1,0 +1,2 @@
+body::before{font-family:"Source Code Pro","SF Mono",Monaco,Inconsolata,"Fira Mono","Droid Sans Mono",monospace,monospace;white-space:pre;display:block;padding:1em;margin-bottom:1em;border-bottom:2px solid #000;content:"Error: Undefined variable.\a    \2577 \a 31 \2502          background-color: $brilliantWhite;\a    \2502                            ^^^^^^^^^^^^^^^\a    \2575 \a   webcontent/src/main/resources/sass/download-placard.scss 31:27  root stylesheet"}
+/*# sourceMappingURL=download-placard.min.css.map */

@@ -1,0 +1,33 @@
+{ 
+        "pageSections" : [
+		{"id" : "sectionIntro", "componentName" : "section-intro", "template" : "text!templates/section-intro.html"},
+		{"label" : "The Software", "labelWidth" : 220, "id" : "sectionTheSoftware", "componentName" : "section-the-software", "module" : "section-the-software", "template" : "text!templates/section-the-software.html"},
+                {"id" : "sectionTheIat", "componentName" : "section-the-iat", "module" : "section-the-iat", "template" : "text!templates/section-the-iat"},
+		{"label" : "Download", "labelWidth" : 220, "id" : "sectionDownload", "componentName" : "section-download", "module" : "section-download", "template" : "text!templates/section-download.html"},
+                {"label" : "Sample IATs", "labelWidth" : 220, "id" : "sectionSampleTests", "componentName" : "sample-tests", "module" : "sample-tests", "template" : "test!templates/sample-tests.html"},
+                {"id" : "sectionCommercialUse", "componentName" : "section-commmercial-use", "module" : "section-commercial-use", "template" : "text!templates/section-commercial-use.html"},
+                {"id" : "sectionOauth", "componentName" : "section-oauth", "module" : "section-oauth",  "template" : "text!templates/section-oauth.html"},
+                {"id" : "sectionCors", "componentName" : "section-cors", "module" : "section-cors", "template" : "text!templates/section-cors.html"},
+                {"label" : "Contact", "labelWidth" : 220, "id" : "sectionContact", "componentName" : "section-contact", "module" : "section-contact", "template" : "text!templates/section-contact.html"}
+        ],
+        "manual":
+        [
+            { "label" : "Your first IAT", "component" : "manual-your-first-iat", "template" : "text!templates/manual/your-first-iat.html" },
+            { "label" : "Main Interface", "component" : "manual-main-interface", "template" : "text!templates/manual/main-interface.html" },
+            { "label" : "Block Design", "component" : "manual-block-design", "template" : "text!templates/manual/block-design.html" },
+            { "label" : "Response Keys", "component" : "manual-response-keys", "template" : "text!templates/manual/response-keys.html" },
+            { "label" : "Instruction Screens", "component" : "manual-instruction-screens", "template" : "text!templates/manual/instruction-screens.html" },
+            { "label" : "Questionnaires", "component" : "manual-questionnaires", "template" : "text!templates/manual/surveys.html" },
+            { "label" : "Layout", "component" : "manual-layout", "template" : "text!templates/manual/layout.html" },
+            { "label" : "Alternating Items", "component" : "manual-alternating-items", "template" : "text!templates/manual/alternating-items.html" },
+            { "label" : "Server Interface", "component" : "manual-server-interface", "template" : "text!templates/manual/server-interface.html" },
+            { "label" : "Privacy (Data Security)", "component" : "manual-privacy", "template" : "text!templates/manual/privacy.html" },
+            { "label" : "Identifying Test Takers", "component" : "manual-tokens", "template" : "text!templates/manual/tokens.html" },
+            { "label" : "Direct Data Retrieval", "component" : "manual-oauth", "module" : "modules/manual/manual-oauth", "template" : "text!templates/manual/manual-oauth.html" },
+            { "label" : "Hosting From Another Site", "component" : "manual-cors", "template" : "text!templates/manual/cors.html" }
+        ],
+        "components" : [
+                { "component" : "oauth-example", "module" : "manual/oauth-example", "template" : "text!templates/manual/oauth-example.html" },
+                { "component" : "manual-wrapper", "module" : "manual-wrapper" }
+        ]        
+}

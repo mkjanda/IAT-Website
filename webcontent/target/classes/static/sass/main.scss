@@ -1,0 +1,21 @@
+@import 'resources';
+@import 'header';
+@import 'menu-bar';
+@import 'page-content';
+@import 'manual';
+@import 'forms';
+@import 'fonts';
+@import 'placard';
+
+body {
+    background: white;
+    padding-bottom: 50px;
+    margin: 0px;
+    min-width: 100%;
+    
+    div.relativeZero {
+        position: relative;
+        top: 0px;
+        left: 0px;
+    }
+}

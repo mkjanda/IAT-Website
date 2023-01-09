@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<html>
+
+<head>
+    <title>OAuth Sample</title>
+    <link rel="stylesheet" href="../css/frames.css" />
+    <script src="../scripts/lib/require.js"></script>
+    <script type="text/javascript">
+        requirejs.config({
+            waitSeconds: 30,
+            baseUrl: "/scripts/lib",
+            paths: {
+                modules: "../../oauth",
+                templates: "../../oauth",
+                json: "../../json",
+            }
+        });
+
+        require(['knockout', 'domReady!'], function(ko) {
+            ko.components.register('request-auth', {
+                require: "modules/request-auth"
+            });
+            ko.applyBindings('request-auth');
+        });
+
+        function onLoad() {
+            document.querySelector("div.authContent p.code").
+            innerText = new URLSearchParams(window.location.search).get("code");
+            document.querySelector("div.authContent p.state").
+            innerText = new URLSearchParams(window.location.search).get("state");
+        }
+
+        function authWithJson() {
+            let authObj = {
+                client_id: "CLIENT611:straight-drag:16269d02f38b4e3a",
+                client_secret: "secret:481dd7bce7f17ec6bf3f71345af4a1c7",
+                code: new URLSearchParams(window.location.search).get("code"),
+                grant_type: "code",
+            };
+            let ajax = new XMLHttpRequest();
+            ajax.onreadystatechange = () => {
+                if (ajax.readyState === 4 && ajax.status === 200) {
+                    parent.document.body.dispatchEvent(
+                        new CustomEvent("oauthsuccess", {
+                            detail: {
+                                result: JSON.parse(ajax.responseText),
+                            },
+                        })
+                    );
+                    displayAuthResults(ajax.responseText);
+                } else if (ajax.readyState === 4) {
+                    displayAuthResults(ajax.responseText);
+                }
+            };
+            ajax.open("POST", "http://127.0.0.1/IAT/OAuth/RequestAuth");
+            // ------ MAKE SURE TO DO THIS -------- //
+            ajax.setRequestHeader("content-type", "text/json");
+            ajax.setRequestHeader("accept", "text/json");
+            ajax.send(JSON.stringify(authObj));
+        }
+
+        function authWithFormData() {
+            let form = new FormData();
+            form.set("client_id", "CLIENT611:straight-drag:16269d02f38b4e3a");
+            form.set("client_secret", "secret:481dd7bce7f17ec6bf3f71345af4a1c7");
+            form.set(
+                "code",
+                new URLSearchParams(window.location.search).get("code")
+            );
+            form.set("grant_type", "code");
+            let ajax = new XMLHttpRequest();
+            ajax.onreadystatechange = () => {
+                if (ajax.readyState === 4 && ajax.status === 200) {
+                    parent.document.body.dispatchEvent(
+                        new CustomEvent("oauthsuccess", {
+                            detail: {
+                                result: JSON.parse(ajax.responseText),
+                            },
+                        })
+                    );
+                    displayAuthResults(ajax.responseText);
+                } else if (ajax.readyState === 4) {
+                    displayAuthResults(ajax.responseText);
+                }
+            };
+            ajax.open("POST", "http://127.0.0.1/IAT/OAuth/RequestAuth");
+            // ------ MAKE SURE TO DO THIS -------- //
+            ajax.setRequestHeader("accept", "text/json");
+            ajax.send(form);
+        }
+
+        function displayAuthResults(results) {
+            let resultLines = results.split("\n");
+            resultLines.forEach((line) => {
+                line = line.innerHTML.replaceAll(/\t/g, "&nbsp;&nbsp;");
+                let pre = document.createElement("pre");
+                pre.innerText = line;
+                document.querySelector("body div#authResponse").appendChild(pre);
+            });
+        }
+    </script>
+</head>
+
+<body onload="onLoad()">
+    <div id="container">
+        <div id="page">
+            <h1>Redirect Complete</h1>
+            <div class="authContent">
+                <p>client_id:</p>
+                <p>CLIENT611:straight-drag:16269d02f38b4e3a</p>
+                <p>client_secret:</p>
+                <p>secret:481dd7bce7f17ec6bf3f71345af4a1c7</p>
+                <p>code:</p>
+                <p class="code"></p>
+                <p>state:</p>
+                <p class="state"></p>
+            </div>
+            <br />
+            <p>
+                Please note that you should <span class="hilight">NEVER</span> embed your client secret into a webpage or even a mobile app. Practice is to issue client secrets that begin with &quot;secret:&quot; to discourage such behavior. It is embedded
+                here for simplicity's sake.
+            </p>
+            <p>
+                The &quot;code&quot; and &quot;state&quot; parameters are retrieved from the query string, not from the respose body. Again, when the GET request was issued, the server responded with a redirect (302) which has no response body. Instead, it sends you
+                to the pre-agreed upon URL with the query parameters shown. Let us suppose that the state token that was issued in the GET request makes reference to some key on this server that the test, test password, and test-taker token can be gotten
+                with. Additionally, this value could perhaps be used to retrieve the client id and client secret. The &quot;code&quot; parameters will be supplied in the next step to complete authentication.
+            </p>
+            <p>
+                The next step is to issue a POST request back to
+                <span style="color: #c01352">https://iatsoftware.net/IAT/OAuth/RequestAuth
+                </span> that contains the client id, client secret, authentication code, and a &quot;grant_type&quot; parameter that must be set equal to &quot;code&quot;. You may pack the four values into a query string and submit a POST,
+                you may send a JSON object via AJAX, you may send a FormData object via AJAX. Sending them as request headers is impermissable because request headers are not encrypted. Look at the example code to the right for options.
+            </p>
+            <div style="display: flex; flex-flow: row; justify-content: space-around">
+                <input type="button" value="Auth with JSON" onclick="authWithJson()" />
+                <input type="button" value="Auth with Form Data" onclick="authWithFormData()" />
+            </div>
+            <div id="authResponse"></div>
+        </div>
+        <div data-bind="foreach: code.line">
+            <p data-bind="text : $data"></p>
+        </div>
+    </div>
+</body>
+
+</html>

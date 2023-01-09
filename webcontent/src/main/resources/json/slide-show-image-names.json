@@ -1,0 +1,7 @@
+{
+    "requireNames" : [ "image!images/test-design-screenshot-1.png", "image!images/test-design-screenshot-2.png",
+        "image!images/test-design-screenshot-3.png", "image!images/test-design-screenshot-4.png",
+        "image!images/test-design-screenshot-5.png", "image!images/test-design-screenshot-6.png",
+        "image!images/test-design-screenshot-7.png", "image!images/test-design-screenshot-8.png",        
+        "image!images/test-design-screenshot-9.png" ]
+}

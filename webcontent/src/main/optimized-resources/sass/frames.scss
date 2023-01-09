@@ -1,0 +1,89 @@
+@import 'fonts';
+@import 'resources';
+
+body {
+    background-image: url("../images/code-background.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: $raspberryWine;
+    text-align: left;
+    margin: 0px;
+    max-width: 100%;
+    div#container {
+        padding: 20px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-items: flex-start;
+        align-content: space-around;
+        div.page {
+            width: 550px;
+            font-family: co-text;
+            h1 {
+                text-align: center;
+                font-size: 2.5em;
+                color: rgb(140, 53, 115);
+                font-family: co-headline, sans-serif;
+                font-weight: 700;
+                font-style: normal;
+            }
+            div.authContent {
+                display: grid;
+                grid-template-columns: minmax(max-content, 25%) minmax(max-content, 70%);
+                font-weight: 400;
+                font-size: 26px;
+                p {
+                    &.highlight {
+                        color: rgb(140, 53, 115);
+                    }
+                    margin: 5px 0px;
+                    &:nth-of-type(2n-1) {
+                        grid-column: 1;
+                        color: rgb(140, 53, 115);
+                        justify-self: right;
+                        margin-right: 10px;
+                    }
+                    &:nth-of-type(2n) {
+                        grid-column: 2;
+                        margin-left: 10px;
+                        justify-self: flex-start;
+                        color: $lovePotion;
+                    }
+                }
+            }
+            div.serverResponse {
+                margin-left: 5%;
+                border-top: 20px;
+                pre {
+                    font-family: $mono;
+                    font-weight: 400;
+                    font-style: normal;
+                    font-size: 26px;
+                    color: $knockoutPink;
+                    margin: 0px;
+                }
+            }
+        }
+        div#code {
+            width: 100%;
+            p.line {
+                margin: 0px;
+                width: 100%;
+                overflow-x: hidden;
+                font-size: 16px;
+                line-height: 17px;
+                font-family: source-code-pro;
+                font-style: normal;
+                font-weight: 700;
+                padding: 0px;
+                span,
+                pre {
+                    white-space: pre-wrap;
+                    margin: 0px;
+                    padding: 0px;
+                    box-sizing: border-box;
+                }
+            }
+        }
+    }
+}

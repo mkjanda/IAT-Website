@@ -1,0 +1,89 @@
+<xs:schema version="1.0"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+	xmlns:iat="http://www.iatsoftware.net/schema"
+	targetNamespace="http://www.iatsoftware.net/schema" jaxb:version="2.1">
+
+	<xs:complexType name="ProductKeyEmail" abstract="true">
+		<xs:annotation>
+			<xs:appinfo>
+				<jaxb:class
+					implClass="net.iatsoftware.website.pojos.ProductKeyEmail" />
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="FirstName" type="xs:string"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element name="LastName" type="xs:string" minOccurs="1"
+				maxOccurs="1" />
+			<xs:element name="ProductKey" type="xs:string"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element name="DownloadPassword" type="xs:string"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element name="ClientId" type="xs:long" minOccurs="1"
+				maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="StackTraceLine">
+		<xs:sequence>
+			<xs:element name="LineNumber" type="xs:int" minOccurs="1"
+				maxOccurs="1" />
+			<xs:element name="ClassName" type="xs:string" minOccurs="1"
+				maxOccurs="1" />
+			<xs:element name="Function" type="xs:string" minOccurs="1"
+				maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="Exception" abstract="true">
+		<xs:annotation>
+			<xs:appinfo>
+				<jaxb:class
+					implClass="net.iatsoftware.website.pojos.SerializableException" />
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Message" type="xs:string" minOccurs="1"
+				maxOccurs="1" />
+			<xs:element name="StackTrace" type="iat:StackTraceLine"
+				minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="ServerErrorReport">
+		<xs:annotation>
+			<xs:appinfo>
+				<jaxb:class
+					implClass="net.iatsoftware.website.pojos.ServerErrorReport" />
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Timestamp" type="xs:string"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element name="Exception" type="iat:Exception"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element name="InnerException" type="iat:Exception"
+				minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:simpleType name="TokenType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NONE" />
+			<xs:enumeration value="VALUE" />
+			<xs:enumeration value="HEX" />
+			<xs:enumeration value="BASE64" />
+			<xs:enumeration value="BASE64_UTF8" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="KeyType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="None" />
+			<xs:enumeration value="Data" />
+			<xs:enumeration value="Admin" />
+		</xs:restriction>
+	</xs:simpleType>
+
+</xs:schema>

@@ -1,0 +1,59 @@
+<div class="menuButton" data-bind="attr : { id : id }, style : { display : expanded() ? 'none' : 'inline-block' }, ifnot : expanded()">
+    <svg data-bind="style : { width : width }, attr : { width : width.toString(), height : height.toString() }, 
+        event : { mouseover : expand }, click : expand ">
+    <defs>
+    <linearGradient x1="0" y1="0" x2="0" y2="1" class="menuBarGradient" data-bind="attr : { id : backgroundGradientId }">
+    <stop offset="0" />
+    <stop offset="0.83" />
+    <stop offset="1" />
+    </linearGradient>
+    <linearGradient x1="0" y1="0" x2="0" y2="1" data-bind="attr : { id : textGradientId }" class="menuButtonTextGradient">
+    <stop offset="0" />
+    <stop offset=".15" />
+    <stop offset="1" />
+    </linearGradient>
+    <linearGradient x1="0" y1="0" x2="0" y2="1" data-bind="attr : { id : hilightedGradientId }" class="menuButtonHilightedGradient">
+    <stop offset="0" />
+    <stop offset=".45" />
+    <stop offset="1" />
+    </linearGradient>
+    </defs>
+    <rect x="0" y="0" data-bind="attr : { width : width, height : height, fill : backgroundGradientUrl }" />
+    <path data-bind="attr : { d : ['M0,0v', (height).toString(), 'h', (width).toString(), 'v-', (height).toString()].join('') }" stroke="rgb(0, 0, 0)" fill="rgba(0, 0, 0, 0)" />
+    <text text-anchor="middle" data-bind="text: label, style : { fontSize : Math.floor(height / 2).toString() + 'px',
+        fontFamily : fontFamily, fontWeight : fontWeight }, attr : { x : (width / 2).toString(), y : (height * 5 / 7).toString(), 
+        fill : textGradientUrl }"></text>
+    </svg>
+</div>
+<div class="expandedMenuButton" data-bind="attr : {id : id }, if : expanded(), style : { display : expanded() ? 'inline-block' : 'none', marginLeft: (width - expandedWidth).toString() + 'px' }">
+    <svg data-bind="attr : { width : expandedWidth, height : expandedHeight.toString() }">
+    <defs>
+    <linearGradient x1="0" y1="0" x2="0" y2="1" class="menuBarGradient" data-bind="attr : { id : backgroundGradientId }">
+    <stop offset="0" />
+    <stop offset="0.83" />
+    <stop offset="1" />
+    </linearGradient>
+    <linearGradient x1="0" y1="0" x2="0" y2="1" data-bind="attr : { id : textGradientId }" class="menuButtonTextGradient">
+    <stop offset="0" />
+    <stop offset=".15" />
+    <stop offset="1" />
+    </linearGradient>
+    <linearGradient x1="0" y1="0" x2="0" y2="1" data-bind="attr : { id : hilightedGradientId }" class="menuButtonHilightedGradient">
+    <stop offset="0" />
+    <stop offset=".45" />
+    <stop offset="1" />
+    </linearGradient>
+    </defs>
+    <path data-bind="attr : { d : expandedPath + ' z', fill : backgroundGradientUrl }" stroke="transparent" />
+    <path data-bind="attr : { d : expandedPath }" fill="transparent" stroke="black" />
+    <text text-anchor="middle" data-bind="text : label, style : { fontSize : Math.floor(height / 2).toString() + 'px',
+        fontFamily : fontFamily, fontWeight : fontWeight }, attr : { x : (expandedWidth - (width / 2)).toString(), 
+        y : (height * 5 / 7).toString(), fill : isMousedOver() ? hilightedGradientUrl : textGradientUrl }, click : contract"></text>
+    <!-- ko foreach : selections -->
+    <text data-bind="text : label, attr : { fill : $parent.selected[$index()]() ? $parent.hilightedGradientUrl : $parent.textGradientUrl, 
+        x : '20', y : ($parent.height + ($parent.choiceHeight * ($index() + 1)) + (0.5 * $parent.choiceHeight)).toString() }, 
+        style : { fontSize : ($parent.choiceHeight * 0.9).toString() + 'px', fontFamily : $parent.fontFamily, fontWeight : $parent.fontWeight }"></text>   
+    <!-- /ko -->
+    <path data-bind="attr : { d : expandedPath + ' z'}, event : { mouseout : contract, mousemove : onMouseMove }, click : onMouseClick" fill="transparent" stroke="transparent" />
+    </svg>
+</div>

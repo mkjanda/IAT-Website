@@ -1,0 +1,228 @@
+<svg-header params="caption : 'Questionnaires', template : headerTemplate, display : display"></svg-header>
+<p>
+    Questionnaire may be designated to appear before or after the IAT and may be
+    specified to alternate from before the IAT to after it. This alternation, as
+    well as the alternation of IAT elements is discussed elsewhere in
+    <span class="hilightHover"
+        data-bind="event : { click : () => { navigate('manual', 'manual-alternating-items'); } }">Specifying Alternating
+        Items</span>. Surveys are added to the IAT on the main screen and editable through the
+    <span class="hilight">Survey Form</span>. A caption may be added to the survey
+    by clicking the <span class="hilight">Include Survey Caption</span> checkbox.
+    The textual content of a survey caption may be set, and its font size. The
+    color of the text, caption background, and the color and width of the border
+    appearing at the bottom of the caption may also be set. The font of the survey
+    caption cannot be set for the reason that surveys are displayed as HTML pages
+    and it cannot be known with any certainty what fonts the end-user will have
+    installed on his machine. What enables the font elements within the IAT to be
+    set is that all text is stored as image data during the packaging process.
+</p>
+<div class="imageOverText">
+    <div class="picture">
+        <div>
+            <picture>
+                <source srcset="images/manual/survey-design.webp" type="image/webp" />
+                <source srcset="images/manual/survey-design.png" type="image/png" />
+                <img src="images/manual/survey-design.png" />
+            </picture>
+        </div>
+    </div>
+    <div class="sidebar">
+        <p>
+            The survey design form contains a row of buttons on the right for adding
+            items. To add an item, click on that items response type and a question of
+            that type will be appended to the end of the survey. Alternatively, to
+            insert an item be- fore the active question, click the Insert button in
+            the top-right before clicking on the response type. The selected item is
+            denoted by the green bars on either side of it. More than one item can be
+            selected for a Cut/Copy/Paste operation. Questions can be collapsed or
+            expanded by clicking the up or down arrows, respectively, in the box that
+            appears
+        </p>
+    </div>
+</div>
+<svg-header params="caption : 'Response Types', template : subHeaderTemplate, display : display"></svg-header>
+<div id="questionnaireResponses">
+    <div class="questionnaireItem">
+        <picture>
+            <source srcset="images/manual/survey-true-false.webp" type="image/webp" />
+            <source srcset="images/manual/survey-true-false.png" type="image/png" />
+            <img src="images/manual/survey-true-false.png" />
+        </picture>
+        <div class="responseExplanation">
+            <p>
+                These are items that consist of a statement that is answered as true or
+                false. The statements need not be &quot;True&quot; and &quot;False&quot;
+                but the true statement will always have a response value of 1 and the
+                false statement will always have a response value of 0.
+            </p>
+        </div>
+    </div>
+    <div class="questionnaireItem">
+        <picture>
+            <source srcset="images/manual/survey-likert.webp" type="image/webp" />
+            <source srcset="images/manual/survey-likert.png" type="image/png" />
+            <img src="images/manual/survey-likert.png" />
+        </picture>
+        <div class="responseExplanation">
+            <p>
+                Likert items consist of a statement followed by a list of statements
+                that describe the degree to which the test taker either agrees or
+                disagrees with the statement, the extent to which the statement applies
+                to the test taker, the frequency with which the statement holds true,
+                etc. By default, Likert items contain the seven statements shown below.
+                These statements can be modified by clicking on the text of the
+                statement, they can be removed by clicking on the X button to the right
+                of the statement, and more statements can be added by clicking the Add
+                Choice button. The response value contained in the data file is
+                indicated to the left of each statement. If you wish to reverse-score a
+                Likert item, simply click the
+                <span class="hilight">Reverse Scored</span> checkbox. This will not
+                modify the order of the statements. Instead, the numerical values
+                associated with the statements will switch to a declining order so that
+                the first response would have a value of seven and the last a value of
+                one.
+            </p>
+        </div>
+    </div>
+    <div class="questionnaireItem">
+        <picture>
+            <source srcset="images/manual/survey-multiple-choice.webp" type="image/webp" />
+            <source srcset="images/manual/survey-multiple-choice.png" type="image/png" />
+            <img src="images/manual/survey-multiple-choice.png" />
+        </picture>
+        <div class="responseExplanation">
+            <p>
+                Multiple choice items consist of a question and a set of choices.
+                Choices may be added by clicking the
+                <span class="hilight">Add Choice</span> button and choices may be
+                removed by clicking the X button to the right of the choice. The text of
+                the question and choices can be modified by clicking on it. In the
+                resulting data files, multiple choice item responses will have a
+                numerical value corresponding to the number of the choice selected.
+            </p>
+        </div>
+    </div>
+    <div class="questionnaireItem">
+        <picture>
+            <source srcset="images/manual/survey-weighted-multiple-choice.webp" type="image/webp" />
+            <source srcset="images/manual/survey-weighted-multiple-choice.png" type="image/png" />
+            <img src="images/manual/survey-weighted-multiple-choice.png" />
+        </picture>
+        <div class="responseExplanation">
+            <p>
+                Weighted multiple choice items are similar to multiple choice items
+                except that, instead of recording the ordinal index of the choice the
+                test taker selects in the result file, a weight assigned to each choice
+                is recorded. You may add choices by clicking the
+                <span class="hilight">Add Choice</span> button, remove them by clicking
+                the X button next to the choice, and assign weights by mousing over the
+                values next to the choices and clicking the up and down arrows, or
+                clicking in the box that appears when you mouse over the value and
+                entering an integer with your keyboard.
+            </p>
+        </div>
+    </div>
+    <div class="questionnaireItem">
+        <picture>
+            <source srcset="images/manual/survey-bounded-length.webp" type="image/webp" />
+            <source srcset="images/manual/survey-bounded-length.png" type="image/png" />
+            <img src="images/manual/survey-bounded-length.png" />
+        </picture>
+        <div class="responseExplanation">
+            <p>
+                Bounded length items consist of a statement or question followed by a
+                text area where the test-taker may enter a response. You can specify the
+                minimal and maximal length of the response by mousing over the values at
+                the bottom of the item display and clicking the up and down arrows, or
+                by clicking in the box provided and entering a numerical value with your
+                keyboard.
+            </p>
+        </div>
+    </div>
+    <div class="questionnaireItem">
+        <picture>
+            <source srcset="images/manual/survey-bounded-number.webp" type="image/webp" />
+            <source srcset="images/manual/survey-bounded-number.png" type="image/png" />
+            <img src="images/manual/survey-bounded-number.png" />
+        </picture>
+        <div class="responseExplanation">
+            <p>
+                Bounded number items consist of a statement or question followed by a
+                text input where the test-taker may enter a numerical response. You can
+                specify the minimal and maximal inclusive bounds of the response by
+                mousing over the values at the bottom of the item display and clicking
+                the up and down arrows, or by clicking in the box provided and entering
+                a numerical value with your keyboard.
+            </p>
+        </div>
+    </div>
+    <div class="questionnaireItem">
+        <picture>
+            <source srcset="images/manual/survey-fixed-digit.webp" type="image/webp" />
+            <source srcset="images/manual/survey-fixed-digit.png" type="image/png" />
+            <img src="images/manual/survey-fixed-digit.png" />
+        </picture>
+        <div class="responseExplanation">
+            <p>
+                Fixed-Digit items consist of a statement or question followed by a text
+                area where the test-taker may enter an integer response. You can specify
+                the number of digits that the response consists of by mousing over the
+                value at the bottom of the item and clicking the up and down arrow
+                buttons, or by clicking in the text box that appears when you mouse over
+                the item and entering the number of digits.
+            </p>
+        </div>
+    </div>
+    <div class="questionnaireItem">
+        <picture>
+            <source srcset="images/manual/survey-date.webp" type="image/webp" />
+            <source srcset="images/manual/survey-date.png" type="image/png" />
+            <img src="images/manual/survey-date.png" />
+        </picture>
+        <div class="responseExplanation">
+            <p>
+                Date Response items consist of a statement or question followed by a
+                text area where the test-taker may enter a date in MM/DD/YYYY format.
+                You can specify a starting date and/or an ending date or neither by
+                clicking on the <span class="hilight">Enable start date</span> and
+                <span class="hilight">Enable end date</span> checks. Once a box has been
+                checked, a date will appear to the right of the check box. Mousing over
+                this date will cause a calendar to appear. You may click on a date or
+                click the left and right arrows next to the month at the top to change
+                months.
+            </p>
+        </div>
+    </div>
+</div>
+<svg-header params="caption: 'Other Questionnaire Features', template : subHeaderTemplate, display : display">
+</svg-header>
+<p>
+    It is possible to create questionnaires with time limits by entering a value
+    in the &quot;Time Limit&quot; box. These questionnaires will automatically
+    submit to the server after the given period of time has expired. All
+    unanswered questions will be given a value of &quot;null&quot; in the results
+    spreadsheet.
+</p>
+<p>
+    It is also possible to create a questionnaire item that requires a unique
+    response from each test-taker. Only certain types of items can be chosen. You
+    may supply a list of valid responses, each of which can then be used by only
+    once, by one test taker. Optionally, you may omit this list of valid
+    responses, which will ensure that each test-taker must supply a unique
+    response but places no constraints upon the value of those responses.
+</p>
+<p>
+    You may also denote a questionnaire item as optional simply by clicking the
+    <span class="hilight">Optional</span> rectangle that appears when you mouse
+    over the item. The rectangle should highlight in blue. Any result sets in
+    which that do not include a reply to this question will read “Unanswered” in
+    the result spreadsheet.
+</p>
+<p>
+    You may also format the text of your questionnaire items by click the
+    <span class="hilight">Format Text</span> rectangle that appears when you mouse
+    over the question. The right-hand panel will be swapped out with a text
+    formatting panel. You may choose from a small collection of fonts as well as
+    font-sizes, font-colors, bold, italic, etc. Click
+    <span class="hilight">Done</span> to return to the questionnaire edit screen.
+</p>

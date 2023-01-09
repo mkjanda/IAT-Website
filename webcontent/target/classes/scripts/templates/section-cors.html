@@ -1,0 +1,40 @@
+<svg-header
+    params="caption : 'Maintaining Your Website Domain Name', template : sectionHeaderTemplate, display : display">
+</svg-header>
+<p>The software was not designed for standalone test administration but if you wish, you may
+    keep your own site's domain in the address bar during test administration or host a test within an iframe.
+    All IATs are setup for Cross-Origin Resource Sharing, which is necessary for the following forward proxy setup
+    that will allow you to transparently run a test on your own server.</p>
+<svg-header params='caption : "Sample Apache Setup", template : sectionHeaderTemplate, display : display'></svg-header>
+<div style="display: flex; flex-flow: row nowrap; align-content: top; justify-content: space-between">
+    <div class="apacheCode" style='vertical-align: top; width: 600px;'>
+<pre>
+<span style="color: #34E2E2"><b>ProxyPreserveHost</b></span> <span style="color: #AD7FA8">on</span>
+<span style="color: #34E2E2"><b>SSLProxyEngine</b></span> <span style="color: #AD7FA8">on</span>
+<span style="color: #34E2E2"><b>SSLProxyVerify</b></span> <span style="color: #AD7FA8">none</span>
+<span style="color: #FFF">SSLProxyCheckPeerCN</span> <span style="color: #AD7FA8">off</span>
+<span style="color: #FFF">SSLProxyCheckPeerName</span> <span style="color: #AD7FA8">off</span>
+<span style="color: #FFF">SSLProxyCheckPeerExpire</span> <span style="color: #AD7FA8">off</span>
+<span style="color: #34E2E2"><b>RewriteEngine</b></span> <span style="color: #AD7FA8">on</span>
+<span style="color: #34E2E2"><b>RewriteCond</b></span> %{REQUEST_URI}  ^/my-iat$
+<span style="color: #34E2E2"><b>RewriteRule</b></span> .? https://www.iatsoftware.net/IAT?IATName=MyIAT&amp;ClientID=100 [P,QSA]
+<span style="color: #34E2E2"><b>ProxyPassMatch</b></span> <span style="color: #AD7FA8">&quot;^/IAT/(.*)&quot;</span> <span style="color: #AD7FA8">&quot;https://www.iatsoftware.net/IAT/$1&quot;</span>
+</pre>
+    </div>
+    <div style='margin-left: 25px;'>
+        <p style="padding: 0px; margin: 0px;">The configuration to the left tests for matching URI patterns to forward as well as ensuring
+        that your server's name is available as a request header . Requests at the URL path /my-iat will be forwarded to 
+            <span class="hilight">iatsoftware.net</span> with an IAT name of &quot;MyIAT,&quot; for a client with the ID of 100. Additionally, any
+             elements such as tokens in the query string to /my-iat will be preserved.</p>
+     <p>Turning so many SSL options to &quot;off&quot; might raise a red flag in your mind. The 
+     reason for this is the first line, which ensures that your host name will appear as an HTTP
+     request header when it arrives at <span class="hilight">iatsoftware.net</span>. An effect
+     of this is that your host will try to perform SSL authentication on itself using the credentials
+     at <span class="hilight">iatsoftware.net</span>. It is receiving the same certificate that
+     a browser does during a direct connection, so if the test-taker's connection to your server
+     is secure, there's no cause for alarm.</p>
+     <p>I regret that I simply do not have time to mock up configurations for other popular web hosting
+     software, but at the time of this writing, no interest has been shown in this feature. I am
+     including it because I feel it is inevitable that I will.</p>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<svg-header params="caption : 'Tokens', template : headerTemplate, display : display"></svg-header>
+<div style="text-align: center;">
+    <picture>
+        <source srcset="images/manual/tokens.webp" type="image/webp" />
+        <source srcset="images/manual/tokens.png" type="image/png" />
+        <img src="images/manual/tokens.png" />
+    </picture>
+</div>
+<p>Tokens are used to link test takers with data collected via your own site or app. In the following section, you’ll
+    see a more powerful use of tokens. When you upload your test, you are given the option of selecting a token.
+    Links to tests that are uploaded typically take the form:</p>
+<p style="text-align: center;"><span class="hilight">http://www.iatsoftware.net/IAT?IATName={test
+        name}&amp;ClientID=###</span></p>
+<p>When you add a token, you supply a name and a type. The Value type is sufficient in almost every
+    instance. A token of the value type may consist of any URI encoded data, which is to say an alphanumeric characters,
+    underscores,
+    hyphens, and characters escaped with a %. There’s a handy java script function,
+    encodeURIComponent() that can be used to ensure your token value will be accepted. When you elect to add a
+    token, your test URL will take the form:</p>
+<p style="text-align: center;"><span class="hilight">http://www.iatsoftware.net/IAT?IATName={text
+        name}&amp;ClientID=###&amp;MyToken={token value}</span></p>
+<p>This same token will be sent to the redirection link you specify upon test completion. In the above example, the user
+    will be redirected to:</p>
+<p style="text-align: center;"><span class="hilight">http://iatsoftware.net/complete?MyToken={token value}</span></p>
+<p>The token name and values will be available in the result data along with other data collected for collation with
+    data you might collect via other mechanisms. I cannot say whether this functionality can be implemented in
+    tandem with other data collection programs without any programming know-how.</p>

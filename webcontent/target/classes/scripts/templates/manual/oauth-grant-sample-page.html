@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>OAuth Sample Grant Page</title>
+        <meta charset="UTF-8">
+        <style type="text/css">
+            body {
+                width: 500px;
+                padding: 40px 20px;
+                color: rgb(237, 241, 254);
+                border: 2px #000 solid;
+                text-align: center;
+            }
+            h1 {
+                font-family: oxtail;
+                font-size: 36px;
+                color: rgb(76, 31, 59);
+            }
+            input {
+                width: 200px;
+                font-family: myriad-pro;
+                font-size: 12px;
+            }
+            table {
+                width: 400px;
+                border-collapse: collapse;
+            }
+            table tr td:first-child {
+                font-family: oxtail;
+                text-align: right;
+                padding-right: 3px;
+                font-size: 12px;
+            }
+        </style>
+        <script type="text/javascript">
+            function OnSubmit() {
+                var authData = new FormData();
+                authData.append("grant_type", "code");
+                authData.append("client_id", "1:657dd0d451bb2eb3");
+                authData.append("client_secret", "secret:b7700a94b7f700fd8d17cbeee8f3edda");
+                var authAjax = new XMLHttpConnection();
+                authAjax.open("POST", "https://www.iatsoftware.net/IAT/OAuth/RequestAuth", true);
+                authAjax.setHeader("accept", "text/json");
+                authAjax.onreadystatechange = () => {
+                    if ((authAjax.status === 200) && (authAjax.readyState === 4))
+                        OnAuthResponse(authAjax);
+                };
+                authAjax.send();
+            }
+
+            function OnAuthResponse(ajax) {
+                var accessToken = JSON.Parse(ajax.responseText).accessToken;
+                var resultAjax = new XMLHttpRequest();
+                var requestData = new FormData(document.getElementById("requestForm"));
+                requestData.append("access_token", accessToken);
+                requestData.append("test_name", requestFormData.get("test-name"));
+                requestData.append("results_format", "DScore");
+                resultAjax.open("POST", "https://www.iatsoftware.net/IAT/OAuth/RetrieveResult", true);
+                resultAjax.setRequestHeader("accept", "text/json");
+                resultAjax.onreadystatechange = () => {
+                    if ((resultAjax.readyState === 4) && (resultAjax.status === 200)) {
+                        var txtNode = document.createTextNode(JSON.parse(resultAjax.responseText));
+                        document.getElementById("dscore").appendChild(txtNode);
+                        document.getElementById("results-line").style.visiblity = "normal";
+                    }
+                };
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Retrieve Test Result</h1>
+        <form id="requestForm">
+            <h2>Retrieve Test Results for &quot;Honesty&quot;</h2>
+            <table>
+                <tr>
+                    <td>Test Password:</td>
+                    <td><input name="test_password" /></td>
+                </tr>
+                <tr>
+                    <td>Test Taker's Token:</td>
+                    <td><input name="result__set_token" /></td>
+                </tr>
+            </table>
+            <input type="button" value="Submit" onclick="OnSubmit()" />
+        </form>
+        <div id="results-line" style="visibility: none;">Test taker's D-Score: <span id="dscore" /></div>
+    </body>
+</html>
+

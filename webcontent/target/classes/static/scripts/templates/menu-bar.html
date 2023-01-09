@@ -1,0 +1,21 @@
+<div id="mainMenuBarWrapper">
+    <div id="mainMenuBar">
+        <svg class="menuBarBackground" data-bind="style : { height : height.toString() + 'px' }">
+            <defs>
+                <linearGradient id="menu-bar-linear-gradient" x1="774.5" y1="0" x2="774.5" class="menuBarGradient"
+                                data-bind="attr : { y2 : height.toString() }" gradientUnits="userSpaceOnUse">
+                    <stop offset="0" />
+                    <stop offset="0.83" />
+                    <stop offset="1" />
+                </linearGradient>
+            </defs>
+        <rect class="cls-1" x="0" y="0" width="100%" data-bind="attr : { height : height.toString() }" fill="url(#menu-bar-linear-gradient)"/>
+        </svg>	
+        <div id="mainMenuButtonWrapper">
+            <!-- ko foreach: menuButtons -->
+                <menu-button params="display : $parent.display, label : label, targetId : id, height : $parent.height, width : buttonWidth, buttonNdx : $index, idPrefix : 'headerMenuButton'"></menu-button>
+            <!-- /ko -->
+            <expanding-menu-button params="display : display, label : 'Documentation', height: height, width: 240, selections : mainContent.manual"></expanding-menu-button>
+        </div>
+    </div>
+</div>

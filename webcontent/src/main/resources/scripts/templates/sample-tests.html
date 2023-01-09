@@ -1,0 +1,6 @@
+<div data-bind="childrenComplete : function() { testLoaded(document.getElementById('sampleTests')); }">
+<svg-header params="caption : 'Sample Tests', template : headerTemplate, display : display"></svg-header>
+<div id="sampleTests" data-bind="foreach: { data : sampleTestData, as : 'test' }">
+    <sample-test params="testData : test, slideWidth : 450, display : $component.display, testLoaded : $component.testLoaded"></sample-test>
+</div>
+</div>

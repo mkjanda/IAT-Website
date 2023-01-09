@@ -1,0 +1,96 @@
+@import url("https://use.typekit.net/ssx7rnd.css");
+@import url("https://use.typekit.net/lxb3sjv.css");
+@import url("https://use.typekit.net/sra2zjj.css");
+/* greenery palettes */
+@font-face {
+  font-family: TektonPro-BoldExt;
+  src: url("../fonts/TektonPro-BoldExt.otf");
+}
+body {
+  background-image: url("../images/code-background.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: rgb(182, 62, 91);
+  text-align: left;
+  margin: 0px;
+  max-width: 100%;
+}
+body div#container {
+  padding: 20px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-items: flex-start;
+  align-content: space-around;
+}
+body div#container div.page {
+  width: 550px;
+  font-family: co-text;
+}
+body div#container div.page h1 {
+  text-align: center;
+  font-size: 2.5em;
+  color: rgb(140, 53, 115);
+  font-family: co-headline, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+body div#container div.page div.authContent {
+  display: grid;
+  grid-template-columns: minmax(max-content, 25%) minmax(max-content, 70%);
+  font-weight: 400;
+  font-size: 26px;
+}
+body div#container div.page div.authContent p {
+  margin: 5px 0px;
+}
+body div#container div.page div.authContent p.highlight {
+  color: rgb(140, 53, 115);
+}
+body div#container div.page div.authContent p:nth-of-type(2n-1) {
+  grid-column: 1;
+  color: rgb(140, 53, 115);
+  justify-self: right;
+  margin-right: 10px;
+}
+body div#container div.page div.authContent p:nth-of-type(2n) {
+  grid-column: 2;
+  margin-left: 10px;
+  justify-self: flex-start;
+  color: #c01352;
+}
+body div#container div.page div.serverResponse {
+  margin-left: 5%;
+  border-top: 20px;
+}
+body div#container div.page div.serverResponse pre {
+  font-family: source-code-pro, monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 26px;
+  color: rgb(255, 62, 165);
+  margin: 0px;
+}
+body div#container div#code {
+  width: 100%;
+}
+body div#container div#code p.line {
+  margin: 0px;
+  width: 100%;
+  overflow-x: hidden;
+  font-size: 16px;
+  line-height: 17px;
+  font-family: source-code-pro;
+  font-style: normal;
+  font-weight: 700;
+  padding: 0px;
+}
+body div#container div#code p.line span,
+body div#container div#code p.line pre {
+  white-space: pre-wrap;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/*# sourceMappingURL=frames.css.map */

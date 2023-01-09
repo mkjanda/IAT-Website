@@ -1,0 +1,7 @@
+{
+    "sectionHeader" : { "font-face" : "hobeaux-rococeaux-sherman", "font-weight" : 400 },
+    "smallSectionHeader" : { "font-face" : "hobeaux-rococeaux-sherman", "font-weight" : 400 },
+    "sampleTestHeader" : { "font-face" : "reklame-script", "font-weight" : 700 },
+    "attentionHeader" : { "font-face" : "coquette", "font-weight" : 900 },
+    "errorCaption" : { "font-face" : "cuisine", "font-weight" : 500 }
+}

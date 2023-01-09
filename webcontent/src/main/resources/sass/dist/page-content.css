@@ -1,0 +1,488 @@
+@import url("https://use.typekit.net/ssx7rnd.css");
+@import url("https://use.typekit.net/lxb3sjv.css");
+@import url("https://use.typekit.net/sra2zjj.css");
+/* greenery palettes */
+@import url("https://use.typekit.net/ssx7rnd.css");
+@import url("https://use.typekit.net/lxb3sjv.css");
+@import url("https://use.typekit.net/sra2zjj.css");
+@font-face {
+  font-family: TektonPro-BoldExt;
+  src: url("../fonts/TektonPro-BoldExt.otf");
+}
+/* greenery palettes */
+@font-face {
+  font-family: TektonPro-BoldExt;
+  src: url("../fonts/TektonPro-BoldExt.otf");
+}
+@media only screen and (max-aspect-ratio: 1/1) and (max-width: 1200px) {
+  div#pageContentWrapper div#pageContent {
+    width: 1200px;
+  }
+  div#pageContentWrapper div#pageContent div#sectionTheSoftware canvas {
+    margin: 0px;
+  }
+  div#pageContentWrapper div#pageContent div#sectionTheSoftware div#features div.featuresContent picture {
+    margin-left: 0px;
+  }
+  div#pageContentWrapper div#pageContent div#sectionTheIat div.leftResponseKey {
+    left: 0px;
+  }
+  div#pageContentWrapper div#pageContent div#sectionTheIat div.rightResponseKey {
+    right: 0px;
+  }
+}
+@media only screen and (min-aspect-ratio: 1/1), (min-width: 1200px) {
+  div#pageContentWrapper div#pageContent {
+    width: max(1000px, 90%);
+  }
+  div#pageContentWrapper div#pageContent div#sectionTheSoftware canvas {
+    width: 75%;
+    margin-top: 20px;
+    margin-left: 50px;
+  }
+  div#pageContentWrapper div#pageContent div#sectionTheSoftware div#features div.featuresContent picture {
+    margin-left: 20%;
+  }
+  div#pageContentWrapper div#pageContent div#sectionTheIat div.leftResponseKey {
+    left: min(calc(10% - 100px), 7%);
+  }
+  div#pageContentWrapper div#pageContent div#sectionTheIat div.rightResponseKey {
+    right: min(calc(10% - 100px), 7%);
+  }
+}
+div#pageContentWrapper {
+  background: white;
+  position: relative;
+  top: 450px;
+  left: 0px;
+  z-index: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+div#pageContentWrapper div#pageContent {
+  text-align: left;
+}
+div#pageContentWrapper div#pageContent p {
+  color: #5f4b8b;
+  font-family: museo-sans-rounded, sans-serif;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 30px;
+}
+div#pageContentWrapper div#pageContent p span.buttonReference {
+  color: #c01352;
+}
+div#pageContentWrapper div#pageContent p span.hilight {
+  color: #c01352;
+}
+div#pageContentWrapper div#pageContent p span.hilightHover {
+  color: #ff3ea5;
+  cursor: pointer;
+}
+div#pageContentWrapper div#pageContent p span.hilightHover:hover {
+  color: #5f4b8b;
+}
+div#pageContentWrapper div#pageContent p a {
+  color: #ff3ea5;
+  text-decoration: none;
+}
+div#pageContentWrapper div#pageContent p a:hover {
+  color: #c01352;
+  cursor: #5f4b8b;
+}
+div#pageContentWrapper div#pageContent div.finePrint p {
+  font-family: museo-sans-rounded, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #88b04b;
+  text-shadow: 1px 1px 0px #5f5b4c;
+  line-height: 20px;
+  font-size: 16px;
+}
+div#pageContentWrapper div#pageContent div.apacheCode {
+  background: #000;
+  font-family: source-code-pro, monospace;
+  font-size: 20px;
+  padding: 10px 25px;
+  color: #fff;
+  line-height: 30px;
+}
+div#pageContentWrapper div#pageContent div.apacheCode pre {
+  white-space: pre-wrap;
+}
+div#pageContentWrapper div#pageContent div.leftMenuBar {
+  color: #5f4b8b;
+  font-family: museo-sans-rounded, sans-serif;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 30px;
+  display: inline-block;
+  width: 240px;
+}
+div#pageContentWrapper div#pageContent div.leftMenuBar span.buttonReference {
+  color: #c01352;
+}
+div#pageContentWrapper div#pageContent div.leftMenuBar span.hilight {
+  color: #c01352;
+}
+div#pageContentWrapper div#pageContent div.leftMenuBar span.hilightHover {
+  color: #ff3ea5;
+  cursor: pointer;
+}
+div#pageContentWrapper div#pageContent div.leftMenuBar span.hilightHover:hover {
+  color: #5f4b8b;
+}
+div#pageContentWrapper div#pageContent div.leftMenuBar a {
+  color: #ff3ea5;
+  text-decoration: none;
+}
+div#pageContentWrapper div#pageContent div.leftMenuBar a:hover {
+  color: #c01352;
+  cursor: #5f4b8b;
+}
+div#pageContentWrapper div#pageContent div.leftMenuBar ul {
+  list-style: none;
+}
+div#pageContentWrapper div#pageContent div.leftMenuBar li {
+  margin-top: 10px;
+}
+div#pageContentWrapper div#pageContent div.download-notification {
+  background-image: url("../images/whitetexture.svg");
+  border-image: url("../images/steel-blue-border.png");
+  border-image-repeat: repeat;
+  border-image-slice: 20%;
+  border-image-width: 10px;
+  border-image-outset: 8px;
+  border-style: solid;
+  padding-top: 30px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 60px;
+  background-repeat: repeat;
+  margin: 30px auto 50px auto;
+  width: 60%;
+}
+div#pageContentWrapper div#pageContent div.download-notification p {
+  font-size: 22px;
+  font-family: hobeaux-rococeaux-sherman, serif;
+  color: #8c3573;
+  text-align: left;
+}
+div#pageContentWrapper div#pageContent div.download-notification p.hilight {
+  color: #c01352;
+}
+div#pageContentWrapper div#pageContent div.download-notification p.hilightHover {
+  color: #ff3ea5;
+}
+div#pageContentWrapper div#pageContent div.download-notification p.hilightHover:hover {
+  cursor: pointer;
+  color: #5f4b8b;
+}
+div#pageContentWrapper div#pageContent div.download-notification li {
+  font-size: 22px;
+  font-family: hobeaux-rococeaux-sherman, serif;
+  color: #8c3573;
+  text-align: left;
+}
+div#pageContentWrapper div#pageContent div.download-notification li.hilight {
+  color: #c01352;
+}
+div#pageContentWrapper div#pageContent div.download-notification li.hilightHover {
+  color: #ff3ea5;
+}
+div#pageContentWrapper div#pageContent div.download-notification li.hilightHover:hover {
+  cursor: pointer;
+  color: #5f4b8b;
+}
+div#pageContentWrapper div#pageContent div.download-notification h2 {
+  font-size: 22px;
+  font-family: hobeaux-rococeaux-sherman, serif;
+  color: #8c3573;
+  text-align: left;
+}
+div#pageContentWrapper div#pageContent div.download-notification h2.hilight {
+  color: #c01352;
+}
+div#pageContentWrapper div#pageContent div.download-notification h2.hilightHover {
+  color: #ff3ea5;
+}
+div#pageContentWrapper div#pageContent div.download-notification h2.hilightHover:hover {
+  cursor: pointer;
+  color: #5f4b8b;
+}
+div#pageContentWrapper div#pageContent div.download-notification span {
+  font-size: 22px;
+  font-family: hobeaux-rococeaux-sherman, serif;
+  color: #8c3573;
+  text-align: left;
+}
+div#pageContentWrapper div#pageContent div.download-notification span.hilight {
+  color: #c01352;
+}
+div#pageContentWrapper div#pageContent div.download-notification span.hilightHover {
+  color: #ff3ea5;
+}
+div#pageContentWrapper div#pageContent div.download-notification span.hilightHover:hover {
+  cursor: pointer;
+  color: #5f4b8b;
+}
+div#pageContentWrapper div#pageContent div.download-notification pre {
+  font-size: 22px;
+  font-family: hobeaux-rococeaux-sherman, serif;
+  color: #8c3573;
+  text-align: left;
+}
+div#pageContentWrapper div#pageContent div.download-notification pre.hilight {
+  color: #c01352;
+}
+div#pageContentWrapper div#pageContent div.download-notification pre.hilightHover {
+  color: #ff3ea5;
+}
+div#pageContentWrapper div#pageContent div.download-notification pre.hilightHover:hover {
+  cursor: pointer;
+  color: #5f4b8b;
+}
+div#pageContentWrapper div#pageContent div.emailing-product-key-notification {
+  background-image: url("../images/whitetexture.svg");
+  border-image: url("../images/steel-blue-border.png");
+  border-image-repeat: repeat;
+  border-image-slice: 20%;
+  border-image-width: 10px;
+  border-image-outset: 8px;
+  border-style: solid;
+  padding-top: 30px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 60px;
+  background-repeat: repeat;
+  margin: 30px auto 50px auto;
+  width: 60%;
+}
+div#pageContentWrapper div#pageContent div.emailing-product-key-notification p {
+  font-size: 22px;
+  font-family: hobeaux-rococeaux-sherman, serif;
+  color: #8c3573;
+  text-align: left;
+}
+div#pageContentWrapper div#pageContent div.emailing-product-key-notification p.hilight {
+  color: #c01352;
+}
+div#pageContentWrapper div#pageContent div.emailing-product-key-notification p.hilightHover {
+  color: #ff3ea5;
+}
+div#pageContentWrapper div#pageContent div.emailing-product-key-notification p.hilightHover:hover {
+  cursor: pointer;
+  color: #5f4b8b;
+}
+div#pageContentWrapper div#pageContent div.emailing-product-key-notification li {
+  font-size: 22px;
+  font-family: hobeaux-rococeaux-sherman, serif;
+  color: #8c3573;
+  text-align: left;
+}
+div#pageContentWrapper div#pageContent div.emailing-product-key-notification li.hilight {
+  color: #c01352;
+}
+div#pageContentWrapper div#pageContent div.emailing-product-key-notification li.hilightHover {
+  color: #ff3ea5;
+}
+div#pageContentWrapper div#pageContent div.emailing-product-key-notification li.hilightHover:hover {
+  cursor: pointer;
+  color: #5f4b8b;
+}
+div#pageContentWrapper div#pageContent div.emailing-product-key-notification h2 {
+  font-size: 22px;
+  font-family: hobeaux-rococeaux-sherman, serif;
+  color: #8c3573;
+  text-align: left;
+}
+div#pageContentWrapper div#pageContent div.emailing-product-key-notification h2.hilight {
+  color: #c01352;
+}
+div#pageContentWrapper div#pageContent div.emailing-product-key-notification h2.hilightHover {
+  color: #ff3ea5;
+}
+div#pageContentWrapper div#pageContent div.emailing-product-key-notification h2.hilightHover:hover {
+  cursor: pointer;
+  color: #5f4b8b;
+}
+div#pageContentWrapper div#pageContent div.emailing-product-key-notification span {
+  font-size: 22px;
+  font-family: hobeaux-rococeaux-sherman, serif;
+  color: #8c3573;
+  text-align: left;
+}
+div#pageContentWrapper div#pageContent div.emailing-product-key-notification span.hilight {
+  color: #c01352;
+}
+div#pageContentWrapper div#pageContent div.emailing-product-key-notification span.hilightHover {
+  color: #ff3ea5;
+}
+div#pageContentWrapper div#pageContent div.emailing-product-key-notification span.hilightHover:hover {
+  cursor: pointer;
+  color: #5f4b8b;
+}
+div#pageContentWrapper div#pageContent div.emailing-product-key-notification pre {
+  font-size: 22px;
+  font-family: hobeaux-rococeaux-sherman, serif;
+  color: #8c3573;
+  text-align: left;
+}
+div#pageContentWrapper div#pageContent div.emailing-product-key-notification pre.hilight {
+  color: #c01352;
+}
+div#pageContentWrapper div#pageContent div.emailing-product-key-notification pre.hilightHover {
+  color: #ff3ea5;
+}
+div#pageContentWrapper div#pageContent div.emailing-product-key-notification pre.hilightHover:hover {
+  cursor: pointer;
+  color: #5f4b8b;
+}
+div#pageContentWrapper div#pageContent div.emailing-product-key-notification p span.name {
+  vertical-align: baseline;
+  font-family: coquette, serif;
+  color: #c01352;
+  font-weight: 900;
+  font-size: 20px;
+}
+div#pageContentWrapper div#pageContent div.svg-header {
+  margin-bottom: 10px;
+}
+div#pageContentWrapper div#pageContent div#sampleTests {
+  text-align: center;
+  display: flex;
+  flex-flow: column wrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  margin-top: 20px;
+  max-height: 100%;
+}
+div#pageContentWrapper div#pageContent div#sampleTests div.sampleTest {
+  border-image: url("../images/purple-ice-border.png");
+  border-image-repeat: round;
+  border-image-slice: 20%;
+  border-image-width: 10px;
+  border-image-outset: 8px;
+  border-style: solid;
+  border-image-repeat: auto;
+  text-align: center;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 30px;
+  width: min-content;
+  background: #807396;
+}
+div#pageContentWrapper div#pageContent div#sampleTests div.sampleTest div.header {
+  margin-top: 35px;
+  margin-bottom: 25px;
+}
+div#pageContentWrapper div#pageContent div#sampleTests div.sampleTest div.sampleTestSlide canvas {
+  margin: auto 25px;
+}
+div#pageContentWrapper div#pageContent div#sampleTests div.sampleTest div.sampleTestDescription p {
+  text-align: left;
+  font-family: TektonPro-BoldExt, serif;
+  font-size: 24px;
+  color: #7b4368;
+  text-shadow: 1px 1px 0px #000;
+  text-indent: 25px;
+  padding: 20px;
+}
+div#pageContentWrapper div#pageContent div.serverError {
+  margin: 75px 150px;
+}
+div#pageContentWrapper div#pageContent div.serverError p {
+  font-family: museo-sans-rounded, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #88b04b;
+  text-shadow: 1px 1px 0px #5f5b4c;
+  line-height: 20px;
+  font-size: 24px;
+  line-height: 26px;
+}
+div#pageContentWrapper div#pageContent div#contactEmail {
+  width: 800px;
+  margin-left: 250px;
+  margin-bottom: 50px;
+}
+div#pageContentWrapper div#pageContent div#sectionTheSoftware div#features {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+div#pageContentWrapper div#pageContent div#sectionTheSoftware div#features div.featureMenu {
+  vertical-align: top;
+}
+div#pageContentWrapper div#pageContent div#sectionTheSoftware div#features div.featureMenu div.featureButton {
+  cursor: pointer;
+}
+div#pageContentWrapper div#pageContent div#sectionTheSoftware div#features div.featureMenu div.featureButton svg text {
+  font-size: 72px;
+  font-weight: bold;
+  font-family: myriad-pro, sans-serif;
+  cursor: pointer;
+  font-weight: 900;
+}
+div#pageContentWrapper div#pageContent div#sectionTheSoftware div#features div.featureMenu div.featureButton svg.unselected g.inner rect {
+  fill: white;
+  opacity: 0.5;
+}
+div#pageContentWrapper div#pageContent div#sectionTheSoftware div#features div.featureMenu div.featureButton svg.unselected g.inner text {
+  fill: #7b4368;
+}
+div#pageContentWrapper div#pageContent div#sectionTheSoftware div#features div.featureMenu div.featureButton svg.selected g.inner rect {
+  fill: white;
+  opacity: 0.5;
+}
+div#pageContentWrapper div#pageContent div#sectionTheSoftware div#features div.featureMenu div.featureButton svg.selected g.inner text {
+  fill: #ce3175;
+}
+div#pageContentWrapper div#pageContent div#sectionTheSoftware div#features div.featureMenu div.featureButton svg.hilighted g.inner rect {
+  fill: #7b4368;
+  opacity: 0.5;
+}
+div#pageContentWrapper div#pageContent div#sectionTheSoftware div#features div.featureMenu div.featureButton svg.hilighted g.inner text {
+  fill: #ce3175;
+}
+div#pageContentWrapper div#pageContent div#sectionTheSoftware div#features div.featuresContent {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-items: center;
+}
+div#pageContentWrapper div#pageContent div#sectionTheSoftware div#features div.featuresContent p {
+  text-align: left;
+}
+div#pageContentWrapper div#pageContent div#sectionTheIat div.leftResponseKey {
+  position: absolute;
+  width: 250px;
+  height: 265px;
+}
+div#pageContentWrapper div#pageContent div#sectionTheIat div.rightResponseKey {
+  position: absolute;
+  width: 250px;
+  height: 265px;
+}
+div#pageContentWrapper div#pageContent div#sectionTheIat div#mlkSample {
+  display: block;
+  height: 800px;
+  text-align: center;
+}
+div#pageContentWrapper div#pageContent div#sectionTheIat div#mlkSample picture.stimulus {
+  position: relative;
+  top: 225px;
+}
+div#pageContentWrapper div#pageContent div#sectionTheIat div#brokenHeartSample {
+  display: block;
+  text-align: center;
+  height: 560px;
+}
+div#pageContentWrapper div#pageContent div#sectionTheIat div#brokenHeartSample picture.stimulus {
+  position: relative;
+  top: 140px;
+}

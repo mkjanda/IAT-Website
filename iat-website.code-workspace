@@ -1,0 +1,32 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"java.configuration.updateBuildConfiguration": "automatic",
+		"prettier.printWidth": 180,
+		"java.format.settings.url": "eclipse-formatter.xml",
+		"sqltools.connections": [
+			{
+				"database": "iatserver_db",
+				"driver": "MariaDB",
+				"group": "IAT",
+				"mysqlOptions": {
+					"authProtocol": "default"
+				},
+				"name": "IAT Server",
+				"password": "jESUScHRISTsUCKScOCKiNhELLfORcIGERATTEmONEY",
+				"port": 3306,
+				"previewLimit": 50,
+				"server": "localhost",
+				"username": "'IATServer'@'localhost'"
+			}
+		],
+		"compile-hero.disable-compile-files-on-did-save-code": false,
+		"dartsass.targetDirectory": "webcontent/src/main/resources/css",
+		"dartsass.sassBinPath": "/usr/bin/sass",
+		"java.compile.nullAnalysis.mode": "automatic"
+	}
+}

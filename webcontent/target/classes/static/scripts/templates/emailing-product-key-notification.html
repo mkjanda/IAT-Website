@@ -1,0 +1,23 @@
+<div class="emailing-product-key-notification">
+<!-- ko if: state().emailSentToClient == true -->
+<p>Your product key has been emailed to <span class="hilight" data-bind="text : state().email"></span>,
+the account initially used to download the software. If you no longer have access to this account, try again by refreshing the page and using any
+of the emails you have activated the product with. If you do not receive it within
+    five minutes, you may wish to check your spam box or click <span class="hilightHover" data-bind="click : resendEmail">here</span> to have it sent
+    again. Thank you again for using my software, <span class="name" data-bind="text : state().firstName"></span>.</p>
+<!-- /ko -->
+<!-- ko ifnot: state().emailSentToClient == true -->
+<p>Your product key was emailed to <span class="hilight" data-bind="text : state().email"></span>. If you do not receive it within
+    five minutes, you may wish to check your spam box or click <span class="hilightHover" data-bind="click : resendEmail">here</span> 
+    to have it sent again. Thank you again for using my software, 
+    <span class="name" data-bind="text : state().firstName"></span>.</p>
+<!-- /ko -->
+<!-- ko if: state().downloaded === false -->
+<p>If you need to download the software as well, click <span class="hilightHover" data-bind="click : requestDownload">here</span>.
+	The email also contains a link you can use to download the software.</p>
+<!-- /ko -->
+<!-- ko if: emailResent -->
+<p>The email has been resent. If this continues to be a problem, please do not hesitate to contact me at 
+    <span class="hilight">michael@iatsoftware.net</span></p>
+<!-- /ko -->
+</div>

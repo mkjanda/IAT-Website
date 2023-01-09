@@ -1,0 +1,6 @@
+<div data-bind="ifnot: errorId()">
+    <div data-bind="component : { name : form().component, params : { state : state, formId : form().component, display : display }}"></div>
+</div>
+<div data-bind="if : errorId()">
+    <server-error-notification params="errorId : errorId"></server-error-notification>
+</div>

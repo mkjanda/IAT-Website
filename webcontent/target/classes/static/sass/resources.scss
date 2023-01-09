@@ -1,0 +1,68 @@
+/* greenery palettes */
+
+    $greenery: rgb(136, 176, 75);
+    $brilliantWhite: rgb(237, 241, 254);
+    // analgous
+    $smokeyGrape: rgb(184, 138, 172);
+    $transparentSmokeyGrape: rgba(184, 138, 172, 0.5);
+    $purpleHaze: rgb(128, 115, 150);
+    $tawnyOrange: rgb(211, 127, 111);
+    $mistedYellow: rgb(218, 185, 101);
+    $sphinx: rgb(171, 152, 149);
+    $woodrose: rgb(174, 140, 142);
+    $buttercream: rgb(239, 224, 205);
+    // "moody blooms"
+    $winterBloom: rgb(71, 36, 59);
+    $batonRouge: rgb(151, 60, 108);
+    $redDahlia: rgb(152, 32, 39);
+    $scarletIbis: rgb(244, 85, 32);
+    $pinkYarrow: rgb(206, 49, 117);
+    $gojiBerry: rgb(185, 18, 40);
+    $mayfly: rgb(101, 102, 63);
+    $sulphur: rgb(221, 182, 20);
+    // "forest floor"
+    $siltGreen: rgb(169, 189, 177);
+    $kalamata: rgb(95, 91, 76);
+    $moss: rgb(160, 157, 89);
+    $willowBough: rgb(89, 117, 77);
+    $grapeKiss: rgb(123, 67, 104);
+    $redwood: rgb(166, 89, 76);
+    $hydro: rgb(66, 105, 114);
+    $bronzeMist: rgb(156, 126, 65);
+    $ultraViolet: rgb(95, 75, 139);
+    $redViolet: rgb(163, 87, 118);
+    $chateauRose: rgb(210, 115, 143);
+    $prismPink: rgb(240, 161, 191);
+    $lovePotion: #c01352;
+    $raspberryWine: rgb(182, 62, 91);
+    $purpleWine: rgb(140, 53, 115);
+    $roseWine: rgb(169, 89, 109);
+    $blackberryWine: rgb(87, 67, 83);
+    $knockoutPink: rgb(255, 62, 165);
+    $sunsetGold: rgb(247, 196, 108);
+    $poinciana: rgb(202, 52, 34);
+    $hotPink: rgb(229, 89, 130);
+    $emberGlow: rgb(234, 103, 89);
+    
+
+
+    @font-face {
+        font-family: TektonPro-BoldExt;
+        src: url("../fonts/TektonPro-BoldExt.otf");
+    }
+    
+    $myriad: myriad-pro, sans-serif;
+    $museo: museo-sans-rounded, sans-serif;
+    $cartoonish: hobeaux-rococeaux-sherman, serif;
+    $tekton: TektonPro-BoldExt, serif;
+    $cutesey: coquette, serif;
+    $mono: source-code-pro, monospace;
+    // site-wide settings
+    $contentWidth: 1200px;
+    $headerHeight: 500px;
+    $menuButtonWidth: 160px !default;
+    $menuButtonHeight: 60px !default;
+    $menuBarHeight: 60px;
+    $buttonFontSize: 32px;
+    $buttonLabelXOffset: 40;
+    $buttonLabelYOffset: 60;

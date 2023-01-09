@@ -1,0 +1,78 @@
+<form data-bind="attr : { id : formId }">
+    <div data-bind="if: wasAutoRedirect">
+        <p>A copy of the software has already been registered to a
+            <!-- ko if: state().action === 'client-exists' -->
+            client
+            <!-- /ko -->
+            <!-- ko if: state().action === 'user-exists' -->
+            user
+            <!-- /ko -->
+            with the name <span class="hilight" data-bind="text : state().firstName + ' ' + state().lastName"></span>
+            and
+            the email address <span class="hilight" data-bind="text : state().email"></span>.</p>
+        <p>If you need to download the software again or retrieve your product key, make the appropriate
+            selection below. Note that your product key will be emailed
+            to <span data-bind="text : state().email"></span> rather than displayed for security reasons.
+            You may also find your product key within
+            <span class="hilight">IAT Design</span> from the <span class="buttonHilight">About Box</span>
+            accessible from the <span class="buttonHilight">Help</span>
+            drop-down menu.</p>
+    </div>
+    <div data-bind="ifnot: wasAutoRedirect">
+        <p>If you need another copy of IAT Design or to have your product key emailed to you, enter
+            your email address below, either the address you used to initially download the software or
+            any email you have activated the software with, select what you need, and click the submit button.
+            Note that your product key will be emailed to you rather than displayed for security reasons.
+        </p>
+    </div>
+    <div class="form">
+        <div class="columns">
+            <div style="grid-column: 1">
+                <div class="formDataGrid">
+                    <!-- ko foreach : errors().filter(e => e.field === 'email') -->
+                    <p class="errorMessage" data-bind="text: $data.message"></p>
+                    <!-- /ko -->
+                    <p class="leftInputLabel">eMail:</p>
+                    <!-- ko if : !noSuchEmail() && email() -->
+                    <input name="email" type="text" data-bind="attr : { value : state().email}" disabled />
+                    <!-- /ko -->
+                    <!-- ko ifnot : !noSuchEmail() && email() -->
+                    <input name="email" type="text" data-bind="attr : { value : state().email }" />
+                    <!-- /ko -->
+                    <!-- ko if: noSuchEmail() && email() -->
+                    <span class="hilightHover" style="grid-column: 3/4; align-content: center; margin: 0px 15px;" data-bind="click : showRegisterForm">Click to Register</span>
+                    <!-- /ko -->
+                </div>
+            </div>                
+            <div style="grid-column: 2">
+                <div class="formDataGrid">
+                    <!-- ko foreach: errors().filter(e => e.field === 'needed') -->
+                    <p class="errorMessage" data-bind="text: $data.message"></p>
+                    <!-- /ko -->
+                    <!-- ko if : (errors().filter(e => e.field === 'neeeded').length > 0) || (needed() !== 'download') -->
+                    <input style="margin-left: 0px;" type="radio" name="needed" value="download" />
+                    <!-- /ko -->
+                    <!-- ko ifnot : (errors().filter(e => e.field === 'neeeded').length > 0) || (needed() !== 'download') -->
+                    <input style="margin-left: 0px;" type="radio" name="needed" value="download" checked />
+                    <!-- /ko -->
+                    <p class="rightInputLabel">I need to download the software</p>
+                    <!-- ko if : (errors().filter(e => e.field === 'needed').length > 0) || (needed() !== 'productKey') -->
+                    <input style="margin-left: 0px;" type="radio" name="needed" value="productKey" />
+                    <!-- /ko -->
+                    <!-- ko ifnot : (errors().filter(e => e.field === 'needed').length > 0) || (needed() !== 'productKey') -->
+                    <input style="margin-left: 0px;" type="radio" name="needed" value="productKey" checked />
+                    <!-- /ko -->
+                    <p class="rightInputLabel">I need to retrieve my product key</p>
+                </div>
+                </div>
+        </div>
+    </div>
+    <div class="formDataGrid">
+        <!-- ko ifnot: posting()-->
+        <input type="button" id="already-registered-form-post" value="Submit" data-bind="click : post" />
+        <!-- /ko -->
+        <!-- ko if: posting() -->
+        <span class="pleaseWait" data-bind="text : pleaseWaitText()"></span>
+        <!-- /ko -->
+    </div>
+</form>

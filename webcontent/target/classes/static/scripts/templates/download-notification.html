@@ -1,0 +1,44 @@
+<iframe width="1" height="1" style="display: none;" id="downloadFrame"></iframe>
+<div class="download-notification">
+    <svg-header params="caption : 'Downloading . . .', template : headerTemplate, display : display"></svg-header>
+    <p>Your download should begin automatically. If it does not, click <span class="hilightHover" data-bind="event : { click : download }">here</span>.
+        If you encounter any problems with the software, please do not hesitate to contact me at <span class="hilight">michael@iatsoftware.net</span>.
+        Contact me as well with suggestions or feature requests. I'm presently working on employing deep learning, a form of AI, to conduct item
+        analysis, so if you'd like to contribute your data, I'd be happy to have it. If you did not read the privacy section, it is impossible
+        to access your data without the password you choose when you upload your test, which is not stored on the server. If you would like
+        an in-depth description of how this works, click <span class="hilightHover" data-bind="click : goToPrivacy">here</span>.
+    </p>
+    <!-- ko if: state().action === 'initial-download' -->
+    <p>Do not close this window yet. Your product key is:</p>
+    <div><svg-header params="caption: state().productKey, display : display, template : productKeyTemplate, id : 'product-key-text'"></svg-header></div>
+    <div><input type="button" value="Copy to Clipboard" id="copy-product-key-button" data-bind="click : copyProductKey" /></div>
+    <p>You will need it to activate the program. A manual is included in your download. You may also find online documentation on the menu bar above.
+        Both contain a step-by-step example of creating a test.</p>
+        <p>If you have trouble with product activation, email me at <span class="highlight">michael@iatsoftware.net</span>
+        and I will email you a dummy activation file once I have an email address on record.</p>
+    <!-- /ko -->        
+    <!-- ko if: state().action === 'organization-download' -->
+    <p>Your product key is the same as every other user in your organization. When you activate the software, a user account will be created
+        on the server for you. If you are activating the product on a second machine, make sure you supply the same email address when activating the software
+        or any tests you might have already uploaded will be inaccessible. If you no longer have access to that email address, as a last resort, get in 
+        touch with the principle contact for your organization, <span data-bind='text: state().firstName'></span> <span data-bind='text: state().lastName'></span>.
+        With his or her consent, I will alter your existing user profile.</p>
+    <!-- /ko -->
+    <div>
+        <div style="display: inline-block; width: 65%; vertical-align: top;">
+            <picture>
+                <source srcset="images/windows-warning.webp" type="image/webp">
+                <source srcset="images/windows-warning.png" type="image/png">
+                <img style="max-width: 100%" src="images/windows-warning.png" />
+            </picture>
+        </div>
+        <div style="display: inline-block; vertical-align: top; width: 30%; padding-left: 20px;">
+            <p>You might see this box when you first run the program. This is because the software is freshly signed
+                and does not have &quot;reputation&quot; with Windows SmartScreen. If contacting me would reassure you
+                that the software is save, please do.</p>
+        </div>
+    </div>
+    <!-- ko if : !state().productKeySent && (state().action !==  'initial-download') -->
+    <h2>If you need to retrieve your product key, click <span class="hilightHover" data-bind="click : retrieveProductKey">here</span>.</h2>
+    <!-- /ko -->
+</div>

@@ -1,0 +1,13 @@
+<div class="sampleTest" data-bind="attr : { id : id }, childrenComplete : childrenComplete">
+    <div class="header" data-bind="foreach: testData.titleLines">
+        <svg-header params="caption : $data, template : $parent.headerTemplate, display : $parent.display"></svg-header>
+    </div>
+    <div class="sampleTestSlide" data-bind="event : { mouseover : onMouseOver, mouseout : onMouseOut }">
+        <a data-bind="attr : { href : testData.url }">
+            <canvas class="sample-test-canvas" data-bind="attr : { id : canvasId, width : slideWidth, height : slideHeight }"></canvas>
+        </a>
+    </div>
+    <div class="sampleTestDescription" data-bind="foreach: { data : testData.descriptionParagraphs, as : 'paragraph' }">
+        <p data-bind="text : paragraph"></p>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+<html>
+<head>
+<title th:remove="all">Server Error Report</title>
+<style th:insert="shared-email-styles"></style>
+<style type="text/css">
+body div#report {
+	padding: 20px;
+}
+
+body div#report p {
+	font-family: paralucent, calibri, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+body div#report div#exception p {
+	font-family: paralucent, calibri, sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	padding: 0px;
+	margin: 0px;
+	line-height: 18px;
+}
+
+body div#report div#exception p.stackTraceLine {
+	font-family: paralucent, calibri, sans-serif;
+	margin: 0px 0px 0px 50px;
+	padding: 0px;
+	font-size: 14px;
+	line-height: 14px;
+	font-weight: normal;
+	
+}
+</style>
+</head>
+<body>
+	<div id="report">
+		<p>
+			A user with the email address <span th:text="${userEmail}"></span>
+			encountered the following error at <span
+				th:text="${report.timestamp}"></span>:
+		</p>
+		<div id="exception">
+			<p th:text="${report.exception.message}"></p>
+			<p>Caused by:</p>
+			<th:block th:each="stl : ${report.exception.stackTrace}">
+				<p class="stackTraceLine" th:text="${stl.className + '.' + stl.function + ' [' + stl.lineNumber + ']'}"></p>
+			</th:block>
+			<th:block th:each="innerEx : ${report.innerException}">
+				<br />
+				<p th:text="${'Caused by: ' + innerEx.message}"></p>
+				<th:block th:each="stl : ${innerEx.stackTrace}">
+					<p class="stackTraceLine" th:text="${stl.className + '.' + stl.function + ' [' + stl.lineNumber + ']'}"></p>
+				</th:block>
+			</th:block>
+		</div>
+	</div>
+</body>
+</html>
