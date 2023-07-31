@@ -135,8 +135,9 @@ div#pageContentWrapper {
 			flex-flow: column wrap;
 			align-content: flex-start;
 			justify-content: flex-start;
+			align-self: center;
 			width: 100%;
-			margin-top: 20px;
+			margin: 20px auto;
 			max-height: 100%;
 
 
@@ -148,13 +149,16 @@ div#pageContentWrapper {
 					border-image-width: 10px;
 					border-image-outset: 8px;
 					border-style: solid;
-					border-image-repeat: auto;
 					text-align: center;
 					margin-left: 15px;
 					margin-right: 15px;
 					margin-bottom: 30px;
 					width: min-content;
 					background: $purpleHaze;
+					display: flex;
+					flex-flow: column nowrap;
+					align-content: center;
+					justify-content: flex-start;
 
 					div.header {
 						margin-top: 35px;

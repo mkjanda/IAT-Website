@@ -73,6 +73,7 @@ define(['knockout', 'text!templates/sample-test.html', 'text!json/svg-headers.js
     };
 
     SampleTest.prototype._playPresentation = function (t) {
+        /*
         var self = this;
         if (!self.isMouseOver) {
             self.tLastPresentation = -1;
@@ -125,7 +126,7 @@ define(['knockout', 'text!templates/sample-test.html', 'text!json/svg-headers.js
         }
         window.requestAnimationFrame(function (t) {
             self.playPresentation(t);
-        });
+        });*/
     };
 
     return { viewModel: SampleTest, template: htmlString };

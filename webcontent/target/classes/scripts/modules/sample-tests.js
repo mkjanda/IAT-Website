@@ -1,6 +1,6 @@
 define(['knockout', 'text!templates/sample-tests.html', 'text!json/svg-headers.json', 'text!json/sample-tests.json'], function (ko, htmlString, headerTemplates, testsJson) {
     function SampleTests(params) {
-        var self = this;
+        let self = this;
         self.display = params.display;
         self.sampleTestJson = JSON.parse(testsJson);
         self.headerTemplate = JSON.parse(headerTemplates).sectionHeader;
@@ -18,26 +18,17 @@ define(['knockout', 'text!templates/sample-tests.html', 'text!json/svg-headers.j
             if (elems.length > 0)
                 self.calculateHeight();
         });
-        const mutationObserver = new MutationObserver((mutationList) => {
-            for (const mutation of mutationList) {
-                if ((mutation.type == "subtree") || (mutation.type == "childList")) {
-                    for (const node of addedNodes) {
-                        resizeObserver.observe(node);
-                    }
-                }
-            }
-        });
         self.testLoaded = ((elem) => {
-            self.calculateHeight();
             self.resizeObserver.observe(elem);
+            self.calculateHeight();
         }).bind(self);
     }
 
     SampleTests.prototype.calculateHeight = () => {
+        const width = document.getElementById("pageContent").clientWidth;
         let testNode = document.getElementById("sampleTests");
         if (testNode === null)
             return;
-        let width = testNode.clientWidth;
         let tests = testNode.querySelectorAll("sample-test");
         if (tests.length === 0)
             return;
@@ -50,9 +41,14 @@ define(['knockout', 'text!templates/sample-tests.html', 'text!json/svg-headers.j
         let colHeight = 0;
         while (ctr < tests.length) {
             colHeight = 0;
+            let done = false;
             do {
-                colHeight += tests[ctr++].offsetHeight + 33;
-            } while ((ctr % nRows !== 0) && (ctr < tests.length));
+                colHeight += tests[ctr++].clientHeight + 36;
+                if (ctr < nCols % nRows)
+                    done = ctr % nRows === 0;
+                else
+                    done = ctr % nRows == nRows - 1;
+            } while (!done && (ctr < tests.length));
             if (colHeight > height)
                 height = colHeight;
         }
