@@ -13,8 +13,8 @@ package net.iatsoftware.website.forms;
 
 import net.iatsoftware.website.validation.RegisteredEmailValid;
 
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 
 
 

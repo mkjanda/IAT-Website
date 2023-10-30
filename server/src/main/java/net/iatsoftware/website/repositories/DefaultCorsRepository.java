@@ -13,9 +13,9 @@ import net.iatsoftware.website.entities.CorsOrigin;
 
 import org.springframework.stereotype.Repository;
 
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Root;
+import jakarta.persistence.criteria.CriteriaBuilder;
+import jakarta.persistence.criteria.CriteriaQuery;
+import jakarta.persistence.criteria.Root;
 
 @Repository
 public class DefaultCorsRepository extends GenericJpaRepository<Long, CorsOrigin> implements CorsRepository {
@@ -29,7 +29,7 @@ public class DefaultCorsRepository extends GenericJpaRepository<Long, CorsOrigin
             CorsOrigin fetchedOrigin = entityManager.createQuery(query.select(root).where(cb.equal(root.get("client"), co.getClient()))).getSingleResult();
             fetchedOrigin.setOrigin(co.getOrigin());
             update(fetchedOrigin);
-        } catch (javax.persistence.NoResultException ex) {
+        } catch (jakarta.persistence.NoResultException ex) {
             add(co);
         }
     }

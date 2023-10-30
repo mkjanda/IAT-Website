@@ -42,7 +42,7 @@ import java.net.URLEncoder;
 import java.util.Base64;
 import java.util.Random;
 import javax.inject.Inject;
-import javax.validation.Valid;
+import jakarta.validation.Valid;
 
 @Controller
 @RequestMapping("/FormSubmissions")
@@ -118,7 +118,7 @@ public class FormSubmissions {
           //  applicationContext.getBean(Client.class, productKey.getProductKey(), downloadPass, form);
             try {
                 repositoryManager.addClient(c);
-            } catch (javax.persistence.PersistenceException ex) {
+            } catch (jakarta.persistence.PersistenceException ex) {
                 return new ResponseEntity<>((RequestSoftwareResponse) null, HttpStatus.TOO_MANY_REQUESTS);
             }
         }
@@ -135,7 +135,7 @@ public class FormSubmissions {
     @PostMapping(value = "/AlreadyRegistered", produces = "text/json")
     @ResponseBody
     public ResponseEntity<AlreadyRegisteredResponse> alreadyRegisteredRequest(@Valid AlreadyRegisteredForm form, Errors errors,
-            @RequestHeader(name="token") String token) throws javax.mail.MessagingException {
+            @RequestHeader(name="token") String token) throws jakarta.mail.MessagingException {
         Client c = repositoryManager.findClientByEmail(form.getEmail());
         User u = repositoryManager.findUserByEmail(form.getEmail());
         AlreadyRegisteredResponse response = new AlreadyRegisteredResponse();
@@ -196,7 +196,7 @@ public class FormSubmissions {
     }
 
     @PostMapping(value = "/ErrorReport", produces = "text/plain")
-    ResponseEntity<String> reportError(@Valid EmailForm errorReport, Errors errors) throws java.io.IOException, javax.mail.MessagingException {
+    ResponseEntity<String> reportError(@Valid EmailForm errorReport, Errors errors) throws java.io.IOException, jakarta.mail.MessagingException {
         if (errors.hasErrors()) {
             return new ResponseEntity<>(errors.getFieldErrors("email").get(0).getDefaultMessage(), HttpStatus.OK);
         }
@@ -297,7 +297,7 @@ public class FormSubmissions {
         try {
             serverErrorService.reportError(ex);
         }
-        catch (javax.mail.MessagingException mex) {
+        catch (jakarta.mail.MessagingException mex) {
             logger.error("Error sending error notification email", mex);
         }
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);

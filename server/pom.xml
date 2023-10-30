@@ -23,7 +23,7 @@
             <plugin>
                 <groupId>org.apache.cxf</groupId>
                 <artifactId>cxf-xjc-plugin</artifactId>
-                <version>3.3.0</version>
+                <version>4.0.0</version>
                 <executions>
                     <execution>
                         <id>xjc</id>
@@ -37,6 +37,10 @@
                                 <xsdOption>
                                     <xsd>${basedir}/src/main/resources/schema.xsd</xsd>
                                     <packagename>net.iatsoftware.website.generated</packagename>
+                                    <extension>true</extension>
+                                    <extensionArgs>
+                                        <extensionArg>-extension</extensionArg>
+                                    </extensionArgs>
                                 </xsdOption>
                             </xsdOptions>
                         </configuration>
@@ -107,22 +111,28 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.30</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>6.2.3.Final</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
         <dependency>
-            <groupId>javax.xml.bind</groupId>
-            <artifactId>jaxb-api</artifactId>
+            <groupId>jakarta.xml.bind</groupId>
+            <artifactId>jakarta.xml.bind-api</artifactId>
         </dependency>
         <dependency>
             <groupId>org.glassfish.jaxb</groupId>
             <artifactId>jaxb-runtime</artifactId>
         </dependency>
         <dependency>
-            <groupId>javax.validation</groupId>
-            <artifactId>validation-api</artifactId>
+            <groupId>jakarta.validation</groupId>
+            <artifactId>jakarta.validation-api</artifactId>
         </dependency>
         <dependency>
             <groupId>net.iatsoftware.website</groupId>

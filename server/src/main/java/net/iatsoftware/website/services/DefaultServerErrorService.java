@@ -49,7 +49,7 @@ public class DefaultServerErrorService implements ServerErrorService {
     }
     
     @Override
-    public void reportError(long errorId, String email) throws javax.mail.MessagingException {
+    public void reportError(long errorId, String email) throws jakarta.mail.MessagingException {
         ServerErrorReport report = Errors.remove(errorId);
         EmailParameters params = new EmailParameters(errorReportRecipient, "Website Error", "email/server-error-report.html");
         params.addParameter("report", report);
@@ -58,7 +58,7 @@ public class DefaultServerErrorService implements ServerErrorService {
     }
     
     @Override
-    public void reportError(Exception ex)  throws javax.mail.MessagingException {
+    public void reportError(Exception ex)  throws jakarta.mail.MessagingException {
         EmailParameters params = new EmailParameters("sysinfo", "Website Error", "email/server-error-report.html");
         params.addParameter("report", new ServerErrorReport(ex));
         params.addParameter("userEmail", "");

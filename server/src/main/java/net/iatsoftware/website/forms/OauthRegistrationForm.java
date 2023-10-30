@@ -20,16 +20,14 @@ import net.iatsoftware.website.validation.RedirectValid;
 import net.iatsoftware.website.validation.TestNameValid;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;
-import javax.validation.constraints.AssertTrue;
-import javax.validation.constraints.NotBlank;
+import jakarta.validation.constraints.AssertTrue;
+import jakarta.validation.constraints.NotBlank;
 
 
 @TestNameValid(message="{validate.oauthRegistrationForm.noSuchTest}")
 @PasswordValid(message="{validate.oauthRegistrationForm.wrongPassword}")
-@Component("prototype")
 public class OauthRegistrationForm {
     
     @Inject RepositoryManager repositoryManager;
@@ -45,11 +43,11 @@ public class OauthRegistrationForm {
     
     @AssertTrue(message="{validate.oauthRegistrationForm.needRedirectForNewClient}")
     public boolean redirectSuppliedForNewUser() {
-        Client client = repositoryManager.getClientByProductKey(getProductKey());
-        IAT test = repositoryManager.getTest(client, getTestName());
-        if ((test.getOauthClientId() == null) && (getRedirect().trim() == "")) {
-            return false;
-        }
+//        Client client = repositoryManager.getClientByProductKey(getProductKey());
+ //       IAT test = repositoryManager.getTest(client, getTestName());
+  //      if ((test.getOauthClientId() == null) && (getRedirect().trim() == "")) {
+   //         return false;
+    //    }
         return true;
     }
 

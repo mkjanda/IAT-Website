@@ -12,8 +12,8 @@ package net.iatsoftware.website.validation;
 
 
 import java.net.URL;
-import javax.validation.ConstraintValidator;
-import javax.validation.ConstraintValidatorContext;
+import jakarta.validation.ConstraintValidator;
+import jakarta.validation.ConstraintValidatorContext;
 
 public class RedirectValidator implements ConstraintValidator<RedirectValid, CharSequence> {
     

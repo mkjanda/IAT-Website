@@ -71,7 +71,6 @@
 /home/michael/java-projects/iat-website/server/src/main/java/net/iatsoftware/website/startup/SpringMailConfig.java
 /home/michael/java-projects/iat-website/server/src/main/java/net/iatsoftware/website/forms/AlreadyRegisteredForm.java
 /home/michael/java-projects/iat-website/server/src/main/java/net/iatsoftware/website/validation/DomainValid.java
-/home/michael/java-projects/iat-website/server/src/main/java/net/iatsoftware/website/controllers/Error.java
 /home/michael/java-projects/iat-website/server/src/main/java/net/iatsoftware/website/entities/CorsOrigin.java
 /home/michael/java-projects/iat-website/server/src/main/java/net/iatsoftware/website/entities/PartiallyEncryptedRSAKey.java
 /home/michael/java-projects/iat-website/server/src/main/java/net/iatsoftware/website/repositories/EncryptionKeyRepository.java

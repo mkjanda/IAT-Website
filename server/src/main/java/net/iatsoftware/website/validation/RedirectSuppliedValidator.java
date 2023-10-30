@@ -16,8 +16,8 @@ import net.iatsoftware.website.forms.OauthRegistrationForm;
 import net.iatsoftware.website.repositories.RepositoryManager;
 
 import javax.inject.Inject;
-import javax.validation.ConstraintValidator;
-import javax.validation.ConstraintValidatorContext;
+import jakarta.validation.ConstraintValidator;
+import jakarta.validation.ConstraintValidatorContext;
 
 public class RedirectSuppliedValidator implements ConstraintValidator<RedirectSuppliedValid, OauthRegistrationForm> {
     

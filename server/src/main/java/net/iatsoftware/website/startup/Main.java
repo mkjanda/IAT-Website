@@ -7,8 +7,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.mysql.cj.jdbc.MysqlConnectionPoolDataSource;
 import java.nio.charset.StandardCharsets;
-import javax.persistence.SharedCacheMode;
-import javax.persistence.ValidationMode;
+import jakarta.persistence.SharedCacheMode;
+import jakarta.persistence.ValidationMode;
 import javax.sql.DataSource;
 import org.hibernate.validator.HibernateValidator;
 import org.springframework.beans.factory.annotation.Value;
@@ -74,8 +74,8 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 import javax.inject.Inject;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 @Order(1)
 @Configuration
@@ -143,7 +143,7 @@ public class Main implements SchedulingConfigurer {
         Jaxb2Marshaller marshaller = new Jaxb2Marshaller();
         marshaller.setPackagesToScan("net.iatsoftware.website");
         Map<String, Boolean> properties = new HashMap<>();
-        properties.put(javax.xml.bind.Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
+        properties.put(jakarta.xml.bind.Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
         marshaller.setMarshallerProperties(properties);
         return marshaller;
     }
@@ -151,12 +151,13 @@ public class Main implements SchedulingConfigurer {
     @Bean
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
         Map<String, Object> properties = new HashMap<>();
-        properties.put("javax.persistence.schema-generation.database.action", "none");
+        properties.put("jakarta.persistence.schema-generation.database.action", "none");
         HibernateJpaVendorAdapter adapter = new HibernateJpaVendorAdapter();
-        adapter.setDatabasePlatform("org.hibernate.dialect.MySQL5InnoDBDialect");
+        adapter.setGenerateDdl(false);
         LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
         factory.setJpaVendorAdapter(adapter);
-        factory.setDataSource(this.dataSource());
+        factory.setDataSource(dataSource());
+        factory.setSharedCacheMode(SharedCacheMode.ENABLE_SELECTIVE);
         factory.setPackagesToScan("net.iatsoftware.website");
         factory.setSharedCacheMode(SharedCacheMode.ENABLE_SELECTIVE);
         factory.setValidationMode(ValidationMode.NONE);

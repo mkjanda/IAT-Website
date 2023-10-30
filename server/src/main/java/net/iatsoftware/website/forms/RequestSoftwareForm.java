@@ -13,9 +13,9 @@ package net.iatsoftware.website.forms;
 import net.iatsoftware.website.validation.ProductRequestEmailValid;
 
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Size;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
 
 public class RequestSoftwareForm {
     @NotBlank(message="{validate.productRequest.noFirstName}")

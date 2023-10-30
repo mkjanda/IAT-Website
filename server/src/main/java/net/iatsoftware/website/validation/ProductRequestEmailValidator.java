@@ -14,8 +14,8 @@ import net.iatsoftware.website.repositories.RepositoryManager;
 
 import java.util.regex.Pattern;
 import javax.inject.Inject;
-import javax.validation.ConstraintValidator;
-import javax.validation.ConstraintValidatorContext;
+import jakarta.validation.ConstraintValidator;
+import jakarta.validation.ConstraintValidatorContext;
 
 public class ProductRequestEmailValidator implements ConstraintValidator<ProductRequestEmailValid, CharSequence> {
     @Inject RepositoryManager repositoryManager;

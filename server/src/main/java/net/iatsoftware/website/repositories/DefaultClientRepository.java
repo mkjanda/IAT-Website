@@ -14,10 +14,10 @@ import net.iatsoftware.website.pojos.ProductKey;
 
 import org.springframework.stereotype.Repository;
 
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Predicate;
-import javax.persistence.criteria.Root;
+import jakarta.persistence.criteria.CriteriaBuilder;
+import jakarta.persistence.criteria.CriteriaQuery;
+import jakarta.persistence.criteria.Predicate;
+import jakarta.persistence.criteria.Root;
 
 @Repository
 public class DefaultClientRepository extends GenericJpaRepository<Long, Client> implements ClientRepository {
@@ -45,7 +45,7 @@ public class DefaultClientRepository extends GenericJpaRepository<Long, Client> 
         Predicate pred = cb.equal(root.get("email"), email.toLowerCase());
         try {
             return this.entityManager.createQuery(query.select(root).where(pred)).getSingleResult();
-        } catch (javax.persistence.NoResultException ex) {
+        } catch (jakarta.persistence.NoResultException ex) {
             return null;
         }
     }
@@ -58,7 +58,7 @@ public class DefaultClientRepository extends GenericJpaRepository<Long, Client> 
         Predicate pred = cb.equal(root.get("organizationId"), id);
         try {
             return this.entityManager.createQuery(query.select(root).where(pred)).getSingleResult();
-        } catch (javax.persistence.NoResultException | javax.persistence.NonUniqueResultException ex) {
+        } catch (jakarta.persistence.NoResultException | jakarta.persistence.NonUniqueResultException ex) {
             return null;
         }
     }
@@ -81,7 +81,7 @@ public class DefaultClientRepository extends GenericJpaRepository<Long, Client> 
         try {
             return this.entityManager.createQuery(query.select(root).where(pred)).getSingleResult();
         }
-        catch (javax.persistence.NoResultException ex) {
+        catch (jakarta.persistence.NoResultException ex) {
             return null;
         }
     }

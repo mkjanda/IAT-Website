@@ -14,8 +14,8 @@ import net.iatsoftware.website.generated.StackTraceLine;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
 
 @XmlAccessorType(XmlAccessType.NONE)
 public class SerializableException extends net.iatsoftware.website.generated.Exception {

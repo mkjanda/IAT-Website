@@ -13,7 +13,7 @@ package net.iatsoftware.website.forms;
 
 import net.iatsoftware.website.validation.OauthExampleTokenValid;
 
-import javax.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotBlank;
 
 
 

@@ -13,5 +13,5 @@ package net.iatsoftware.website.services;
 import net.iatsoftware.website.pojos.EmailParameters;
 
 public interface MailService {
-    void sendEmail(EmailParameters params) throws javax.mail.MessagingException;
+    void sendEmail(EmailParameters params) throws jakarta.mail.MessagingException;
 }

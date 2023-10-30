@@ -11,7 +11,7 @@
     <artifactId>webcontent</artifactId>
     <name>IAT Software website client</name>
     <properties>
-        <java.version>1.11</java.version>
+        <java.version>17</java.version>
     </properties>
     <build>
         <plugins>

@@ -422,7 +422,7 @@ div#pageContentWrapper div#pageContent div#sampleTests {
   align-content: flex-start;
   justify-content: flex-start;
   align-self: center;
-  width: 80%;
+  width: 100%;
   margin: 20px auto;
   max-height: 100%;
 }

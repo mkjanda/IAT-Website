@@ -13,6 +13,6 @@ package net.iatsoftware.website.services;
 
 public interface ServerErrorService {
     Long storeError(Exception ex);
-    void reportError(long errorNum, String email) throws javax.mail.MessagingException;
-    void reportError(Exception ex) throws javax.mail.MessagingException;
+    void reportError(long errorNum, String email) throws jakarta.mail.MessagingException;
+    void reportError(Exception ex) throws jakarta.mail.MessagingException;
 }
